@@ -1,0 +1,60 @@
+- generic [ref=e133]:
+  - complementary [ref=e134]:
+    - generic [ref=e135]:
+      - generic [ref=e136]: GigGle
+      - generic [ref=e137]: ✦
+    - generic [ref=e139]:
+      - img [ref=e141]
+      - generic [ref=e144]:
+        - paragraph [ref=e145]: Paul Tabi
+        - paragraph [ref=e146]: Worker
+    - navigation [ref=e147]:
+      - link "Dashboard" [ref=e148] [cursor=pointer]:
+        - /url: /worker/dashboard
+        - img [ref=e149]
+        - generic [ref=e154]: Dashboard
+      - link "Browse Jobs" [ref=e155] [cursor=pointer]:
+        - /url: /worker/browse
+        - img [ref=e156]
+        - generic [ref=e159]: Browse Jobs
+      - link "Applications" [ref=e160] [cursor=pointer]:
+        - /url: /worker/applications
+        - img [ref=e161]
+        - generic [ref=e164]: Applications
+      - link "History" [ref=e165] [cursor=pointer]:
+        - /url: /worker/history
+        - img [ref=e166]
+        - generic [ref=e169]: History
+      - link "Notifications" [ref=e170] [cursor=pointer]:
+        - /url: /worker/notifications
+        - img [ref=e171]
+        - generic [ref=e174]: Notifications
+    - generic [ref=e175]:
+      - link "Profile" [ref=e176] [cursor=pointer]:
+        - /url: /worker/profile
+        - img [ref=e177]
+        - generic [ref=e180]: Profile
+      - link "Settings" [ref=e181] [cursor=pointer]:
+        - /url: /worker/settings
+        - img [ref=e182]
+        - generic [ref=e185]: Settings
+      - button "Sign out" [ref=e186] [cursor=pointer]:
+        - img [ref=e187]
+        - generic [ref=e190]: Sign out
+  - main [ref=e192]:
+    - generic [ref=e193]:
+      - generic [ref=e194]:
+        - heading "Good evening, Paul 👋" [level=1] [ref=e195]
+        - paragraph [ref=e196]: Complete jobs to build your reputation
+      - generic [ref=e197]:
+        - generic [ref=e198]:
+          - paragraph [ref=e199]: "0"
+          - paragraph [ref=e200]: Applications
+        - generic [ref=e201]:
+          - paragraph [ref=e202]: —
+          - paragraph [ref=e203]: Active Job
+        - generic [ref=e204]:
+          - paragraph [ref=e205]: —
+          - paragraph [ref=e206]: Rating
+      - heading "Active Job" [level=2] [ref=e208]
+      - heading "Recent Applications" [level=2] [ref=e214]

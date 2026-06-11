@@ -1,0 +1,91 @@
+- generic [ref=e5]:
+  - complementary [ref=e6]:
+    - generic [ref=e7]:
+      - generic [ref=e8]: GigGle
+      - generic [ref=e9]: ✦
+    - generic [ref=e11]:
+      - img [ref=e13]
+      - generic [ref=e16]:
+        - paragraph [ref=e17]: Marie Nkomo
+        - paragraph [ref=e18]: Employer
+    - navigation [ref=e19]:
+      - link "Dashboard" [ref=e20] [cursor=pointer]:
+        - /url: /employer/dashboard
+        - img [ref=e21]
+        - generic [ref=e26]: Dashboard
+      - link "Post a Job" [ref=e27] [cursor=pointer]:
+        - /url: /employer/post-job
+        - img [ref=e28]
+        - generic [ref=e30]: Post a Job
+      - link "Notifications" [ref=e31] [cursor=pointer]:
+        - /url: /employer/notifications
+        - img [ref=e32]
+        - generic [ref=e35]: Notifications
+      - link "My Jobs" [ref=e36] [cursor=pointer]:
+        - /url: /employer/dashboard
+        - img [ref=e37]
+        - generic [ref=e40]: My Jobs
+    - generic [ref=e41]:
+      - link "Profile" [ref=e42] [cursor=pointer]:
+        - /url: /employer/profile
+        - img [ref=e43]
+        - generic [ref=e46]: Profile
+      - link "Settings" [ref=e47] [cursor=pointer]:
+        - /url: /employer/settings
+        - img [ref=e48]
+        - generic [ref=e51]: Settings
+      - button "Sign out" [ref=e52] [cursor=pointer]:
+        - img [ref=e53]
+        - generic [ref=e56]: Sign out
+  - main [ref=e58]:
+    - generic [ref=e59]:
+      - heading "My Profile" [level=1] [ref=e60]
+      - generic [ref=e61]:
+        - generic [ref=e63]: MN
+        - button "Change photo" [ref=e64] [cursor=pointer]:
+          - img [ref=e65]
+          - text: Change photo
+        - paragraph [ref=e68]: JPG, PNG or WebP — max 2MB
+        - generic [ref=e69]:
+          - img [ref=e70]
+          - text: Employer
+      - generic [ref=e73]:
+        - heading "Personal Information" [level=2] [ref=e74]
+        - generic [ref=e108]:
+          - img [ref=e109]
+          - text: Profile updated!
+        - generic [ref=e75]:
+          - generic [ref=e76]: Full name *
+          - textbox "Your full name" [ref=e77]: Marie Nkomo
+        - generic [ref=e78]:
+          - generic [ref=e79]: Company / Organization (optional)
+          - textbox "Leave blank if hiring personally" [ref=e80]: Nkomo Enterprises
+        - generic [ref=e81]:
+          - generic [ref=e82]: Phone number (optional)
+          - textbox "+237 6XX XXX XXX" [ref=e83]: "+237677001001"
+        - generic [ref=e84]:
+          - generic [ref=e85]: City *
+          - combobox [ref=e86]:
+            - option "Select your city"
+            - option "Douala" [selected]
+            - option "Yaounde"
+            - option "Bafoussam"
+            - option "Bamenda"
+            - option "Buea"
+            - option "Limbe"
+        - generic [ref=e87]:
+          - generic [ref=e88]: About you / your hiring needs (optional)
+          - textbox "Describe what you typically hire for..." [ref=e89]: "We hire domestic staff, event workers, and delivery personnel for our household and business needs in Douala. Typically hires for: Cleaning, Event Labor, Delivery"
+          - paragraph [ref=e90]: 163/500
+        - button "Save Changes" [ref=e91] [cursor=pointer]
+      - generic [ref=e92]:
+        - heading "Your Rating" [level=2] [ref=e93]
+        - generic [ref=e94]:
+          - generic [ref=e95]:
+            - img [ref=e96]
+            - img [ref=e98]
+            - img [ref=e100]
+            - img [ref=e102]
+            - img [ref=e104]
+          - generic [ref=e106]: No ratings yet
+        - paragraph [ref=e107]: Workers rate employers after completed jobs

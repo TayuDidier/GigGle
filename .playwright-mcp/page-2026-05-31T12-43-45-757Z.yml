@@ -1,0 +1,90 @@
+- generic [ref=e5]:
+  - complementary [ref=e6]:
+    - generic [ref=e7]:
+      - generic [ref=e8]: GigGle
+      - generic [ref=e9]: ✦
+    - generic [ref=e11]:
+      - img [ref=e13]
+      - generic [ref=e16]:
+        - paragraph [ref=e17]: Marie Nkomo
+        - paragraph [ref=e18]: Employer
+    - navigation [ref=e19]:
+      - link "Dashboard" [ref=e20] [cursor=pointer]:
+        - /url: /employer/dashboard
+        - img [ref=e21]
+        - generic [ref=e26]: Dashboard
+      - link "Post a Job" [ref=e27] [cursor=pointer]:
+        - /url: /employer/post-job
+        - img [ref=e28]
+        - generic [ref=e30]: Post a Job
+      - link "Notifications" [ref=e31] [cursor=pointer]:
+        - /url: /employer/notifications
+        - img [ref=e32]
+        - generic [ref=e35]: Notifications
+      - link "Complaints" [ref=e36] [cursor=pointer]:
+        - /url: /employer/complaints
+        - img [ref=e37]
+        - generic [ref=e39]: Complaints
+      - link "My Jobs" [ref=e40] [cursor=pointer]:
+        - /url: /employer/dashboard
+        - img [ref=e41]
+        - generic [ref=e44]: My Jobs
+    - generic [ref=e45]:
+      - link "Profile" [ref=e46] [cursor=pointer]:
+        - /url: /employer/profile
+        - img [ref=e47]
+        - generic [ref=e50]: Profile
+      - link "Settings" [ref=e51] [cursor=pointer]:
+        - /url: /employer/settings
+        - img [ref=e52]
+        - generic [ref=e55]: Settings
+      - button "Sign out" [ref=e56] [cursor=pointer]:
+        - img [ref=e57]
+        - generic [ref=e60]: Sign out
+  - main [ref=e62]:
+    - generic [ref=e63]:
+      - link "My Jobs" [ref=e64] [cursor=pointer]:
+        - /url: /employer/dashboard
+        - img [ref=e65]
+        - text: My Jobs
+      - generic [ref=e67]:
+        - generic [ref=e68]:
+          - generic [ref=e69]:
+            - generic [ref=e70]: 🧹
+            - generic [ref=e71]: Cleaning
+          - generic [ref=e72]: In Progress
+        - heading "House cleaner needed for 3-bedroom apartment in Bonanjo" [level=1] [ref=e73]
+        - generic [ref=e74]: 18 000 XAF
+        - generic [ref=e75]:
+          - generic [ref=e76]:
+            - img [ref=e77]
+            - text: Douala · Rue de la Paix, Bonanjo
+          - generic [ref=e80]:
+            - img [ref=e81]
+            - text: 1 day
+      - generic [ref=e84]:
+        - heading "Description" [level=2] [ref=e85]
+        - paragraph [ref=e86]: We need an experienced house cleaner to clean our 3-bedroom apartment in Bonanjo. Tasks include mopping floors, cleaning bathrooms, kitchen, and dusting all rooms. Cleaning supplies will be provided.
+      - generic [ref=e87]:
+        - heading "Actions" [level=2] [ref=e88]
+        - generic [ref=e89]:
+          - link "View Chat" [ref=e90] [cursor=pointer]:
+            - /url: /employer/jobs/74846cf3-30eb-4f67-96ae-c6adcac7c826/chat
+            - img [ref=e91]
+            - text: View Chat
+          - button "Mark as Completed" [active] [ref=e93] [cursor=pointer]:
+            - img [ref=e94]
+            - text: Mark as Completed
+      - generic [ref=e97]:
+        - heading "Selected Worker" [level=2] [ref=e98]
+        - generic [ref=e99]:
+          - generic [ref=e100]: P
+          - paragraph [ref=e102]: Paul Tabi
+          - link "View Profile" [ref=e103] [cursor=pointer]:
+            - /url: /profile/00e57c9e-cc8f-48d4-89f5-a264fc85a7b6
+      - generic [ref=e105]:
+        - heading "Mark as Completed?" [level=2] [ref=e106]
+        - paragraph [ref=e107]: This will mark the job as completed and notify the worker. This action cannot be undone.
+        - generic [ref=e108]:
+          - button "Cancel" [ref=e109] [cursor=pointer]
+          - button "Mark Completed" [ref=e110] [cursor=pointer]

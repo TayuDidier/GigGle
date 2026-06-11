@@ -1,0 +1,94 @@
+- generic [ref=e5]:
+  - complementary [ref=e6]:
+    - generic [ref=e7]:
+      - generic [ref=e8]: GigGle
+      - generic [ref=e9]: ✦
+    - generic [ref=e11]:
+      - img [ref=e13]
+      - generic [ref=e16]:
+        - paragraph [ref=e17]: Paul Tabi
+        - paragraph [ref=e18]: Worker
+    - navigation [ref=e19]:
+      - link "Dashboard" [ref=e20] [cursor=pointer]:
+        - /url: /worker/dashboard
+        - img [ref=e21]
+        - generic [ref=e26]: Dashboard
+      - link "Browse Jobs" [ref=e27] [cursor=pointer]:
+        - /url: /worker/browse
+        - img [ref=e28]
+        - generic [ref=e31]: Browse Jobs
+      - link "Applications" [ref=e32] [cursor=pointer]:
+        - /url: /worker/applications
+        - img [ref=e33]
+        - generic [ref=e36]: Applications
+      - link "History" [ref=e37] [cursor=pointer]:
+        - /url: /worker/history
+        - img [ref=e38]
+        - generic [ref=e41]: History
+      - link "Notifications" [ref=e42] [cursor=pointer]:
+        - /url: /worker/notifications
+        - img [ref=e43]
+        - generic [ref=e46]: Notifications
+      - link "Complaints" [ref=e47] [cursor=pointer]:
+        - /url: /worker/complaints
+        - img [ref=e48]
+        - generic [ref=e50]: Complaints
+    - generic [ref=e51]:
+      - link "Profile" [ref=e52] [cursor=pointer]:
+        - /url: /worker/profile
+        - img [ref=e53]
+        - generic [ref=e56]: Profile
+      - link "Settings" [ref=e57] [cursor=pointer]:
+        - /url: /worker/settings
+        - img [ref=e58]
+        - generic [ref=e61]: Settings
+      - button "Sign out" [ref=e62] [cursor=pointer]:
+        - img [ref=e63]
+        - generic [ref=e66]: Sign out
+  - main [ref=e68]:
+    - generic [ref=e200]:
+      - link "Browse Jobs" [ref=e202] [cursor=pointer]:
+        - /url: /worker/browse
+        - img [ref=e203]
+        - text: Browse Jobs
+      - generic [ref=e205]:
+        - generic [ref=e206]:
+          - generic [ref=e207]:
+            - generic [ref=e208]:
+              - generic [ref=e209]: 🧹
+              - generic [ref=e210]: Cleaning
+            - generic [ref=e211]: Open
+          - heading "House cleaner needed for 3-bedroom apartment in Bonanjo" [level=1] [ref=e212]
+          - generic [ref=e213]: 15 000 XAF
+          - generic [ref=e215]:
+            - img [ref=e216]
+            - text: Douala · Rue de la Paix, Bonanjo
+        - generic [ref=e219]:
+          - heading "Job Description" [level=2] [ref=e220]
+          - paragraph [ref=e221]: We need a thorough house cleaner for a 3-bedroom apartment in Bonanjo, Douala. The job includes sweeping, mopping, dusting all surfaces, cleaning bathrooms and kitchen. Must bring own cleaning supplies. Job should take about 4-5 hours.
+        - generic [ref=e222]:
+          - heading "About the Employer" [level=2] [ref=e223]
+          - generic [ref=e224]:
+            - generic [ref=e225]: M
+            - generic [ref=e226]:
+              - paragraph [ref=e227]: Marie Nkomo
+              - paragraph [ref=e228]: Douala
+            - link "View Profile" [ref=e229] [cursor=pointer]:
+              - /url: /profile/da19c577-4a05-4467-bed3-0155066463ae
+        - generic [ref=e230]:
+          - heading "Apply for this Job" [level=2] [ref=e231]
+          - button "Apply Now" [active] [ref=e232] [cursor=pointer]:
+            - img [ref=e233]
+            - text: Apply Now
+      - generic [ref=e237]:
+        - heading "Apply for \"House cleaner needed for 3-bedroom apartment in Bonanjo\"" [level=2] [ref=e238]
+        - paragraph [ref=e239]: Add a cover note to introduce yourself (optional).
+        - generic [ref=e240]: Cover Note
+        - textbox "Tell the employer why you're a great fit…" [ref=e241]
+        - paragraph [ref=e242]: 0/500
+        - generic [ref=e243]:
+          - button "Cancel" [ref=e244] [cursor=pointer]
+          - button "Submit Application" [ref=e245] [cursor=pointer]:
+            - generic [ref=e246]:
+              - img [ref=e247]
+              - text: Submit Application

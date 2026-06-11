@@ -1,0 +1,15 @@
+- generic [ref=e4]:
+  - img [ref=e6]
+  - generic [ref=e8]: "404"
+  - heading "Page Not Found" [level=1] [ref=e9]
+  - paragraph [ref=e10]: The page you're looking for doesn't exist or has been moved. Double-check the URL, or head back home.
+  - generic [ref=e11]:
+    - link "Go Home" [ref=e12] [cursor=pointer]:
+      - /url: /
+      - img [ref=e13]
+      - text: Go Home
+    - button "Go Back" [ref=e15] [cursor=pointer]
+  - paragraph [ref=e16]:
+    - text: Lost? Email us at
+    - link "hello@gigle.cm" [ref=e17] [cursor=pointer]:
+      - /url: mailto:hello@gigle.cm

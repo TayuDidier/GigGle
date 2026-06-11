@@ -1,0 +1,83 @@
+- generic [ref=e5]:
+  - complementary [ref=e6]:
+    - generic [ref=e7]:
+      - generic [ref=e8]: GigGle
+      - generic [ref=e9]: ✦
+    - generic [ref=e11]:
+      - img [ref=e13]
+      - generic [ref=e16]:
+        - paragraph [ref=e17]: Marie Nkomo
+        - paragraph [ref=e18]: Employer
+    - navigation [ref=e19]:
+      - link "Dashboard" [active] [ref=e20] [cursor=pointer]:
+        - /url: /employer/dashboard
+        - img [ref=e21]
+        - generic [ref=e26]: Dashboard
+      - link "Post a Job" [ref=e27] [cursor=pointer]:
+        - /url: /employer/post-job
+        - img [ref=e28]
+        - generic [ref=e30]: Post a Job
+      - link "Notifications" [ref=e31] [cursor=pointer]:
+        - /url: /employer/notifications
+        - img [ref=e32]
+        - generic [ref=e35]: Notifications
+      - link "Complaints" [ref=e36] [cursor=pointer]:
+        - /url: /employer/complaints
+        - img [ref=e37]
+        - generic [ref=e39]: Complaints
+      - link "My Jobs" [ref=e40] [cursor=pointer]:
+        - /url: /employer/dashboard
+        - img [ref=e41]
+        - generic [ref=e44]: My Jobs
+    - generic [ref=e45]:
+      - link "Profile" [ref=e46] [cursor=pointer]:
+        - /url: /employer/profile
+        - img [ref=e47]
+        - generic [ref=e50]: Profile
+      - link "Settings" [ref=e51] [cursor=pointer]:
+        - /url: /employer/settings
+        - img [ref=e52]
+        - generic [ref=e55]: Settings
+      - button "Sign out" [ref=e56] [cursor=pointer]:
+        - img [ref=e57]
+        - generic [ref=e60]: Sign out
+  - main [ref=e62]:
+    - generic [ref=e119]:
+      - generic [ref=e120]:
+        - generic [ref=e121]:
+          - heading "Good afternoon, Marie 👋" [level=1] [ref=e122]
+          - paragraph [ref=e123]: Manage your job listings
+        - link "Post a New Job" [ref=e124] [cursor=pointer]:
+          - /url: /employer/post-job
+          - img [ref=e125]
+          - text: Post a New Job
+      - generic [ref=e127]:
+        - generic [ref=e128]:
+          - paragraph [ref=e129]: "1"
+          - paragraph [ref=e130]: Total Posted
+        - generic [ref=e131]:
+          - paragraph [ref=e132]: "0"
+          - paragraph [ref=e133]: Open
+        - generic [ref=e134]:
+          - paragraph [ref=e135]: "0"
+          - paragraph [ref=e136]: In Progress
+        - generic [ref=e137]:
+          - paragraph [ref=e138]: "1"
+          - paragraph [ref=e139]: Completed
+      - generic [ref=e140]:
+        - heading "My Jobs" [level=2] [ref=e142]
+        - generic [ref=e145]:
+          - generic [ref=e146]:
+            - generic [ref=e147]: 🧹
+            - generic [ref=e148]:
+              - paragraph [ref=e149]: House cleaner needed for 3-bedroom apartment in Bonanjo
+              - generic [ref=e150]:
+                - generic [ref=e151]: Cleaning
+                - generic [ref=e152]: 18,000 XAF
+                - generic [ref=e153]: 30 May 2026
+          - generic [ref=e154]:
+            - generic [ref=e155]: Completed
+            - link "Manage" [ref=e156] [cursor=pointer]:
+              - /url: /employer/jobs/74846cf3-30eb-4f67-96ae-c6adcac7c826/applicants
+              - text: Manage
+              - img [ref=e157]

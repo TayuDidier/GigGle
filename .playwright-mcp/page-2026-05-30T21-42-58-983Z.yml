@@ -1,0 +1,61 @@
+- generic [ref=e36]:
+  - generic [ref=e37]:
+    - generic [ref=e38]: GigGle
+    - generic [ref=e39]: ✦
+  - generic [ref=e40]:
+    - generic [ref=e41]:
+      - img [ref=e68]
+      - generic [ref=e46]: "2"
+      - generic [ref=e49]: "3"
+    - heading "Describe your skills" [level=1] [ref=e70]
+    - paragraph [ref=e51]: Let employers know what you're great at
+    - generic [ref=e71]:
+      - generic [ref=e72]:
+        - generic [ref=e73]: About you
+        - textbox "Briefly describe what you're good at and any experience you have..." [ref=e74]: Experienced house cleaner with 3 years of work in Douala. Skilled in deep cleaning, laundry, and kitchen work. Available on weekends and weekdays.
+        - paragraph [ref=e75]: 146/500
+      - generic [ref=e76]:
+        - generic [ref=e77]: Types of work you can do
+        - paragraph [ref=e78]: Select all that apply
+        - generic [ref=e79]:
+          - button "🧹 Cleaning" [active] [ref=e80] [cursor=pointer]:
+            - generic [ref=e81]: 🧹
+            - generic [ref=e82]: Cleaning
+          - button "📚 Tutoring" [ref=e83] [cursor=pointer]:
+            - generic [ref=e84]: 📚
+            - generic [ref=e85]: Tutoring
+          - button "🔧 Repairs" [ref=e86] [cursor=pointer]:
+            - generic [ref=e87]: 🔧
+            - generic [ref=e88]: Repairs
+          - button "❤️ Caregiving" [ref=e89] [cursor=pointer]:
+            - generic [ref=e90]: ❤️
+            - generic [ref=e91]: Caregiving
+          - button "📦 Delivery" [ref=e92] [cursor=pointer]:
+            - generic [ref=e93]: 📦
+            - generic [ref=e94]: Delivery
+          - button "🎉 Event Labor" [ref=e95] [cursor=pointer]:
+            - generic [ref=e96]: 🎉
+            - generic [ref=e97]: Event Labor
+          - button "💻 Digital Services" [ref=e98] [cursor=pointer]:
+            - generic [ref=e99]: 💻
+            - generic [ref=e100]: Digital Services
+          - button "🌿 Gardening" [ref=e101] [cursor=pointer]:
+            - generic [ref=e102]: 🌿
+            - generic [ref=e103]: Gardening
+          - button "🚚 Moving" [ref=e104] [cursor=pointer]:
+            - generic [ref=e105]: 🚚
+            - generic [ref=e106]: Moving
+          - button "👨‍🍳 Cooking" [ref=e107] [cursor=pointer]:
+            - generic [ref=e108]: 👨‍🍳
+            - generic [ref=e109]: Cooking
+          - button "💼 Other" [ref=e110] [cursor=pointer]:
+            - generic [ref=e111]: 💼
+            - generic [ref=e112]: Other
+    - generic [ref=e62]:
+      - button "Back" [ref=e113] [cursor=pointer]:
+        - img [ref=e114]
+        - text: Back
+      - button "Next" [ref=e64] [cursor=pointer]:
+        - text: Next
+        - img [ref=e65]
+  - paragraph [ref=e67]: Step 2 of 3

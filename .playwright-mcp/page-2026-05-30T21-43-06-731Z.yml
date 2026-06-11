@@ -1,0 +1,27 @@
+- generic [ref=e36]:
+  - generic [ref=e37]:
+    - generic [ref=e38]: GigGle
+    - generic [ref=e39]: ✦
+  - generic [ref=e40]:
+    - generic [ref=e41]:
+      - img [ref=e68]
+      - img [ref=e116]
+      - generic [ref=e49]: "3"
+    - heading "Add a profile photo" [level=1] [ref=e118]
+    - paragraph [ref=e51]: A photo helps build trust with employers
+    - generic [ref=e119]:
+      - img [ref=e121]
+      - button "Upload photo" [ref=e124] [cursor=pointer]:
+        - img [ref=e125]
+        - text: Upload photo
+      - paragraph [ref=e128]: JPG, PNG or WebP — max 2MB
+    - generic [ref=e62]:
+      - button "Back" [ref=e113] [cursor=pointer]:
+        - img [ref=e114]
+        - text: Back
+      - generic [ref=e63]:
+        - button "Skip for now" [ref=e129] [cursor=pointer]
+        - button "Complete Setup" [active] [ref=e130] [cursor=pointer]:
+          - text: Complete Setup
+          - img [ref=e131]
+  - paragraph [ref=e67]: Step 3 of 3

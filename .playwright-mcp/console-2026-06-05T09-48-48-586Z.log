@@ -1,0 +1,3 @@
+[    2465ms] [INFO] %cDownload the React DevTools for a better development experience: https://reactjs.org/link/react-devtools font-weight:bold @ http://localhost:5173/node_modules/.vite/deps/chunk-WERSD76P.js?v=de16e338:21550
+[   13002ms] [ERROR] Failed to load resource: the server responded with a status of 400 () @ https://omcakemsuifgfanvepbs.supabase.co/auth/v1/token?grant_type=password:0
+[   58486ms] [ERROR] Failed to load resource: the server responded with a status of 400 () @ https://omcakemsuifgfanvepbs.supabase.co/auth/v1/token?grant_type=password:0

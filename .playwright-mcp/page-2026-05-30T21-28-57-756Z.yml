@@ -1,0 +1,117 @@
+- generic [ref=e5]:
+  - complementary [ref=e6]:
+    - generic [ref=e7]:
+      - generic [ref=e8]: GigGle
+      - generic [ref=e9]: ✦
+    - generic [ref=e11]:
+      - img [ref=e13]
+      - generic [ref=e16]:
+        - paragraph [ref=e17]: Marie Nkomo
+        - paragraph [ref=e18]: Employer
+    - navigation [ref=e19]:
+      - link "Dashboard" [ref=e20] [cursor=pointer]:
+        - /url: /employer/dashboard
+        - img [ref=e21]
+        - generic [ref=e26]: Dashboard
+      - link "Post a Job" [ref=e27] [cursor=pointer]:
+        - /url: /employer/post-job
+        - img [ref=e28]
+        - generic [ref=e30]: Post a Job
+      - link "Notifications" [ref=e31] [cursor=pointer]:
+        - /url: /employer/notifications
+        - img [ref=e32]
+        - generic [ref=e35]: Notifications
+      - link "My Jobs" [ref=e36] [cursor=pointer]:
+        - /url: /employer/dashboard
+        - img [ref=e37]
+        - generic [ref=e40]: My Jobs
+    - generic [ref=e41]:
+      - link "Profile" [ref=e42] [cursor=pointer]:
+        - /url: /employer/profile
+        - img [ref=e43]
+        - generic [ref=e46]: Profile
+      - link "Settings" [ref=e47] [cursor=pointer]:
+        - /url: /employer/settings
+        - img [ref=e48]
+        - generic [ref=e51]: Settings
+      - button "Sign out" [ref=e52] [cursor=pointer]:
+        - img [ref=e53]
+        - generic [ref=e56]: Sign out
+  - main [ref=e58]:
+    - generic [ref=e59]:
+      - generic [ref=e60]:
+        - link "Back" [ref=e61] [cursor=pointer]:
+          - /url: /employer/dashboard
+          - img [ref=e62]
+          - text: Back
+        - heading "Post a New Job" [level=1] [ref=e64]
+        - paragraph [ref=e65]: Fill in the details to attract the right worker.
+      - generic [ref=e66]:
+        - generic [ref=e67]:
+          - generic [ref=e68]: Job Title *
+          - textbox "e.g. House cleaner needed for 3-bedroom apartment" [ref=e69]: House cleaner needed for 3-bedroom apartment in Bonanjo
+        - generic [ref=e70]:
+          - generic [ref=e71]: Category *
+          - generic [ref=e72]:
+            - button "🧹 Cleaning" [active] [ref=e73] [cursor=pointer]:
+              - generic [ref=e74]: 🧹
+              - generic [ref=e75]: Cleaning
+            - button "📚 Tutoring" [ref=e76] [cursor=pointer]:
+              - generic [ref=e77]: 📚
+              - generic [ref=e78]: Tutoring
+            - button "🔧 Repairs" [ref=e79] [cursor=pointer]:
+              - generic [ref=e80]: 🔧
+              - generic [ref=e81]: Repairs
+            - button "❤️ Caregiving" [ref=e82] [cursor=pointer]:
+              - generic [ref=e83]: ❤️
+              - generic [ref=e84]: Caregiving
+            - button "📦 Delivery" [ref=e85] [cursor=pointer]:
+              - generic [ref=e86]: 📦
+              - generic [ref=e87]: Delivery
+            - button "🎉 Event Labor" [ref=e88] [cursor=pointer]:
+              - generic [ref=e89]: 🎉
+              - generic [ref=e90]: Event Labor
+            - button "💻 Digital Services" [ref=e91] [cursor=pointer]:
+              - generic [ref=e92]: 💻
+              - generic [ref=e93]: Digital Services
+            - button "🌿 Gardening" [ref=e94] [cursor=pointer]:
+              - generic [ref=e95]: 🌿
+              - generic [ref=e96]: Gardening
+            - button "🚚 Moving" [ref=e97] [cursor=pointer]:
+              - generic [ref=e98]: 🚚
+              - generic [ref=e99]: Moving
+            - button "👨‍🍳 Cooking" [ref=e100] [cursor=pointer]:
+              - generic [ref=e101]: 👨‍🍳
+              - generic [ref=e102]: Cooking
+            - button "💼 Other" [ref=e103] [cursor=pointer]:
+              - generic [ref=e104]: 💼
+              - generic [ref=e105]: Other
+        - generic [ref=e106]:
+          - generic [ref=e107]: Description *
+          - 'textbox "Describe the job in detail: what needs to be done, when, any requirements…" [ref=e108]': We need an experienced house cleaner to clean our 3-bedroom apartment in Bonanjo. Tasks include mopping floors, cleaning bathrooms, kitchen, and dusting all rooms. Cleaning supplies will be provided.
+          - paragraph [ref=e110]: 199/2000
+        - generic [ref=e111]:
+          - generic [ref=e112]: Pay (XAF) *
+          - generic [ref=e113]:
+            - spinbutton [ref=e114]: "15000"
+            - generic [ref=e115]: XAF
+          - paragraph [ref=e116]: MTN MoMo / Orange Money payment confirmed after job completion.
+          - generic [ref=e126]:
+            - paragraph [ref=e127]: "Preview:"
+            - paragraph [ref=e128]: 15 000 XAF
+        - generic [ref=e117]:
+          - generic [ref=e118]: City *
+          - combobox [ref=e119]:
+            - option "Select a city"
+            - option "Douala" [selected]
+            - option "Yaounde"
+            - option "Bafoussam"
+            - option "Bamenda"
+            - option "Buea"
+            - option "Limbe"
+          - generic [ref=e120]: Street Address *
+          - textbox "e.g. Rue de la Paix, Akwa" [ref=e121]: Rue de la Paix, Bonanjo
+        - generic [ref=e122]:
+          - generic [ref=e123]: Timeline (days) — optional
+          - spinbutton [ref=e124]: "1"
+        - button "Post Job" [ref=e125] [cursor=pointer]

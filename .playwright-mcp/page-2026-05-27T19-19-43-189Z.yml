@@ -1,0 +1,42 @@
+- generic [ref=e4]:
+  - generic [ref=e5]:
+    - link "GigGle ✦" [ref=e6] [cursor=pointer]:
+      - /url: /
+      - generic [ref=e7]: GigGle
+      - generic [ref=e8]: ✦
+    - heading "Create your account" [level=1] [ref=e9]
+    - paragraph [ref=e10]: Join Cameroon's gig marketplace
+  - generic [ref=e11]:
+    - generic [ref=e12]:
+      - generic [ref=e13]: I want to...
+      - generic [ref=e14]:
+        - button "I'm looking for work" [ref=e15] [cursor=pointer]:
+          - img [ref=e17]
+          - generic [ref=e20]: I'm looking for work
+        - button "I need to hire someone" [ref=e21] [cursor=pointer]:
+          - img [ref=e23]
+          - generic [ref=e28]: I need to hire someone
+    - generic [ref=e29]:
+      - generic [ref=e30]:
+        - generic [ref=e31]: Full name
+        - textbox "Jean-Baptiste Ngono" [ref=e32]
+      - generic [ref=e33]:
+        - generic [ref=e34]: Email address
+        - textbox "you@example.com" [ref=e35]
+      - generic [ref=e36]:
+        - generic [ref=e37]: Password
+        - generic [ref=e38]:
+          - textbox "Min. 6 characters" [ref=e39]
+          - button [ref=e40] [cursor=pointer]:
+            - img [ref=e41]
+      - generic [ref=e44]:
+        - generic [ref=e45]: Confirm password
+        - generic [ref=e46]:
+          - textbox "Repeat your password" [ref=e47]
+          - button [ref=e48] [cursor=pointer]:
+            - img [ref=e49]
+      - button "Create Account" [ref=e52] [cursor=pointer]
+    - paragraph [ref=e53]:
+      - text: Already have an account?
+      - link "Login" [ref=e54] [cursor=pointer]:
+        - /url: /login

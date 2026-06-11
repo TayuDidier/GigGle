@@ -1,0 +1,2 @@
+[     611ms] [INFO] %cDownload the React DevTools for a better development experience: https://reactjs.org/link/react-devtools font-weight:bold @ http://localhost:5173/node_modules/.vite/deps/chunk-WERSD76P.js?v=de16e338:21550
+[   36192ms] [ERROR] Failed to load resource: the server responded with a status of 403 () @ https://omcakemsuifgfanvepbs.supabase.co/rest/v1/ratings?select=*:0

@@ -1,0 +1,121 @@
+- generic [ref=e5]:
+  - complementary [ref=e6]:
+    - generic [ref=e7]:
+      - generic [ref=e8]: GigGle
+      - generic [ref=e9]: ✦
+    - generic [ref=e11]:
+      - img [ref=e13]
+      - generic [ref=e16]:
+        - paragraph [ref=e17]: Marie Nkomo
+        - paragraph [ref=e18]: Employer
+    - navigation [ref=e19]:
+      - link "Dashboard" [ref=e20] [cursor=pointer]:
+        - /url: /employer/dashboard
+        - img [ref=e21]
+        - generic [ref=e26]: Dashboard
+      - link "Post a Job" [ref=e27] [cursor=pointer]:
+        - /url: /employer/post-job
+        - img [ref=e28]
+        - generic [ref=e30]: Post a Job
+      - link "Notifications" [ref=e31] [cursor=pointer]:
+        - /url: /employer/notifications
+        - img [ref=e32]
+        - generic [ref=e35]: Notifications
+      - link "Complaints" [ref=e36] [cursor=pointer]:
+        - /url: /employer/complaints
+        - img [ref=e37]
+        - generic [ref=e39]: Complaints
+      - link "My Jobs" [ref=e40] [cursor=pointer]:
+        - /url: /employer/dashboard
+        - img [ref=e41]
+        - generic [ref=e44]: My Jobs
+    - generic [ref=e45]:
+      - link "Profile" [ref=e46] [cursor=pointer]:
+        - /url: /employer/profile
+        - img [ref=e47]
+        - generic [ref=e50]: Profile
+      - link "Settings" [ref=e51] [cursor=pointer]:
+        - /url: /employer/settings
+        - img [ref=e52]
+        - generic [ref=e55]: Settings
+      - button "Sign out" [ref=e56] [cursor=pointer]:
+        - img [ref=e57]
+        - generic [ref=e60]: Sign out
+  - main [ref=e62]:
+    - generic [ref=e63]:
+      - generic [ref=e64]:
+        - link "Back" [ref=e65] [cursor=pointer]:
+          - /url: /employer/dashboard
+          - img [ref=e66]
+          - text: Back
+        - heading "Post a New Job" [level=1] [ref=e68]
+        - paragraph [ref=e69]: Fill in the details to attract the right worker.
+      - generic [ref=e70]:
+        - generic [ref=e71]:
+          - generic [ref=e72]: Job Title *
+          - textbox "e.g. House cleaner needed for 3-bedroom apartment" [ref=e73]: Plumber needed urgently for bathroom pipe repair in Akwa
+        - generic [ref=e74]:
+          - generic [ref=e75]: Category *
+          - generic [ref=e76]:
+            - button "🧹 Cleaning" [ref=e77] [cursor=pointer]:
+              - generic [ref=e78]: 🧹
+              - generic [ref=e79]: Cleaning
+            - button "📚 Tutoring" [ref=e80] [cursor=pointer]:
+              - generic [ref=e81]: 📚
+              - generic [ref=e82]: Tutoring
+            - button "🔧 Repairs" [active] [ref=e83] [cursor=pointer]:
+              - generic [ref=e84]: 🔧
+              - generic [ref=e85]: Repairs
+            - button "❤️ Caregiving" [ref=e86] [cursor=pointer]:
+              - generic [ref=e87]: ❤️
+              - generic [ref=e88]: Caregiving
+            - button "📦 Delivery" [ref=e89] [cursor=pointer]:
+              - generic [ref=e90]: 📦
+              - generic [ref=e91]: Delivery
+            - button "🎉 Event Labor" [ref=e92] [cursor=pointer]:
+              - generic [ref=e93]: 🎉
+              - generic [ref=e94]: Event Labor
+            - button "💻 Digital Services" [ref=e95] [cursor=pointer]:
+              - generic [ref=e96]: 💻
+              - generic [ref=e97]: Digital Services
+            - button "🌿 Gardening" [ref=e98] [cursor=pointer]:
+              - generic [ref=e99]: 🌿
+              - generic [ref=e100]: Gardening
+            - button "🚚 Moving" [ref=e101] [cursor=pointer]:
+              - generic [ref=e102]: 🚚
+              - generic [ref=e103]: Moving
+            - button "👨‍🍳 Cooking" [ref=e104] [cursor=pointer]:
+              - generic [ref=e105]: 👨‍🍳
+              - generic [ref=e106]: Cooking
+            - button "💼 Other" [ref=e107] [cursor=pointer]:
+              - generic [ref=e108]: 💼
+              - generic [ref=e109]: Other
+        - generic [ref=e110]:
+          - generic [ref=e111]: Description *
+          - 'textbox "Describe the job in detail: what needs to be done, when, any requirements…" [ref=e112]': Urgent plumbing work needed in a 2-bathroom apartment in Akwa, Douala. There is a leaking pipe under the sink and the shower pressure is very low. Must be experienced with residential plumbing, able to assess and fix same day. Tools must be provided by the worker.
+          - paragraph [ref=e114]: 264/2000
+        - generic [ref=e115]:
+          - generic [ref=e116]: Pay (XAF) *
+          - generic [ref=e117]:
+            - spinbutton [ref=e118]: "25000"
+            - generic [ref=e119]: XAF
+          - paragraph [ref=e120]: MTN MoMo / Orange Money payment confirmed after job completion.
+          - generic [ref=e121]:
+            - paragraph [ref=e122]: "Preview:"
+            - paragraph [ref=e123]: 25 000 XAF
+        - generic [ref=e124]:
+          - generic [ref=e125]: City *
+          - combobox [ref=e126]:
+            - option "Select a city"
+            - option "Douala" [selected]
+            - option "Yaounde"
+            - option "Bafoussam"
+            - option "Bamenda"
+            - option "Buea"
+            - option "Limbe"
+          - generic [ref=e127]: Street Address *
+          - textbox "e.g. Rue de la Paix, Akwa" [ref=e128]
+        - generic [ref=e129]:
+          - generic [ref=e130]: Timeline (days) — optional
+          - spinbutton [ref=e131]
+        - button "Post Job" [ref=e132] [cursor=pointer]

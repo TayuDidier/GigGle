@@ -1,0 +1,51 @@
+[   41449ms] [WARNING] [GSI_LOGGER]: Your client application uses one of the Google One Tap prompt UI status methods that may stop functioning when FedCM becomes mandatory. Refer to the migration guide to update your code accordingly and opt-in to FedCM to test your changes. Learn more: https://developers.google.com/identity/gsi/web/guides/fedcm-migration?s=dc#display_moment and https://developers.google.com/identity/gsi/web/guides/fedcm-migration?s=dc#skipped_moment @ https://accounts.google.com/gsi/client:86
+[   42311ms] [ERROR] Failed to load resource: the server responded with a status of 403 () @ https://accounts.google.com/gsi/status?client_id=626901221629-15ss1s412okbv1qg834f6e3h8chm6ubk.apps.googleusercontent.com&cas=f%2BXJNSX%2Fxx6%2B0cnIa%2F2Qn8UmJTjinRRqCJcldFWrTVM&bs=BkZsi%2FTBfNnwI8PNdQbmBGWZO69P8GCZLD1V5%2BEoKCk:0
+[   44486ms] [WARNING] [GPT] PubAdsService.enableSingleRequest is deprecated, use googletag.setConfig({singleRequest: ...}) instead.
+https://goo.gle/gpt-message#170 @ https://securepubads.g.doubleclick.net/pagead/managed/js/gpt/m202606020101/pubads_impl.js?cb=31098926:18
+[   44521ms] [WARNING] [GPT] Slot.setCollapseEmptyDiv is deprecated, use Slot.setConfig({collapseDiv: ...}) instead.
+https://goo.gle/gpt-message#171 @ https://securepubads.g.doubleclick.net/pagead/managed/js/gpt/m202606020101/pubads_impl.js?cb=31098926:18
+[   45660ms] [ERROR] Failed to load resource: the server responded with a status of 400 () @ https://ups.analytics.yahoo.com/ups/58713/fed?v=1&1p=0&gdpr=0&gdpr_consent=&us_privacy=&url=https://editor.plantuml.com/&pixelId=58713:0
+[   45661ms] [ERROR] Attestation check for Protected Audience on https://onetag-sys.com failed. @ https://editor.plantuml.com/:0
+[   45662ms] [ERROR] Attestation check for Protected Audience on https://ap.lijit.com failed. @ https://editor.plantuml.com/:0
+[   45662ms] [ERROR] Attestation check for Protected Audience on https://prebid.media.net failed. @ https://editor.plantuml.com/:0
+[   45662ms] [ERROR] Attestation check for Protected Audience on https://direct.adsrvr.org failed. @ https://editor.plantuml.com/:0
+[   45662ms] [ERROR] Attestation check for Protected Audience on https://web.ads.aps.amazon-adsystem.com failed. @ https://editor.plantuml.com/:0
+[   45662ms] [ERROR] Attestation check for Protected Audience on https://ib.adnxs.com failed. @ https://editor.plantuml.com/:0
+[   45663ms] [ERROR] Attestation check for Protected Audience on https://fastlane.rubiconproject.com failed. @ https://editor.plantuml.com/:0
+[   45663ms] [ERROR] Attestation check for Protected Audience on https://htlb.casalemedia.com failed. @ https://editor.plantuml.com/:0
+[   45707ms] [ERROR] Failed to load resource: the server responded with a status of 451 () @ https://api.rlcdn.com/api/identity/envelope?pid=14067:0
+[   45976ms] [ERROR] Attestation check for Protected Audience on https://grid-bidder.criteo.com failed. @ https://editor.plantuml.com/:0
+[   45976ms] [ERROR] Attestation check for Protected Audience on https://hbopenbid.pubmatic.com failed. @ https://editor.plantuml.com/:0
+[   46387ms] [ERROR] Failed to load resource: the server responded with a status of 404 () @ https://js-sec.indexww.com/prebid/topics/topics_frame.html?bidder=ix:0
+[   46395ms] [LOG] Called iframe: acdn.adnxs.com [] 
+Number of topics:  0 @ https://acdn.adnxs.com/prebid/topics/topics_frame.html?bidder=appnexus:17
+[   46483ms] [LOG] Called iframe: ads.pubmatic.com [] 
+Number of topics:  0 @ https://ads.pubmatic.com/AdServer/js/topics/topics_frame.html?bidder=pubmatic:19
+[   46540ms] [ERROR] Failed to load resource: the server responded with a status of 404 () @ https://eb2.3lift.com/topics/topics_frame.html?bidder=triplelift:0
+[   46578ms] [ERROR] Failed to load resource: the server responded with a status of 404 () @ https://btlr.sharethrough.com/topics/topics_frame.html?bidder=sharethrough:0
+[   46609ms] [ERROR] Mixed Content: The page at 'https://editor.plantuml.com/' was loaded over HTTPS, but requested an insecure frame 'http://www.optmd.com/'. This request has been blocked; the content must be served over HTTPS. @ https://js-sec.indexww.com/prebid/topics/topics_frame.html?bidder=ix:0
+[   46694ms] [ERROR] Provider's token is invalid. @ https://editor.plantuml.com/:0
+[   46695ms] [ERROR] [GSI_LOGGER]: FedCM get() rejects with NetworkError: Error retrieving a token. @ https://accounts.google.com/gsi/client:87
+[   46758ms] [ERROR] Failed to load resource: the server responded with a status of 400 () @ https://ups.analytics.yahoo.com/ups/58713/fed?v=1&1p=0&gdpr=0&gdpr_consent=&us_privacy=&url=https://editor.plantuml.com/&pixelId=58713:0
+[   46808ms] [LOG] Called iframe: onetag-sys.com [] 
+Number of topics:  0 @ https://onetag-sys.com/static/topicsapi.html?bidder=onetag:13
+[   50169ms] [WARNING] [GPT] Using deprecated googletag.encryptedSignalProviders. Please use googletag.secureSignalProviders instead.
+https://goo.gle/gpt-message#155 @ https://securepubads.g.doubleclick.net/pagead/managed/js/gpt/m202606020101/pubads_impl.js?cb=31098926:18
+[   50611ms] [WARNING] [GPT] Using deprecated googletag.encryptedSignalProviders. Please use googletag.secureSignalProviders instead.
+https://goo.gle/gpt-message#155 @ https://securepubads.g.doubleclick.net/pagead/managed/js/gpt/m202606020101/pubads_impl.js?cb=31098926:18
+[   50714ms] [ERROR] Failed to load resource: the server responded with a status of 400 () @ https://ups.analytics.yahoo.com/ups/58813/fed?gpp_sid=-1&v=1&url=https%3A%2F%2Feditor.plantuml.com%2F:0
+[   51823ms] [WARNING] Google Deploy of the SharedId library has been deprecated. Please select another option in the GAM UI. If you use Prebid, we suggest the Prebid.js UserId option. If you do not, you may configure GAM to allow Google to share a first party user identifier with OB and AB participants, which is either the publisherProvidedId or the __gads value when that is missing. @ https://cdn.jsdelivr.net/gh/prebid/shared-id/pubcid.js/docs/pubcid.min.js:0
+[   53421ms] [INFO] Slow network is detected. See https://www.chromestatus.com/feature/5636954674692096 for more details. Fallback font will be used while loading: https://fonts.gstatic.com/s/opensans/v44/memvYaGs126MiZpBA-UvWbX2vVnXBbObj2OVTS-muw.woff2 @ https://editor.plantuml.com/:0
+[   46387ms] [ERROR] Failed to load resource: the server responded with a status of 404 () @ https://js-sec.indexww.com/prebid/topics/topics_frame.html?bidder=ix:0
+[   46609ms] [ERROR] Mixed Content: The page at 'https://editor.plantuml.com/' was loaded over HTTPS, but requested an insecure frame 'http://www.optmd.com/'. This request has been blocked; the content must be served over HTTPS. @ https://js-sec.indexww.com/prebid/topics/topics_frame.html?bidder=ix:0
+[   53762ms] [INFO] Powered by AMP ⚡ HTML – Version 2605071401000 https://editor.plantuml.com/ @ https://cdn.ampproject.org/rtv/012605071401000/amp4ads-v0.mjs:1
+[   79928ms] [ERROR] Attestation check for Protected Audience on https://htlb.casalemedia.com failed. @ https://editor.plantuml.com/:0
+[   79928ms] [ERROR] Attestation check for Protected Audience on https://direct.adsrvr.org failed. @ https://editor.plantuml.com/:0
+[   79929ms] [ERROR] Attestation check for Protected Audience on https://ap.lijit.com failed. @ https://editor.plantuml.com/:0
+[   79929ms] [ERROR] Attestation check for Protected Audience on https://ib.adnxs.com failed. @ https://editor.plantuml.com/:0
+[   79930ms] [ERROR] Attestation check for Protected Audience on https://prebid.media.net failed. @ https://editor.plantuml.com/:0
+[   79930ms] [ERROR] Attestation check for Protected Audience on https://web.ads.aps.amazon-adsystem.com failed. @ https://editor.plantuml.com/:0
+[   79930ms] [ERROR] Attestation check for Protected Audience on https://onetag-sys.com failed. @ https://editor.plantuml.com/:0
+[   79931ms] [ERROR] Attestation check for Protected Audience on https://fastlane.rubiconproject.com failed. @ https://editor.plantuml.com/:0
+[   79940ms] [ERROR] Attestation check for Protected Audience on https://hbopenbid.pubmatic.com failed. @ https://editor.plantuml.com/:0
+[   79945ms] [ERROR] Attestation check for Protected Audience on https://grid-bidder.criteo.com failed. @ https://editor.plantuml.com/:0

@@ -1,0 +1,5 @@
+[     246ms] [INFO] %cDownload the React DevTools for a better development experience: https://reactjs.org/link/react-devtools font-weight:bold @ http://localhost:5175/node_modules/.vite/deps/chunk-WERSD76P.js?v=27697d25:21550
+[  121527ms] [LOG] [vite] server connection lost. Polling for restart... @ http://localhost:5175/@vite/client:559
+[  121606ms] [ERROR] Failed to load resource: net::ERR_CONNECTION_RESET @ http://localhost:5175/:0
+[  125762ms] [INFO] %cDownload the React DevTools for a better development experience: https://reactjs.org/link/react-devtools font-weight:bold @ http://localhost:5175/node_modules/.vite/deps/chunk-WERSD76P.js?v=27697d25:21550
+[  561391ms] [INFO] %cDownload the React DevTools for a better development experience: https://reactjs.org/link/react-devtools font-weight:bold @ http://localhost:5175/node_modules/.vite/deps/chunk-WERSD76P.js?v=de16e338:21550

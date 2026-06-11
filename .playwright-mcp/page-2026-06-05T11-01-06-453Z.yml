@@ -1,0 +1,73 @@
+- generic [ref=e33]:
+  - complementary [ref=e34]:
+    - generic [ref=e35]:
+      - generic [ref=e36]: GigGle
+      - generic [ref=e37]: ✦
+    - generic [ref=e39]:
+      - img [ref=e41]
+      - generic [ref=e44]:
+        - paragraph [ref=e45]: Paul Tabi
+        - paragraph [ref=e46]: Worker
+    - navigation [ref=e47]:
+      - link "Dashboard" [ref=e48] [cursor=pointer]:
+        - /url: /worker/dashboard
+        - img [ref=e49]
+        - generic [ref=e54]: Dashboard
+      - link "Browse Jobs" [ref=e55] [cursor=pointer]:
+        - /url: /worker/browse
+        - img [ref=e56]
+        - generic [ref=e59]: Browse Jobs
+      - link "Applications" [ref=e60] [cursor=pointer]:
+        - /url: /worker/applications
+        - img [ref=e61]
+        - generic [ref=e64]: Applications
+      - link "History" [ref=e65] [cursor=pointer]:
+        - /url: /worker/history
+        - img [ref=e66]
+        - generic [ref=e69]: History
+      - link "Notifications" [ref=e70] [cursor=pointer]:
+        - /url: /worker/notifications
+        - img [ref=e71]
+        - generic [ref=e74]: Notifications
+      - link "Complaints" [ref=e75] [cursor=pointer]:
+        - /url: /worker/complaints
+        - img [ref=e76]
+        - generic [ref=e78]: Complaints
+    - generic [ref=e79]:
+      - link "Profile" [ref=e80] [cursor=pointer]:
+        - /url: /worker/profile
+        - img [ref=e81]
+        - generic [ref=e84]: Profile
+      - link "Settings" [ref=e85] [cursor=pointer]:
+        - /url: /worker/settings
+        - img [ref=e86]
+        - generic [ref=e89]: Settings
+      - button "Sign out" [ref=e90] [cursor=pointer]:
+        - img [ref=e91]
+        - generic [ref=e94]: Sign out
+  - main [ref=e96]:
+    - generic [ref=e97]:
+      - generic [ref=e98]:
+        - heading "Good afternoon, Paul 👋" [level=1] [ref=e99]
+        - paragraph [ref=e100]: Complete jobs to build your reputation
+      - generic [ref=e101]:
+        - generic [ref=e102]:
+          - paragraph [ref=e103]: "0"
+          - paragraph [ref=e104]: Applications
+        - generic [ref=e105]:
+          - paragraph [ref=e106]: "0"
+          - paragraph [ref=e107]: Active Job
+        - generic [ref=e108]:
+          - paragraph [ref=e109]: —
+          - paragraph [ref=e110]: Rating
+      - generic [ref=e111]:
+        - heading "Active Job" [level=2] [ref=e112]
+        - generic [ref=e113]:
+          - generic [ref=e114]:
+            - img [ref=e116]
+            - generic [ref=e119]:
+              - paragraph [ref=e120]: No active job
+              - paragraph [ref=e121]: Browse available gigs near you
+          - link "Browse Jobs →" [ref=e122] [cursor=pointer]:
+            - /url: /worker/browse
+      - heading "Recent Applications" [level=2] [ref=e125]

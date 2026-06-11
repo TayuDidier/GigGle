@@ -1,0 +1,120 @@
+- generic [ref=e5]:
+  - complementary [ref=e6]:
+    - generic [ref=e7]:
+      - generic [ref=e8]: GigGle
+      - generic [ref=e9]: ✦
+    - generic [ref=e11]:
+      - img [ref=e13]
+      - generic [ref=e16]:
+        - paragraph [ref=e17]: Paul Tabi
+        - paragraph [ref=e18]: Worker
+    - navigation [ref=e19]:
+      - link "Dashboard" [ref=e20] [cursor=pointer]:
+        - /url: /worker/dashboard
+        - img [ref=e21]
+        - generic [ref=e26]: Dashboard
+      - link "Browse Jobs" [ref=e27] [cursor=pointer]:
+        - /url: /worker/browse
+        - img [ref=e28]
+        - generic [ref=e31]: Browse Jobs
+      - link "Applications" [ref=e32] [cursor=pointer]:
+        - /url: /worker/applications
+        - img [ref=e33]
+        - generic [ref=e36]: Applications
+      - link "History" [ref=e37] [cursor=pointer]:
+        - /url: /worker/history
+        - img [ref=e38]
+        - generic [ref=e41]: History
+      - link "Notifications" [ref=e42] [cursor=pointer]:
+        - /url: /worker/notifications
+        - img [ref=e43]
+        - generic [ref=e46]: Notifications
+    - generic [ref=e47]:
+      - link "Profile" [ref=e48] [cursor=pointer]:
+        - /url: /worker/profile
+        - img [ref=e49]
+        - generic [ref=e52]: Profile
+      - link "Settings" [ref=e53] [cursor=pointer]:
+        - /url: /worker/settings
+        - img [ref=e54]
+        - generic [ref=e57]: Settings
+      - button "Sign out" [ref=e58] [cursor=pointer]:
+        - img [ref=e59]
+        - generic [ref=e62]: Sign out
+  - main [ref=e64]:
+    - generic [ref=e65]:
+      - generic [ref=e66]:
+        - generic [ref=e68]:
+          - heading "Browse Jobs" [level=1] [ref=e69]
+          - paragraph [ref=e70]: 0 jobs found
+        - generic [ref=e71]:
+          - img [ref=e72]
+          - textbox "Search job titles…" [ref=e75]
+        - generic [ref=e76]:
+          - img [ref=e77]
+          - generic [ref=e78]:
+            - button "5km" [ref=e79] [cursor=pointer]
+            - button "10km" [ref=e80] [cursor=pointer]
+            - button "15km" [ref=e81] [cursor=pointer]
+            - button "25km" [ref=e82] [cursor=pointer]
+            - button "50km" [ref=e83] [cursor=pointer]
+        - generic [ref=e84]:
+          - button "All" [ref=e85] [cursor=pointer]
+          - button "🧹 Cleaning" [ref=e86] [cursor=pointer]:
+            - generic [ref=e87]: 🧹
+            - generic [ref=e88]: Cleaning
+          - button "📚 Tutoring" [ref=e89] [cursor=pointer]:
+            - generic [ref=e90]: 📚
+            - generic [ref=e91]: Tutoring
+          - button "🔧 Repairs" [active] [ref=e92] [cursor=pointer]:
+            - generic [ref=e93]: 🔧
+            - generic [ref=e94]: Repairs
+          - button "❤️ Caregiving" [ref=e95] [cursor=pointer]:
+            - generic [ref=e96]: ❤️
+            - generic [ref=e97]: Caregiving
+          - button "📦 Delivery" [ref=e98] [cursor=pointer]:
+            - generic [ref=e99]: 📦
+            - generic [ref=e100]: Delivery
+          - button "🎉 Event Labor" [ref=e101] [cursor=pointer]:
+            - generic [ref=e102]: 🎉
+            - generic [ref=e103]: Event Labor
+          - button "💻 Digital Services" [ref=e104] [cursor=pointer]:
+            - generic [ref=e105]: 💻
+            - generic [ref=e106]: Digital Services
+          - button "🌿 Gardening" [ref=e107] [cursor=pointer]:
+            - generic [ref=e108]: 🌿
+            - generic [ref=e109]: Gardening
+          - button "🚚 Moving" [ref=e110] [cursor=pointer]:
+            - generic [ref=e111]: 🚚
+            - generic [ref=e112]: Moving
+          - button "👨‍🍳 Cooking" [ref=e113] [cursor=pointer]:
+            - generic [ref=e114]: 👨‍🍳
+            - generic [ref=e115]: Cooking
+          - button "💼 Other" [ref=e116] [cursor=pointer]:
+            - generic [ref=e117]: 💼
+            - generic [ref=e118]: Other
+      - generic [ref=e119]:
+        - generic [ref=e121]:
+          - generic [ref=e122]:
+            - generic:
+              - generic:
+                - img
+            - generic:
+              - generic [ref=e124]:
+                - button "Zoom in" [ref=e125] [cursor=pointer]: +
+                - button "Zoom out" [ref=e126] [cursor=pointer]: −
+              - generic [ref=e127]:
+                - link "Leaflet" [ref=e128] [cursor=pointer]:
+                  - /url: https://leafletjs.com
+                  - img [ref=e129]
+                  - text: Leaflet
+                - text: "| ©"
+                - link "OpenStreetMap" [ref=e133] [cursor=pointer]:
+                  - /url: https://www.openstreetmap.org/copyright
+          - generic [ref=e134]:
+            - generic [ref=e137]: You
+            - generic [ref=e140]: Job
+        - generic [ref=e149]:
+          - img [ref=e150]
+          - paragraph [ref=e153]: No jobs found
+          - paragraph [ref=e154]: No jobs within 10km. Try increasing the radius or changing the category.

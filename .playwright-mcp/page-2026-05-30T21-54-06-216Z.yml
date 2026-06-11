@@ -1,0 +1,71 @@
+- generic [ref=e5]:
+  - complementary [ref=e6]:
+    - generic [ref=e7]:
+      - generic [ref=e8]: GigGle
+      - generic [ref=e9]: ✦
+    - generic [ref=e11]:
+      - img [ref=e13]
+      - generic [ref=e16]:
+        - paragraph [ref=e17]: Paul Tabi
+        - paragraph [ref=e18]: Worker
+    - navigation [ref=e19]:
+      - link "Dashboard" [ref=e20] [cursor=pointer]:
+        - /url: /worker/dashboard
+        - img [ref=e21]
+        - generic [ref=e26]: Dashboard
+      - link "Browse Jobs" [ref=e27] [cursor=pointer]:
+        - /url: /worker/browse
+        - img [ref=e28]
+        - generic [ref=e31]: Browse Jobs
+      - link "Applications" [ref=e32] [cursor=pointer]:
+        - /url: /worker/applications
+        - img [ref=e33]
+        - generic [ref=e36]: Applications
+      - link "History" [ref=e37] [cursor=pointer]:
+        - /url: /worker/history
+        - img [ref=e38]
+        - generic [ref=e41]: History
+      - link "Notifications" [ref=e42] [cursor=pointer]:
+        - /url: /worker/notifications
+        - img [ref=e43]
+        - generic [ref=e46]: Notifications
+    - generic [ref=e47]:
+      - link "Profile" [ref=e48] [cursor=pointer]:
+        - /url: /worker/profile
+        - img [ref=e49]
+        - generic [ref=e52]: Profile
+      - link "Settings" [ref=e53] [cursor=pointer]:
+        - /url: /worker/settings
+        - img [ref=e54]
+        - generic [ref=e57]: Settings
+      - button "Sign out" [ref=e58] [cursor=pointer]:
+        - img [ref=e59]
+        - generic [ref=e62]: Sign out
+  - main [ref=e64]:
+    - generic [ref=e65]:
+      - generic [ref=e66]:
+        - link [ref=e67] [cursor=pointer]:
+          - /url: /worker/applications
+          - img [ref=e68]
+        - generic [ref=e70]: M
+        - generic [ref=e71]:
+          - paragraph [ref=e72]: Marie Nkomo
+          - paragraph [ref=e73]: House cleaner needed for 3-bedroom apartment in Bonanjo
+      - generic [ref=e74]:
+        - generic [ref=e75]:
+          - generic [ref=e76]: M
+          - generic [ref=e77]:
+            - generic [ref=e78]: Hi Paul! Thanks for applying. Please come to our apartment at Rue de la Paix, Bonanjo at 8am tomorrow. Bring your own gloves if you have them.
+            - paragraph [ref=e79]: 22:49
+        - generic [ref=e80]:
+          - generic [ref=e81]: M
+          - generic [ref=e82]:
+            - generic [ref=e83]: Please confirm you received this. We look forward to seeing you tomorrow!
+            - paragraph [ref=e84]: 22:52
+        - generic [ref=e92]:
+          - generic [ref=e93]: Good morning! Confirmed, I will be there at 8am. I have my own gloves. See you tomorrow!
+          - paragraph [ref=e94]: 22:54
+      - generic [ref=e85]:
+        - textbox "Type a message…" [ref=e86]
+        - button [disabled] [ref=e87]:
+          - img [ref=e95]

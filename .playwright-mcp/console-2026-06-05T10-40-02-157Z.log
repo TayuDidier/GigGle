@@ -1,0 +1,5 @@
+[   11109ms] [INFO] %cDownload the React DevTools for a better development experience: https://reactjs.org/link/react-devtools font-weight:bold @ http://localhost:5173/node_modules/.vite/deps/chunk-WERSD76P.js?v=de16e338:21550
+[   14595ms] [ERROR] Failed to load resource: the server responded with a status of 406 () @ https://omcakemsuifgfanvepbs.supabase.co/rest/v1/profiles?select=*&user_id=eq.ccee09cf-bf0d-4c79-8c96-3439e1c3e523:0
+[   15008ms] [ERROR] Failed to load resource: the server responded with a status of 406 () @ https://omcakemsuifgfanvepbs.supabase.co/rest/v1/profiles?select=*&user_id=eq.ccee09cf-bf0d-4c79-8c96-3439e1c3e523:0
+[   15929ms] [ERROR] Failed to load resource: the server responded with a status of 406 () @ https://omcakemsuifgfanvepbs.supabase.co/rest/v1/profiles?select=*&user_id=eq.ccee09cf-bf0d-4c79-8c96-3439e1c3e523:0
+[   16230ms] [ERROR] Failed to load resource: the server responded with a status of 406 () @ https://omcakemsuifgfanvepbs.supabase.co/rest/v1/profiles?select=*&user_id=eq.ccee09cf-bf0d-4c79-8c96-3439e1c3e523:0

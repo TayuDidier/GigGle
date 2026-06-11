@@ -1,0 +1,23 @@
+[     399ms] [INFO] %cDownload the React DevTools for a better development experience: https://reactjs.org/link/react-devtools font-weight:bold @ http://localhost:5173/node_modules/.vite/deps/chunk-WERSD76P.js?v=de16e338:21550
+[ 1698562ms] [LOG] [vite] server connection lost. Polling for restart... @ http://localhost:5173/@vite/client:559
+[ 1699444ms] [ERROR] Failed to load resource: net::ERR_NETWORK_IO_SUSPENDED @ http://localhost:5173/:0
+[ 1950682ms] [INFO] %cDownload the React DevTools for a better development experience: https://reactjs.org/link/react-devtools font-weight:bold @ http://localhost:5173/node_modules/.vite/deps/chunk-WERSD76P.js?v=de16e338:21550
+[ 1951218ms] [ERROR] Failed to load resource: net::ERR_NAME_NOT_RESOLVED @ https://omcakemsuifgfanvepbs.supabase.co/rest/v1/profiles?select=*&user_id=eq.c868733c-da2c-4690-9a69-885ee060f55c:0
+[ 1951232ms] [ERROR] Failed to load resource: net::ERR_NAME_NOT_RESOLVED @ https://omcakemsuifgfanvepbs.supabase.co/rest/v1/profiles?select=*&user_id=eq.c868733c-da2c-4690-9a69-885ee060f55c:0
+[ 1951233ms] [ERROR] Failed to load resource: net::ERR_NAME_NOT_RESOLVED @ https://omcakemsuifgfanvepbs.supabase.co/rest/v1/profiles?select=*&user_id=eq.c868733c-da2c-4690-9a69-885ee060f55c:0
+[ 1951241ms] [ERROR] Failed to load resource: net::ERR_NAME_NOT_RESOLVED @ https://omcakemsuifgfanvepbs.supabase.co/rest/v1/profiles?select=*&user_id=eq.c868733c-da2c-4690-9a69-885ee060f55c:0
+[ 1952231ms] [ERROR] Failed to load resource: net::ERR_NAME_NOT_RESOLVED @ https://omcakemsuifgfanvepbs.supabase.co/rest/v1/profiles?select=*&user_id=eq.c868733c-da2c-4690-9a69-885ee060f55c:0
+[ 1952269ms] [ERROR] Failed to load resource: net::ERR_NAME_NOT_RESOLVED @ https://omcakemsuifgfanvepbs.supabase.co/rest/v1/profiles?select=*&user_id=eq.c868733c-da2c-4690-9a69-885ee060f55c:0
+[ 1952272ms] [ERROR] Failed to load resource: net::ERR_NAME_NOT_RESOLVED @ https://omcakemsuifgfanvepbs.supabase.co/rest/v1/profiles?select=*&user_id=eq.c868733c-da2c-4690-9a69-885ee060f55c:0
+[ 1952288ms] [ERROR] Failed to load resource: net::ERR_NAME_NOT_RESOLVED @ https://omcakemsuifgfanvepbs.supabase.co/rest/v1/profiles?select=*&user_id=eq.c868733c-da2c-4690-9a69-885ee060f55c:0
+[ 1954238ms] [ERROR] Failed to load resource: net::ERR_NAME_NOT_RESOLVED @ https://omcakemsuifgfanvepbs.supabase.co/rest/v1/profiles?select=*&user_id=eq.c868733c-da2c-4690-9a69-885ee060f55c:0
+[ 1954278ms] [ERROR] Failed to load resource: net::ERR_NAME_NOT_RESOLVED @ https://omcakemsuifgfanvepbs.supabase.co/rest/v1/profiles?select=*&user_id=eq.c868733c-da2c-4690-9a69-885ee060f55c:0
+[ 1954307ms] [ERROR] Failed to load resource: net::ERR_NAME_NOT_RESOLVED @ https://omcakemsuifgfanvepbs.supabase.co/rest/v1/profiles?select=*&user_id=eq.c868733c-da2c-4690-9a69-885ee060f55c:0
+[ 1954310ms] [ERROR] Failed to load resource: net::ERR_NAME_NOT_RESOLVED @ https://omcakemsuifgfanvepbs.supabase.co/rest/v1/profiles?select=*&user_id=eq.c868733c-da2c-4690-9a69-885ee060f55c:0
+[ 1958253ms] [ERROR] Failed to load resource: net::ERR_NAME_NOT_RESOLVED @ https://omcakemsuifgfanvepbs.supabase.co/rest/v1/profiles?select=*&user_id=eq.c868733c-da2c-4690-9a69-885ee060f55c:0
+[ 1958294ms] [ERROR] Failed to load resource: net::ERR_NAME_NOT_RESOLVED @ https://omcakemsuifgfanvepbs.supabase.co/rest/v1/profiles?select=*&user_id=eq.c868733c-da2c-4690-9a69-885ee060f55c:0
+[ 1958315ms] [ERROR] Failed to load resource: net::ERR_NAME_NOT_RESOLVED @ https://omcakemsuifgfanvepbs.supabase.co/rest/v1/profiles?select=*&user_id=eq.c868733c-da2c-4690-9a69-885ee060f55c:0
+[ 1958394ms] [ERROR] Failed to load resource: net::ERR_NAME_NOT_RESOLVED @ https://omcakemsuifgfanvepbs.supabase.co/rest/v1/profiles?select=*&user_id=eq.c868733c-da2c-4690-9a69-885ee060f55c:0
+[ 4595025ms] [LOG] [vite] server connection lost. Polling for restart... @ http://localhost:5173/@vite/client:559
+[ 4595089ms] [ERROR] Failed to load resource: net::ERR_NETWORK_IO_SUSPENDED @ http://localhost:5173/:0
+[ 4735651ms] [INFO] %cDownload the React DevTools for a better development experience: https://reactjs.org/link/react-devtools font-weight:bold @ http://localhost:5173/node_modules/.vite/deps/chunk-WERSD76P.js?v=de16e338:21550

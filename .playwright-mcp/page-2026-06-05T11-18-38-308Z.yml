@@ -1,0 +1,71 @@
+- generic [ref=e5]:
+  - complementary [ref=e6]:
+    - generic [ref=e7]:
+      - generic [ref=e8]: GigGle
+      - generic [ref=e9]: ✦
+    - generic [ref=e11]:
+      - img [ref=e13]
+      - generic [ref=e16]:
+        - paragraph [ref=e17]: Marie Nkomo
+        - paragraph [ref=e18]: Employer
+    - navigation [ref=e19]:
+      - link "Dashboard" [ref=e20] [cursor=pointer]:
+        - /url: /employer/dashboard
+        - img [ref=e21]
+        - generic [ref=e26]: Dashboard
+      - link "Post a Job" [ref=e27] [cursor=pointer]:
+        - /url: /employer/post-job
+        - img [ref=e28]
+        - generic [ref=e30]: Post a Job
+      - link "Notifications" [ref=e31] [cursor=pointer]:
+        - /url: /employer/notifications
+        - img [ref=e32]
+        - generic [ref=e35]: Notifications
+      - link "Complaints" [ref=e36] [cursor=pointer]:
+        - /url: /employer/complaints
+        - img [ref=e37]
+        - generic [ref=e39]: Complaints
+      - link "My Jobs" [ref=e40] [cursor=pointer]:
+        - /url: /employer/dashboard
+        - img [ref=e41]
+        - generic [ref=e44]: My Jobs
+    - generic [ref=e45]:
+      - link "Profile" [ref=e46] [cursor=pointer]:
+        - /url: /employer/profile
+        - img [ref=e47]
+        - generic [ref=e50]: Profile
+      - link "Settings" [ref=e51] [cursor=pointer]:
+        - /url: /employer/settings
+        - img [ref=e52]
+        - generic [ref=e55]: Settings
+      - button "Sign out" [ref=e56] [cursor=pointer]:
+        - img [ref=e57]
+        - generic [ref=e60]: Sign out
+  - main [ref=e62]:
+    - generic [ref=e63]:
+      - link "Back to Job" [ref=e64] [cursor=pointer]:
+        - /url: /employer/jobs/c1c90b06-3197-4d10-aadf-f889d491e4d8
+        - img [ref=e65]
+        - text: Back to Job
+      - generic [ref=e67]:
+        - img [ref=e69]
+        - generic [ref=e71]:
+          - heading "Rate the Worker" [level=1] [ref=e72]
+          - paragraph [ref=e73]: House cleaner needed for 3-bedroom apartment in Bonanjo
+      - generic [ref=e74]:
+        - generic [ref=e75]: P
+        - generic [ref=e76]:
+          - paragraph [ref=e77]: "Rating: Paul Tabi"
+          - paragraph [ref=e78]: Your honest feedback helps other employers
+      - generic [ref=e107]:
+        - img [ref=e109]
+        - heading "Rating submitted" [level=2] [ref=e112]
+        - paragraph [ref=e113]: You've already rated Paul Tabi for this job. Thank you!
+        - link "Back to Job" [ref=e114] [cursor=pointer]:
+          - /url: /employer/jobs/c1c90b06-3197-4d10-aadf-f889d491e4d8
+      - generic [ref=e115]:
+        - img [ref=e117]
+        - heading "Rating submitted — thank you!" [level=2] [ref=e120]
+        - paragraph [ref=e121]: Your rating helps build trust in the GigGle community.
+        - link "Back to Dashboard" [ref=e122] [cursor=pointer]:
+          - /url: /employer/dashboard

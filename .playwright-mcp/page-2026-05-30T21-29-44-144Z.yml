@@ -1,0 +1,87 @@
+- generic [ref=e5]:
+  - complementary [ref=e6]:
+    - generic [ref=e7]:
+      - generic [ref=e8]: GigGle
+      - generic [ref=e9]: ✦
+    - generic [ref=e11]:
+      - img [ref=e13]
+      - generic [ref=e16]:
+        - paragraph [ref=e17]: Marie Nkomo
+        - paragraph [ref=e18]: Employer
+    - navigation [ref=e19]:
+      - link "Dashboard" [ref=e20] [cursor=pointer]:
+        - /url: /employer/dashboard
+        - img [ref=e21]
+        - generic [ref=e26]: Dashboard
+      - link "Post a Job" [ref=e27] [cursor=pointer]:
+        - /url: /employer/post-job
+        - img [ref=e28]
+        - generic [ref=e30]: Post a Job
+      - link "Notifications" [ref=e31] [cursor=pointer]:
+        - /url: /employer/notifications
+        - img [ref=e32]
+        - generic [ref=e35]: Notifications
+      - link "My Jobs" [ref=e36] [cursor=pointer]:
+        - /url: /employer/dashboard
+        - img [ref=e37]
+        - generic [ref=e40]: My Jobs
+    - generic [ref=e41]:
+      - link "Profile" [ref=e42] [cursor=pointer]:
+        - /url: /employer/profile
+        - img [ref=e43]
+        - generic [ref=e46]: Profile
+      - link "Settings" [ref=e47] [cursor=pointer]:
+        - /url: /employer/settings
+        - img [ref=e48]
+        - generic [ref=e51]: Settings
+      - button "Sign out" [ref=e52] [cursor=pointer]:
+        - img [ref=e53]
+        - generic [ref=e56]: Sign out
+  - main [ref=e58]:
+    - generic [ref=e170]:
+      - generic [ref=e171]:
+        - link "Back" [ref=e172] [cursor=pointer]:
+          - /url: /employer/jobs/74846cf3-30eb-4f67-96ae-c6adcac7c826
+          - img [ref=e173]
+          - text: Back
+        - heading "Edit Job" [level=1] [ref=e175]
+      - generic [ref=e176]:
+        - img [ref=e177]
+        - generic [ref=e180]:
+          - text: You can only edit jobs that are still
+          - strong [ref=e181]: Open
+          - text: . Once a worker is selected, editing is locked.
+      - generic [ref=e182]:
+        - heading "Locked Fields (cannot be changed after posting)" [level=2] [ref=e183]:
+          - img [ref=e184]
+          - text: Locked Fields (cannot be changed after posting)
+        - generic [ref=e187]:
+          - generic [ref=e188]:
+            - paragraph [ref=e189]: Category
+            - generic [ref=e190]:
+              - generic [ref=e191]: 🧹
+              - generic [ref=e192]: Cleaning
+          - generic [ref=e193]:
+            - paragraph [ref=e194]: City
+            - generic [ref=e195]: Douala
+      - generic [ref=e196]:
+        - generic [ref=e197]:
+          - generic [ref=e198]: Job Title *
+          - textbox [ref=e199]: House cleaner needed for 3-bedroom apartment in Bonanjo
+        - generic [ref=e200]:
+          - generic [ref=e201]: Description *
+          - textbox [ref=e202]: We need an experienced house cleaner to clean our 3-bedroom apartment in Bonanjo. Tasks include mopping floors, cleaning bathrooms, kitchen, and dusting all rooms. Cleaning supplies will be provided.
+          - paragraph [ref=e204]: 199/2000
+        - generic [ref=e205]:
+          - generic [ref=e206]: Pay (XAF) *
+          - generic [ref=e207]:
+            - spinbutton [ref=e208]: "15000"
+            - generic [ref=e209]: XAF
+          - paragraph [ref=e211]: 15 000 XAF
+        - generic [ref=e212]:
+          - generic [ref=e213]: Street Address *
+          - textbox [ref=e214]: Rue de la Paix, Bonanjo
+        - generic [ref=e215]:
+          - generic [ref=e216]: Timeline (days) — optional
+          - spinbutton [ref=e217]: "1"
+        - button "Save Changes" [ref=e218] [cursor=pointer]

@@ -1,0 +1,26 @@
+- generic [ref=e4]:
+  - generic [ref=e5]:
+    - link "GigGle ✦" [ref=e6] [cursor=pointer]:
+      - /url: /
+      - generic [ref=e7]: GigGle
+      - generic [ref=e8]: ✦
+    - heading "Welcome back" [level=1] [ref=e9]
+    - paragraph [ref=e10]: Sign in to your account to continue
+  - generic [ref=e11]:
+    - generic [ref=e12]:
+      - generic [ref=e13]:
+        - generic [ref=e14]: Email address
+        - textbox "you@example.com" [ref=e15]: employer.test@gigle.cm
+      - generic [ref=e16]:
+        - generic [ref=e17]: Password
+        - generic [ref=e18]:
+          - textbox "••••••••" [ref=e19]: GigGle2026!
+          - button [ref=e20] [cursor=pointer]:
+            - img [ref=e21]
+        - link "Forgot password?" [ref=e25] [cursor=pointer]:
+          - /url: /auth/forgot-password
+      - button "Signing in..." [disabled] [ref=e33]:
+        - generic [ref=e34]: Signing in...
+    - generic [ref=e31]: Don't have an account?
+    - link "Create an account" [ref=e32] [cursor=pointer]:
+      - /url: /register

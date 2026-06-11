@@ -1,0 +1,149 @@
+[   24394ms] [INFO] [O11Y] [DatadogRUM] Initialized {service: claude-ai, env: production, version: b9d41932ba} @ https://assets-proxy.anthropic.com/claude-ai/v2/assets/v1/c6eedc03a-D5iKxgA9.js:1
+[   34272ms] [ERROR] Not signed in with the identity provider. @ https://claude.ai/login:0
+[   51524ms] [ERROR] Cross-Origin-Opener-Policy policy would block the window.closed call. @ https://accounts.google.com/gsi/client:137
+[   51524ms] [ERROR] Cross-Origin-Opener-Policy policy would block the window.closed call. @ https://accounts.google.com/gsi/client:137
+[   62246ms] [ERROR] [GSI_LOGGER]: FedCM get() rejects with NetworkError: Error retrieving a token. @ https://assets-proxy.anthropic.com/claude-ai/v2/assets/v1/c6eedc03a-D5iKxgA9.js:1
+[  117346ms] [ERROR] Cross-Origin-Opener-Policy policy would block the window.closed call. @ https://accounts.google.com/gsi/client:137
+[  117346ms] [ERROR] Cross-Origin-Opener-Policy policy would block the window.closed call. @ https://accounts.google.com/gsi/client:137
+[  117855ms] [ERROR] Cross-Origin-Opener-Policy policy would block the window.closed call. @ https://accounts.google.com/gsi/client:137
+[  117855ms] [ERROR] Cross-Origin-Opener-Policy policy would block the window.closed call. @ https://accounts.google.com/gsi/client:137
+[  124445ms] [ERROR] Cross-Origin-Opener-Policy policy would block the window.closed call. @ https://accounts.google.com/gsi/client:137
+[  124445ms] [ERROR] Cross-Origin-Opener-Policy policy would block the window.closed call. @ https://accounts.google.com/gsi/client:137
+[  128983ms] [ERROR] Cross-Origin-Opener-Policy policy would block the window.closed call. @ https://accounts.google.com/gsi/client:137
+[  128983ms] [ERROR] Cross-Origin-Opener-Policy policy would block the window.closed call. @ https://accounts.google.com/gsi/client:137
+[  134708ms] [ERROR] Failed to load resource: the server responded with a status of 401 () @ https://claude.ai/v1/privacy-consents?prefix=cookies.:0
+[  270597ms] [ERROR] Failed to load resource: net::ERR_CONNECTION_CLOSED @ https://a-api.anthropic.com/v1/b:0
+[  270599ms] [ERROR] TypeError: Failed to fetch
+    at a (https://assets-proxy.anthropic.com/claude-ai/v2/assets/v1/c6eedc03a-D5iKxgA9.js:2:24088)
+    at mh (https://assets-proxy.anthropic.com/claude-ai/v2/assets/v1/c6eedc03a-D5iKxgA9.js:2:230110)
+    at d (https://assets-proxy.anthropic.com/claude-ai/v2/assets/v1/c6eedc03a-D5iKxgA9.js:3:53573)
+    at https://assets-proxy.anthropic.com/claude-ai/v2/assets/v1/c6eedc03a-D5iKxgA9.js:3:53857
+    at https://assets-proxy.anthropic.com/claude-ai/v2/assets/v1/vendor-radix-DUj_zwHo.js:1:2334
+    at Object.next (https://assets-proxy.anthropic.com/claude-ai/v2/assets/v1/vendor-radix-DUj_zwHo.js:1:2439)
+    at https://assets-proxy.anthropic.com/claude-ai/v2/assets/v1/vendor-radix-DUj_zwHo.js:1:1356
+    at new Promise (<anonymous>)
+    at u (https://assets-proxy.anthropic.com/claude-ai/v2/assets/v1/vendor-radix-DUj_zwHo.js:1:1104)
+    at p (https://assets-proxy.anthropic.com/claude-ai/v2/assets/v1/c6eedc03a-D5iKxgA9.js:3:53764) @ https://assets-proxy.anthropic.com/claude-ai/v2/assets/v1/c6eedc03a-D5iKxgA9.js:1
+[  378916ms] [INFO] [COMPLETION] Starting completion request (attempt 1, mode=legacy) @ https://assets-proxy.anthropic.com/claude-ai/v2/assets/v1/c6eedc03a-D5iKxgA9.js:1
+[  422866ms] [WARNING] [MCP] tool_approval_gate {toolId: toolu_01EiyGB9BvgaNaPiEHWcdeL6, toolName: view, approvalRequired: false, hasBufferedInput: false} @ https://assets-proxy.anthropic.com/claude-ai/v2/assets/v1/c6eedc03a-D5iKxgA9.js:1
+[  470691ms] [ERROR] Failed to load resource: net::ERR_CONNECTION_RESET @ https://browser-intake-us5-datadoghq.com/api/v2/rum?ddsource=browser&dd-api-key=pub71869dceb5b70dba6123af9ca357d1f9&dd-evp-origin-version=6.31.0&dd-evp-origin=browser&dd-request-id=9ae244d8-7d6f-431a-a8a5-c9192d657fd0&batch_time=1780562757138&_dd.api=fetch:0
+[  470693ms] [ERROR] Failed to load resource: net::ERR_CONNECTION_RESET @ https://browser-intake-us5-datadoghq.com/api/v2/rum?ddsource=browser&dd-api-key=pub71869dceb5b70dba6123af9ca357d1f9&dd-evp-origin-version=6.31.0&dd-evp-origin=browser&dd-request-id=c8fba290-535f-4c1f-b34e-06ce4cd88714&batch_time=1780562801146&_dd.api=fetch:0
+[  470694ms] [ERROR] Failed to load resource: net::ERR_CONNECTION_RESET @ https://browser-intake-us5-datadoghq.com/api/v2/rum?ddsource=browser&dd-api-key=pub71869dceb5b70dba6123af9ca357d1f9&dd-evp-origin-version=6.31.0&dd-evp-origin=browser&dd-request-id=1cbd14cc-16a1-47a5-be2b-1402757cf8cb&batch_time=1780562799875&_dd.api=fetch:0
+[  470695ms] [ERROR] Failed to load resource: net::ERR_CONNECTION_RESET @ https://browser-intake-us5-datadoghq.com/api/v2/rum?ddsource=browser&dd-api-key=pub71869dceb5b70dba6123af9ca357d1f9&dd-evp-origin-version=6.31.0&dd-evp-origin=browser&dd-request-id=398a2d59-32ae-423d-ac97-64f8cffe005f&batch_time=1780562776623&_dd.api=fetch:0
+[  470695ms] [ERROR] Failed to load resource: net::ERR_CONNECTION_RESET @ https://browser-intake-us5-datadoghq.com/api/v2/rum?ddsource=browser&dd-api-key=pub71869dceb5b70dba6123af9ca357d1f9&dd-evp-origin-version=6.31.0&dd-evp-origin=browser&dd-request-id=f92e3bdc-aef2-43ec-9625-979cea23bc83&batch_time=1780562831152&_dd.api=fetch:0
+[  568778ms] [ERROR] Failed to load resource: net::ERR_CONNECTION_RESET @ https://a-api.anthropic.com/v1/b:0
+[  568781ms] [ERROR] TypeError: Failed to fetch
+    at a (https://assets-proxy.anthropic.com/claude-ai/v2/assets/v1/c6eedc03a-D5iKxgA9.js:2:24088)
+    at mh (https://assets-proxy.anthropic.com/claude-ai/v2/assets/v1/c6eedc03a-D5iKxgA9.js:2:230110)
+    at d (https://assets-proxy.anthropic.com/claude-ai/v2/assets/v1/c6eedc03a-D5iKxgA9.js:3:53573)
+    at https://assets-proxy.anthropic.com/claude-ai/v2/assets/v1/c6eedc03a-D5iKxgA9.js:3:53857
+    at https://assets-proxy.anthropic.com/claude-ai/v2/assets/v1/vendor-radix-DUj_zwHo.js:1:2334
+    at Object.next (https://assets-proxy.anthropic.com/claude-ai/v2/assets/v1/vendor-radix-DUj_zwHo.js:1:2439)
+    at https://assets-proxy.anthropic.com/claude-ai/v2/assets/v1/vendor-radix-DUj_zwHo.js:1:1356
+    at new Promise (<anonymous>)
+    at u (https://assets-proxy.anthropic.com/claude-ai/v2/assets/v1/vendor-radix-DUj_zwHo.js:1:1104)
+    at p (https://assets-proxy.anthropic.com/claude-ai/v2/assets/v1/c6eedc03a-D5iKxgA9.js:3:53764) @ https://assets-proxy.anthropic.com/claude-ai/v2/assets/v1/c6eedc03a-D5iKxgA9.js:1
+[  918210ms] [ERROR] Failed to load resource: net::ERR_CONNECTION_RESET @ https://claude.ai/api/organizations/b79bcbda-1066-403a-8c0b-54c0a3594e32/chat_conversations/8e34e2f0-8118-4f18-9aea-8f137764fc2b/completion:0
+[  918218ms] [ERROR] [COMPLETION] Request failed TypeError: network error @ https://assets-proxy.anthropic.com/claude-ai/v2/assets/v1/c6eedc03a-D5iKxgA9.js:1
+[  918409ms] [ERROR] [COMPLETION] Not retryable error, throwing @ https://assets-proxy.anthropic.com/claude-ai/v2/assets/v1/c6eedc03a-D5iKxgA9.js:1
+[  918428ms] [ERROR] [COMPLETION] Non-API stream error TypeError: network error @ https://assets-proxy.anthropic.com/claude-ai/v2/assets/v1/c6eedc03a-D5iKxgA9.js:1
+[  920133ms] Error: [tiptap error]: The editor view is not available. Cannot access view['dom']. The editor may not be mounted yet.
+    at Object.get (https://assets-proxy.anthropic.com/claude-ai/v2/assets/v1/index-BFh4rODj.js:16:2270431)
+    at https://assets-proxy.anthropic.com/claude-ai/v2/assets/v1/index-BFh4rODj.js:16:3137383
+[ 1318095ms] [INFO] [COMPLETION] Starting completion request (attempt 1, mode=legacy) @ https://assets-proxy.anthropic.com/claude-ai/v2/assets/v1/c6eedc03a-D5iKxgA9.js:1
+[ 1391184ms] [ERROR] Failed to load resource: the server responded with a status of 408 () @ https://browser-intake-us5-datadoghq.com/api/v2/rum?ddsource=browser&dd-api-key=pub71869dceb5b70dba6123af9ca357d1f9&dd-evp-origin-version=6.31.0&dd-evp-origin=browser&dd-request-id=f1fb4ef2-1f55-49a0-ba1d-decdc38bf5b3&batch_time=1780563738004&_dd.api=fetch:0
+[ 1400101ms] [WARNING] [MCP] tool_approval_gate {toolId: toolu_01Xaz2WQ6GT5hUxDfiei7XPk, toolName: view, approvalRequired: false, hasBufferedInput: false} @ https://assets-proxy.anthropic.com/claude-ai/v2/assets/v1/c6eedc03a-D5iKxgA9.js:1
+[ 1478909ms] [WARNING] Failed to execute 'postMessage' on 'DOMWindow': The target origin provided ('https://www.claudeusercontent.com') does not match the recipient window's origin ('https://claude.ai'). @ https://assets-proxy.anthropic.com/claude-ai/v2/assets/v1/index-BFh4rODj.js:15
+[ 1478911ms] [WARNING] Failed to execute 'postMessage' on 'DOMWindow': The target origin provided ('https://www.claudeusercontent.com') does not match the recipient window's origin ('https://claude.ai'). @ https://assets-proxy.anthropic.com/claude-ai/v2/assets/v1/index-BFh4rODj.js:15
+[ 1480942ms] [ERROR] Unrecognized Content-Security-Policy directive 'webrtc'. @ https://www.claudeusercontent.com/?domain=claude.ai&parentOrigin=https%3A%2F%2Fclaude.ai&errorReportingMode=parent&formattedSpreadsheets=true:0
+[ 1482509ms] [INFO] [COMPLETION] Completion request succeeded on attempt 1 @ https://assets-proxy.anthropic.com/claude-ai/v2/assets/v1/c6eedc03a-D5iKxgA9.js:1
+[ 1490805ms] [WARNING] [ARTIFACTS] Received message does not conform to basic message shape, ignoring @ https://assets-proxy.anthropic.com/claude-ai/v2/assets/v1/c6eedc03a-D5iKxgA9.js:1
+[ 1590815ms] [WARNING] ProseMirror expects the CSS white-space property to be set, preferably to 'pre-wrap'. It is recommended to load style/prosemirror.css from the prosemirror-view package. @ https://assets-proxy.anthropic.com/claude-ai/v2/assets/v1/index-BFh4rODj.js:15
+[ 1609347ms] [INFO] [COMPLETION] Starting completion request (attempt 1, mode=legacy) @ https://assets-proxy.anthropic.com/claude-ai/v2/assets/v1/c6eedc03a-D5iKxgA9.js:1
+[ 1611860ms] [WARNING] [MCP] tool_approval_gate {toolId: toolu_019WA29umhv7ztoqgfUT1k9L, toolName: bash_tool, approvalRequired: false, hasBufferedInput: false} @ https://assets-proxy.anthropic.com/claude-ai/v2/assets/v1/c6eedc03a-D5iKxgA9.js:1
+[ 1614070ms] [WARNING] [MCP] tool_approval_gate {toolId: toolu_01RFhn5DoxdR3XPfoRXY3mZ1, toolName: str_replace, approvalRequired: false, hasBufferedInput: false} @ https://assets-proxy.anthropic.com/claude-ai/v2/assets/v1/c6eedc03a-D5iKxgA9.js:1
+[ 1631744ms] [WARNING] [MCP] tool_approval_gate {toolId: toolu_0152HmqEXTW3RUx2okJojR27, toolName: bash_tool, approvalRequired: false, hasBufferedInput: false} @ https://assets-proxy.anthropic.com/claude-ai/v2/assets/v1/c6eedc03a-D5iKxgA9.js:1
+[ 1634111ms] [WARNING] [MCP] tool_approval_gate {toolId: toolu_01CrtkxxEuFkqCzaZVidvQey, toolName: bash_tool, approvalRequired: false, hasBufferedInput: false} @ https://assets-proxy.anthropic.com/claude-ai/v2/assets/v1/c6eedc03a-D5iKxgA9.js:1
+[ 1642384ms] [INFO] [COMPLETION] Completion request succeeded on attempt 1 @ https://assets-proxy.anthropic.com/claude-ai/v2/assets/v1/c6eedc03a-D5iKxgA9.js:1
+[ 1765013ms] [INFO] [COMPLETION] Starting completion request (attempt 1, mode=legacy) @ https://assets-proxy.anthropic.com/claude-ai/v2/assets/v1/c6eedc03a-D5iKxgA9.js:1
+[ 1765208ms] [ERROR] Failed to load resource: net::ERR_CONNECTION_CLOSED @ https://claude.ai/api/organizations/b79bcbda-1066-403a-8c0b-54c0a3594e32/chat_conversations/3eb65917-6973-4170-b458-39e99c6013ab/completion:0
+[ 1765209ms] [ERROR] [COMPLETION] Request failed TypeError: Failed to fetch
+    at a (https://assets-proxy.anthropic.com/claude-ai/v2/assets/v1/c6eedc03a-D5iKxgA9.js:2:24088)
+    at x (https://assets-proxy.anthropic.com/claude-ai/v2/assets/v1/c70a3d12b-HYbJM7YO.js:1:178137)
+    at https://assets-proxy.anthropic.com/claude-ai/v2/assets/v1/c70a3d12b-HYbJM7YO.js:1:178989
+    at new Promise (<anonymous>)
+    at zl (https://assets-proxy.anthropic.com/claude-ai/v2/assets/v1/c70a3d12b-HYbJM7YO.js:1:177642)
+    at fn (https://assets-proxy.anthropic.com/claude-ai/v2/assets/v1/c70a3d12b-HYbJM7YO.js:1:312598)
+    at Kp (https://assets-proxy.anthropic.com/claude-ai/v2/assets/v1/c70a3d12b-HYbJM7YO.js:1:305083)
+    at Qp (https://assets-proxy.anthropic.com/claude-ai/v2/assets/v1/c70a3d12b-HYbJM7YO.js:1:312019)
+    at https://assets-proxy.anthropic.com/claude-ai/v2/assets/v1/index-BFh4rODj.js:2:375806
+    at https://assets-proxy.anthropic.com/claude-ai/v2/assets/v1/index-BFh4rODj.js:16:894365 @ https://assets-proxy.anthropic.com/claude-ai/v2/assets/v1/c6eedc03a-D5iKxgA9.js:1
+[ 1765211ms] [ERROR] [COMPLETION] Not retryable error, throwing @ https://assets-proxy.anthropic.com/claude-ai/v2/assets/v1/c6eedc03a-D5iKxgA9.js:1
+[ 1765224ms] [ERROR] [COMPLETION] Non-API stream error TypeError: Failed to fetch
+    at a (https://assets-proxy.anthropic.com/claude-ai/v2/assets/v1/c6eedc03a-D5iKxgA9.js:2:24088)
+    at x (https://assets-proxy.anthropic.com/claude-ai/v2/assets/v1/c70a3d12b-HYbJM7YO.js:1:178137)
+    at https://assets-proxy.anthropic.com/claude-ai/v2/assets/v1/c70a3d12b-HYbJM7YO.js:1:178989
+    at new Promise (<anonymous>)
+    at zl (https://assets-proxy.anthropic.com/claude-ai/v2/assets/v1/c70a3d12b-HYbJM7YO.js:1:177642)
+    at fn (https://assets-proxy.anthropic.com/claude-ai/v2/assets/v1/c70a3d12b-HYbJM7YO.js:1:312598)
+    at Kp (https://assets-proxy.anthropic.com/claude-ai/v2/assets/v1/c70a3d12b-HYbJM7YO.js:1:305083)
+    at Qp (https://assets-proxy.anthropic.com/claude-ai/v2/assets/v1/c70a3d12b-HYbJM7YO.js:1:312019)
+    at https://assets-proxy.anthropic.com/claude-ai/v2/assets/v1/index-BFh4rODj.js:2:375806
+    at https://assets-proxy.anthropic.com/claude-ai/v2/assets/v1/index-BFh4rODj.js:16:894365 @ https://assets-proxy.anthropic.com/claude-ai/v2/assets/v1/c6eedc03a-D5iKxgA9.js:1
+[ 1765454ms] TypeError: Failed to fetch
+    at a (https://assets-proxy.anthropic.com/claude-ai/v2/assets/v1/c6eedc03a-D5iKxgA9.js:2:24088)
+    at x (https://assets-proxy.anthropic.com/claude-ai/v2/assets/v1/c70a3d12b-HYbJM7YO.js:1:178137)
+    at https://assets-proxy.anthropic.com/claude-ai/v2/assets/v1/c70a3d12b-HYbJM7YO.js:1:178989
+    at new Promise (<anonymous>)
+    at zl (https://assets-proxy.anthropic.com/claude-ai/v2/assets/v1/c70a3d12b-HYbJM7YO.js:1:177642)
+    at fn (https://assets-proxy.anthropic.com/claude-ai/v2/assets/v1/c70a3d12b-HYbJM7YO.js:1:312598)
+    at Kp (https://assets-proxy.anthropic.com/claude-ai/v2/assets/v1/c70a3d12b-HYbJM7YO.js:1:305083)
+    at Qp (https://assets-proxy.anthropic.com/claude-ai/v2/assets/v1/c70a3d12b-HYbJM7YO.js:1:312019)
+    at https://assets-proxy.anthropic.com/claude-ai/v2/assets/v1/index-BFh4rODj.js:2:375806
+    at https://assets-proxy.anthropic.com/claude-ai/v2/assets/v1/index-BFh4rODj.js:16:894365
+[ 1766369ms] [WARNING] [COMPLETION] message_store_sync_blocked {conversation_uuid: 3eb65917-6973-4170-b458-39e99c6013ab, reason: tree_shrink, prev_tree_count: 6, new_tree_count: 4, tree_lost_count: 2} @ https://assets-proxy.anthropic.com/claude-ai/v2/assets/v1/c6eedc03a-D5iKxgA9.js:1
+[ 1775552ms] [INFO] [COMPLETION] Starting completion request (attempt 1, mode=legacy) @ https://assets-proxy.anthropic.com/claude-ai/v2/assets/v1/c6eedc03a-D5iKxgA9.js:1
+[ 1784887ms] [INFO] [COMPLETION] Completion request succeeded on attempt 1 @ https://assets-proxy.anthropic.com/claude-ai/v2/assets/v1/c6eedc03a-D5iKxgA9.js:1
+[ 2128400ms] [ERROR] Failed to load resource: net::ERR_CONNECTION_RESET @ https://browser-intake-us5-datadoghq.com/api/v2/rum?ddsource=browser&dd-api-key=pub71869dceb5b70dba6123af9ca357d1f9&dd-evp-origin-version=6.31.0&dd-evp-origin=browser&dd-request-id=7d2cc240-19ac-401b-a254-ead5b0e890c8&batch_time=1780564499334&_dd.api=fetch:0
+[ 2465482ms] [ERROR] Failed to load resource: net::ERR_TIMED_OUT @ https://browser-intake-us5-datadoghq.com/api/v2/rum?ddsource=browser&dd-api-key=pub71869dceb5b70dba6123af9ca357d1f9&dd-evp-origin-version=6.31.0&dd-evp-origin=browser&dd-request-id=f83c931d-745d-4032-b7d1-d8aaebd26bce&batch_time=1780564811388&_dd.api=fetch:0
+[ 2519526ms] [ERROR] Failed to load resource: net::ERR_CONNECTION_RESET @ https://browser-intake-us5-datadoghq.com/api/v2/rum?ddsource=browser&dd-api-key=pub71869dceb5b70dba6123af9ca357d1f9&dd-evp-origin-version=6.31.0&dd-evp-origin=browser&dd-request-id=aae58b4c-8ff7-4deb-a131-e0b7cfe20f79&batch_time=1780564878349&_dd.api=beacon:0
+[ 2553471ms] [ERROR] Failed to load resource: net::ERR_CONNECTION_RESET @ https://browser-intake-us5-datadoghq.com/api/v2/rum?ddsource=browser&dd-api-key=pub71869dceb5b70dba6123af9ca357d1f9&dd-evp-origin-version=6.31.0&dd-evp-origin=browser&dd-request-id=3a825e61-b1d4-43fd-a166-ca79668403ca&batch_time=1780564841398&_dd.api=fetch:0
+[ 2553478ms] [ERROR] Failed to load resource: net::ERR_CONNECTION_RESET @ https://browser-intake-us5-datadoghq.com/api/v2/rum?ddsource=browser&dd-api-key=pub71869dceb5b70dba6123af9ca357d1f9&dd-evp-origin-version=6.31.0&dd-evp-origin=browser&dd-request-id=cc678448-01af-486e-8ea4-410801f3ce7e&batch_time=1780564925304&_dd.api=fetch:0
+[ 2559668ms] [ERROR] Failed to load resource: net::ERR_HTTP2_PING_FAILED @ https://a-api.anthropic.com/v1/b:0
+[ 2559669ms] [ERROR] TypeError: Failed to fetch
+    at a (https://assets-proxy.anthropic.com/claude-ai/v2/assets/v1/c6eedc03a-D5iKxgA9.js:2:24088)
+    at mh (https://assets-proxy.anthropic.com/claude-ai/v2/assets/v1/c6eedc03a-D5iKxgA9.js:2:230110)
+    at d (https://assets-proxy.anthropic.com/claude-ai/v2/assets/v1/c6eedc03a-D5iKxgA9.js:3:53573)
+    at https://assets-proxy.anthropic.com/claude-ai/v2/assets/v1/c6eedc03a-D5iKxgA9.js:3:53857
+    at https://assets-proxy.anthropic.com/claude-ai/v2/assets/v1/vendor-radix-DUj_zwHo.js:1:2334
+    at Object.next (https://assets-proxy.anthropic.com/claude-ai/v2/assets/v1/vendor-radix-DUj_zwHo.js:1:2439)
+    at https://assets-proxy.anthropic.com/claude-ai/v2/assets/v1/vendor-radix-DUj_zwHo.js:1:1356
+    at new Promise (<anonymous>)
+    at u (https://assets-proxy.anthropic.com/claude-ai/v2/assets/v1/vendor-radix-DUj_zwHo.js:1:1104)
+    at p (https://assets-proxy.anthropic.com/claude-ai/v2/assets/v1/c6eedc03a-D5iKxgA9.js:3:53764) @ https://assets-proxy.anthropic.com/claude-ai/v2/assets/v1/c6eedc03a-D5iKxgA9.js:1
+[ 2559672ms] [ERROR] Failed to load resource: net::ERR_ADDRESS_UNREACHABLE @ https://a-api.anthropic.com/v1/b:0
+[ 2559672ms] [ERROR] TypeError: Failed to fetch
+    at a (https://assets-proxy.anthropic.com/claude-ai/v2/assets/v1/c6eedc03a-D5iKxgA9.js:2:24088)
+    at mh (https://assets-proxy.anthropic.com/claude-ai/v2/assets/v1/c6eedc03a-D5iKxgA9.js:2:230110)
+    at d (https://assets-proxy.anthropic.com/claude-ai/v2/assets/v1/c6eedc03a-D5iKxgA9.js:3:53573)
+    at https://assets-proxy.anthropic.com/claude-ai/v2/assets/v1/c6eedc03a-D5iKxgA9.js:3:53857
+    at https://assets-proxy.anthropic.com/claude-ai/v2/assets/v1/vendor-radix-DUj_zwHo.js:1:2334
+    at Object.next (https://assets-proxy.anthropic.com/claude-ai/v2/assets/v1/vendor-radix-DUj_zwHo.js:1:2439)
+    at https://assets-proxy.anthropic.com/claude-ai/v2/assets/v1/vendor-radix-DUj_zwHo.js:1:1356
+    at new Promise (<anonymous>)
+    at u (https://assets-proxy.anthropic.com/claude-ai/v2/assets/v1/vendor-radix-DUj_zwHo.js:1:1104)
+    at p (https://assets-proxy.anthropic.com/claude-ai/v2/assets/v1/c6eedc03a-D5iKxgA9.js:3:53764) @ https://assets-proxy.anthropic.com/claude-ai/v2/assets/v1/c6eedc03a-D5iKxgA9.js:1
+[ 2559674ms] [ERROR] Failed to load resource: net::ERR_ADDRESS_UNREACHABLE @ https://a-api.anthropic.com/v1/b:0
+[ 2559674ms] [ERROR] TypeError: Failed to fetch
+    at a (https://assets-proxy.anthropic.com/claude-ai/v2/assets/v1/c6eedc03a-D5iKxgA9.js:2:24088)
+    at mh (https://assets-proxy.anthropic.com/claude-ai/v2/assets/v1/c6eedc03a-D5iKxgA9.js:2:230110)
+    at d (https://assets-proxy.anthropic.com/claude-ai/v2/assets/v1/c6eedc03a-D5iKxgA9.js:3:53573)
+    at https://assets-proxy.anthropic.com/claude-ai/v2/assets/v1/c6eedc03a-D5iKxgA9.js:3:53857
+    at https://assets-proxy.anthropic.com/claude-ai/v2/assets/v1/vendor-radix-DUj_zwHo.js:1:2334
+    at Object.next (https://assets-proxy.anthropic.com/claude-ai/v2/assets/v1/vendor-radix-DUj_zwHo.js:1:2439)
+    at https://assets-proxy.anthropic.com/claude-ai/v2/assets/v1/vendor-radix-DUj_zwHo.js:1:1356
+    at new Promise (<anonymous>)
+    at u (https://assets-proxy.anthropic.com/claude-ai/v2/assets/v1/vendor-radix-DUj_zwHo.js:1:1104)
+    at p (https://assets-proxy.anthropic.com/claude-ai/v2/assets/v1/c6eedc03a-D5iKxgA9.js:3:53764) @ https://assets-proxy.anthropic.com/claude-ai/v2/assets/v1/c6eedc03a-D5iKxgA9.js:1
+[ 2584170ms] [INFO] [O11Y] [DatadogRUM] Initialized {service: claude-ai, env: production, version: b9d41932ba} @ https://assets-proxy.anthropic.com/claude-ai/v2/assets/v1/c6eedc03a-D5iKxgA9.js:1
+[ 2619819ms] [ERROR] Failed to load resource: net::ERR_HTTP2_PROTOCOL_ERROR @ https://claude.ai/cdn-cgi/challenge-platform/h/g/jsd/oneshot/8fc8ed1d8752/0.7554488887924339:1780560023:Ad0HYvJoQkCqqiKXCuzWQuk77Fq9tFBJC8_0DAn75ik/a065dfc36adcf816:0

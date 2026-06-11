@@ -1,0 +1,9 @@
+[   10776ms] [VERBOSE] [DOM] Password field is not contained in a form: (More info: https://goo.gl/9p2vKq) %o @ https://chat.deepseek.com/sign_in:0
+[   31797ms] [ERROR] Failed to load resource: net::ERR_TIMED_OUT @ https://apm.volccdn.com/mars-web/apmplus/web/browser.cn.js?aid=0&globalName=apmPlus:0
+[   57969ms] [WARNING] `WebAssembly.instantiateStreaming` failed because your server does not serve Wasm with `application/wasm` MIME type. Falling back to `WebAssembly.instantiate` which is slower. Original error:
+ TypeError: Failed to execute 'compile' on 'WebAssembly': Incorrect response MIME type. Expected 'application/wasm'. @ https://fe-static.deepseek.com/chat/static/37627.ebf6d8f55d.js:0
+[  142460ms] [WARNING] `WebAssembly.instantiateStreaming` failed because your server does not serve Wasm with `application/wasm` MIME type. Falling back to `WebAssembly.instantiate` which is slower. Original error:
+ TypeError: Failed to execute 'compile' on 'WebAssembly': Incorrect response MIME type. Expected 'application/wasm'. @ https://fe-static.deepseek.com/chat/static/37627.ebf6d8f55d.js:0
+[  161807ms] [LOG] %c %s color: yellow; background-color: black; [instance: default] appid: 20006317, userInfo:{"user_unique_id":"5cfcc77e-26e0-450f-a436-a5936519dd97","web_id":"7647460931504503820"} @ https://lf3-data.volccdn.com/obj/data-static/log-sdk/collect/5.0/collect-rangers-v5.2.11.js:0
+[  161816ms] [LOG] %c %s color: yellow; background-color: black; [instance: default] appid: 20006317, sdk is ready, version is 5.2.11_tob, you can report now !!! @ https://lf3-data.volccdn.com/obj/data-static/log-sdk/collect/5.0/collect-rangers-v5.2.11.js:0
+[ 1852988ms] [ERROR] Failed to load resource: net::ERR_NAME_NOT_RESOLVED @ https://gator.volces.com/list:0

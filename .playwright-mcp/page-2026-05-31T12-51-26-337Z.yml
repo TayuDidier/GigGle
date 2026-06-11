@@ -1,0 +1,91 @@
+- generic [ref=e5]:
+  - complementary [ref=e6]:
+    - generic [ref=e7]:
+      - generic [ref=e8]: GigGle
+      - generic [ref=e9]: ✦
+    - generic [ref=e11]:
+      - img [ref=e13]
+      - generic [ref=e16]:
+        - paragraph [ref=e17]: Marie Nkomo
+        - paragraph [ref=e18]: Employer
+    - navigation [ref=e19]:
+      - link "Dashboard" [ref=e20] [cursor=pointer]:
+        - /url: /employer/dashboard
+        - img [ref=e21]
+        - generic [ref=e26]: Dashboard
+      - link "Post a Job" [ref=e27] [cursor=pointer]:
+        - /url: /employer/post-job
+        - img [ref=e28]
+        - generic [ref=e30]: Post a Job
+      - link "Notifications" [ref=e31] [cursor=pointer]:
+        - /url: /employer/notifications
+        - img [ref=e32]
+        - generic [ref=e35]: Notifications
+      - link "Complaints" [ref=e36] [cursor=pointer]:
+        - /url: /employer/complaints
+        - img [ref=e37]
+        - generic [ref=e39]: Complaints
+      - link "My Jobs" [ref=e40] [cursor=pointer]:
+        - /url: /employer/dashboard
+        - img [ref=e41]
+        - generic [ref=e44]: My Jobs
+    - generic [ref=e45]:
+      - link "Profile" [ref=e46] [cursor=pointer]:
+        - /url: /employer/profile
+        - img [ref=e47]
+        - generic [ref=e50]: Profile
+      - link "Settings" [ref=e51] [cursor=pointer]:
+        - /url: /employer/settings
+        - img [ref=e52]
+        - generic [ref=e55]: Settings
+      - button "Sign out" [ref=e56] [cursor=pointer]:
+        - img [ref=e57]
+        - generic [ref=e60]: Sign out
+  - main [ref=e62]:
+    - generic [ref=e63]:
+      - generic [ref=e64]:
+        - link [ref=e65] [cursor=pointer]:
+          - /url: /employer/jobs/74846cf3-30eb-4f67-96ae-c6adcac7c826
+          - img [ref=e66]
+        - generic [ref=e68]: P
+        - generic [ref=e69]:
+          - paragraph [ref=e70]: Paul Tabi
+          - paragraph [ref=e71]: House cleaner needed for 3-bedroom apartment in Bonanjo
+        - link "Report" [ref=e72] [cursor=pointer]:
+          - /url: /complaint/new?jobId=74846cf3-30eb-4f67-96ae-c6adcac7c826&userId=00e57c9e-cc8f-48d4-89f5-a264fc85a7b6
+          - img [ref=e73]
+          - text: Report
+      - generic [ref=e75]:
+        - generic [ref=e77]:
+          - generic [ref=e78]: Hi Paul! Thanks for applying. Please come to our apartment at Rue de la Paix, Bonanjo at 8am tomorrow. Bring your own gloves if you have them.
+          - paragraph [ref=e79]: 22:49
+        - generic [ref=e81]:
+          - generic [ref=e82]: Please confirm you received this. We look forward to seeing you tomorrow!
+          - paragraph [ref=e83]: 22:52
+        - generic [ref=e84]:
+          - generic [ref=e85]: P
+          - generic [ref=e86]:
+            - generic [ref=e87]: Good morning! Confirmed, I will be there at 8am. I have my own gloves. See you tomorrow!
+            - paragraph [ref=e88]: 22:54
+      - generic [ref=e89]:
+        - img [ref=e90]
+        - text: Payment confirmed by worker
+      - generic [ref=e93]:
+        - paragraph [ref=e94]: Rate the worker
+        - generic [ref=e95]:
+          - button [ref=e96] [cursor=pointer]:
+            - img [ref=e97]
+          - button [ref=e99] [cursor=pointer]:
+            - img [ref=e100]
+          - button [ref=e102] [cursor=pointer]:
+            - img [ref=e103]
+          - button [ref=e105] [cursor=pointer]:
+            - img [ref=e106]
+          - button [active] [ref=e108] [cursor=pointer]:
+            - img [ref=e109]
+        - textbox "Leave a review (optional)" [ref=e111]
+        - button "Submit Rating" [ref=e112] [cursor=pointer]
+      - generic [ref=e113]:
+        - textbox "Type a message…" [ref=e114]
+        - button [disabled] [ref=e115]:
+          - img [ref=e116]

@@ -1,0 +1,130 @@
+- generic [ref=e33]:
+  - complementary [ref=e34]:
+    - generic [ref=e35]:
+      - generic [ref=e36]: GigGle
+      - generic [ref=e37]: ✦
+    - generic [ref=e39]:
+      - img [ref=e41]
+      - generic [ref=e44]:
+        - paragraph [ref=e45]: Marie Nkomo
+        - paragraph [ref=e46]: Employer
+    - navigation [ref=e47]:
+      - link "Dashboard" [ref=e48] [cursor=pointer]:
+        - /url: /employer/dashboard
+        - img [ref=e49]
+        - generic [ref=e54]: Dashboard
+      - link "Post a Job" [ref=e55] [cursor=pointer]:
+        - /url: /employer/post-job
+        - img [ref=e56]
+        - generic [ref=e58]: Post a Job
+      - link "Notifications 1" [ref=e59] [cursor=pointer]:
+        - /url: /employer/notifications
+        - img [ref=e60]
+        - generic [ref=e63]: Notifications
+        - generic [ref=e64]: "1"
+      - link "Complaints" [ref=e65] [cursor=pointer]:
+        - /url: /employer/complaints
+        - img [ref=e66]
+        - generic [ref=e68]: Complaints
+      - link "My Jobs" [ref=e69] [cursor=pointer]:
+        - /url: /employer/dashboard
+        - img [ref=e70]
+        - generic [ref=e73]: My Jobs
+    - generic [ref=e74]:
+      - link "Profile" [ref=e75] [cursor=pointer]:
+        - /url: /employer/profile
+        - img [ref=e76]
+        - generic [ref=e79]: Profile
+      - link "Settings" [ref=e80] [cursor=pointer]:
+        - /url: /employer/settings
+        - img [ref=e81]
+        - generic [ref=e84]: Settings
+      - button "Sign out" [ref=e85] [cursor=pointer]:
+        - img [ref=e86]
+        - generic [ref=e89]: Sign out
+  - main [ref=e91]:
+    - generic [ref=e92]:
+      - generic [ref=e93]:
+        - generic [ref=e94]:
+          - heading "Good afternoon, Marie 👋" [level=1] [ref=e95]
+          - paragraph [ref=e96]: Manage your job listings
+        - link "Post a New Job" [ref=e97] [cursor=pointer]:
+          - /url: /employer/post-job
+          - img [ref=e98]
+          - text: Post a New Job
+      - generic [ref=e100]:
+        - generic [ref=e101]:
+          - paragraph [ref=e102]: "4"
+          - paragraph [ref=e103]: Total Posted
+        - generic [ref=e104]:
+          - paragraph [ref=e105]: "4"
+          - paragraph [ref=e106]: Open
+        - generic [ref=e107]:
+          - paragraph [ref=e108]: "0"
+          - paragraph [ref=e109]: In Progress
+        - generic [ref=e110]:
+          - paragraph [ref=e111]: "0"
+          - paragraph [ref=e112]: Completed
+      - generic [ref=e113]:
+        - heading "My Jobs" [level=2] [ref=e115]
+        - generic [ref=e116]:
+          - generic [ref=e118]:
+            - generic [ref=e119]:
+              - generic [ref=e120]: 🔧
+              - generic [ref=e121]:
+                - paragraph [ref=e122]: Plumber needed urgently for bathroom pipe repair in Akwa
+                - generic [ref=e123]:
+                  - generic [ref=e124]: Repairs
+                  - generic [ref=e125]: 25,000 XAF
+                  - generic [ref=e126]: 5 Jun 2026
+            - generic [ref=e127]:
+              - generic [ref=e128]: Open
+              - link "Manage" [ref=e129] [cursor=pointer]:
+                - /url: /employer/jobs/c0cafb56-a3bf-41ea-976e-93f3ed3c55f5/applicants
+                - text: Manage
+                - img [ref=e130]
+          - generic [ref=e133]:
+            - generic [ref=e134]:
+              - generic [ref=e135]: 📦
+              - generic [ref=e136]:
+                - paragraph [ref=e137]: Motorcycle delivery rider needed for daily errands in Buea
+                - generic [ref=e138]:
+                  - generic [ref=e139]: Delivery
+                  - generic [ref=e140]: 12,000 XAF
+                  - generic [ref=e141]: 5 Jun 2026
+            - generic [ref=e142]:
+              - generic [ref=e143]: Open
+              - link "Manage" [ref=e144] [cursor=pointer]:
+                - /url: /employer/jobs/176dd9a0-7cff-4010-b45f-67b74358065d/applicants
+                - text: Manage
+                - img [ref=e145]
+          - generic [ref=e148]:
+            - generic [ref=e149]:
+              - generic [ref=e150]: 📚
+              - generic [ref=e151]:
+                - paragraph [ref=e152]: Math and Science tutor needed for secondary school student
+                - generic [ref=e153]:
+                  - generic [ref=e154]: Tutoring
+                  - generic [ref=e155]: 20,000 XAF
+                  - generic [ref=e156]: 5 Jun 2026
+            - generic [ref=e157]:
+              - generic [ref=e158]: Open
+              - link "Manage" [ref=e159] [cursor=pointer]:
+                - /url: /employer/jobs/e92bce7e-65f7-4dce-bf7c-50b28c4539f5/applicants
+                - text: Manage
+                - img [ref=e160]
+          - generic [ref=e163]:
+            - generic [ref=e164]:
+              - generic [ref=e165]: 🧹
+              - generic [ref=e166]:
+                - paragraph [ref=e167]: House cleaner needed for 3-bedroom apartment in Bonanjo
+                - generic [ref=e168]:
+                  - generic [ref=e169]: Cleaning
+                  - generic [ref=e170]: 15,000 XAF
+                  - generic [ref=e171]: 5 Jun 2026
+            - generic [ref=e172]:
+              - generic [ref=e173]: Open
+              - link "Manage" [ref=e174] [cursor=pointer]:
+                - /url: /employer/jobs/c1c90b06-3197-4d10-aadf-f889d491e4d8/applicants
+                - text: Manage
+                - img [ref=e175]

@@ -1,0 +1,87 @@
+- generic [ref=e48]:
+  - complementary [ref=e49]:
+    - generic [ref=e50]:
+      - generic [ref=e51]: GigGle
+      - generic [ref=e52]: ✦
+    - generic [ref=e54]:
+      - img [ref=e56]
+      - generic [ref=e59]:
+        - paragraph [ref=e60]: Paul Tabi
+        - paragraph [ref=e61]: Worker
+    - navigation [ref=e62]:
+      - link "Dashboard" [ref=e63] [cursor=pointer]:
+        - /url: /worker/dashboard
+        - img [ref=e64]
+        - generic [ref=e69]: Dashboard
+      - link "Browse Jobs" [ref=e70] [cursor=pointer]:
+        - /url: /worker/browse
+        - img [ref=e71]
+        - generic [ref=e74]: Browse Jobs
+      - link "Applications" [ref=e75] [cursor=pointer]:
+        - /url: /worker/applications
+        - img [ref=e76]
+        - generic [ref=e79]: Applications
+      - link "History" [ref=e80] [cursor=pointer]:
+        - /url: /worker/history
+        - img [ref=e81]
+        - generic [ref=e84]: History
+      - link "Notifications 1" [ref=e85] [cursor=pointer]:
+        - /url: /worker/notifications
+        - img [ref=e86]
+        - generic [ref=e89]: Notifications
+        - generic [ref=e90]: "1"
+      - link "Complaints" [ref=e91] [cursor=pointer]:
+        - /url: /worker/complaints
+        - img [ref=e92]
+        - generic [ref=e94]: Complaints
+    - generic [ref=e95]:
+      - link "Profile" [ref=e96] [cursor=pointer]:
+        - /url: /worker/profile
+        - img [ref=e97]
+        - generic [ref=e100]: Profile
+      - link "Settings" [ref=e101] [cursor=pointer]:
+        - /url: /worker/settings
+        - img [ref=e102]
+        - generic [ref=e105]: Settings
+      - button "Sign out" [ref=e106] [cursor=pointer]:
+        - img [ref=e107]
+        - generic [ref=e110]: Sign out
+  - main [ref=e5]:
+    - generic [ref=e112]:
+      - link "My Applications" [ref=e113] [cursor=pointer]:
+        - /url: /worker/applications
+        - img [ref=e114]
+        - text: My Applications
+      - generic [ref=e116]:
+        - img [ref=e118]
+        - generic [ref=e120]:
+          - heading "Rate the Employer" [level=1] [ref=e121]
+          - paragraph [ref=e122]: House cleaner needed for 3-bedroom apartment in Bonanjo
+      - generic [ref=e123]:
+        - generic [ref=e124]: M
+        - generic [ref=e125]:
+          - paragraph [ref=e126]: "Rating: Marie Nkomo"
+          - paragraph [ref=e127]: Your honest feedback helps other workers
+      - generic [ref=e128]:
+        - generic [ref=e129]:
+          - generic [ref=e130]: Your rating *
+          - generic [ref=e131]:
+            - button [ref=e132] [cursor=pointer]:
+              - img [ref=e133]
+            - button [ref=e135] [cursor=pointer]:
+              - img [ref=e136]
+            - button [ref=e138] [cursor=pointer]:
+              - img [ref=e139]
+            - button [ref=e141] [cursor=pointer]:
+              - img [ref=e142]
+            - button [ref=e144] [cursor=pointer]:
+              - img [ref=e145]
+        - generic [ref=e147]:
+          - generic [ref=e148]:
+            - generic [ref=e149]: Written review (optional)
+            - generic [ref=e150]: 0/500
+          - textbox "Describe your experience working for Marie Nkomo…" [ref=e151]
+        - generic [ref=e152]:
+          - link "Cancel" [ref=e153] [cursor=pointer]:
+            - /url: /worker/applications
+          - button "Submit Rating" [disabled] [ref=e154]

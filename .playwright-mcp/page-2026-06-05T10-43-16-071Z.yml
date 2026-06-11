@@ -1,0 +1,138 @@
+- generic [ref=e33]:
+  - complementary [ref=e34]:
+    - generic [ref=e35]:
+      - generic [ref=e37]:
+        - img [ref=e39]
+        - generic [ref=e42]:
+          - paragraph [ref=e43]: GigGle
+          - paragraph [ref=e44]: Admin Panel
+      - generic [ref=e46]:
+        - generic [ref=e47]: G
+        - generic [ref=e48]:
+          - paragraph [ref=e49]: GigGle Admin
+          - paragraph [ref=e50]: Administrator
+      - paragraph [ref=e51]: Navigation
+      - navigation [ref=e52]:
+        - link "Dashboard" [ref=e53] [cursor=pointer]:
+          - /url: /admin/dashboard
+          - img [ref=e54]
+          - generic [ref=e59]: Dashboard
+        - link "Users" [ref=e60] [cursor=pointer]:
+          - /url: /admin/users
+          - img [ref=e61]
+          - generic [ref=e66]: Users
+        - link "Jobs" [ref=e67] [cursor=pointer]:
+          - /url: /admin/jobs
+          - img [ref=e68]
+          - generic [ref=e71]: Jobs
+        - link "Reports" [ref=e72] [cursor=pointer]:
+          - /url: /admin/reports
+          - img [ref=e73]
+          - generic [ref=e75]: Reports
+      - button "Sign out" [ref=e77] [cursor=pointer]:
+        - img [ref=e78]
+        - generic [ref=e81]: Sign out
+  - main [ref=e83]:
+    - generic [ref=e84]:
+      - generic [ref=e85]:
+        - heading "Welcome back, GigGle" [level=1] [ref=e86]
+        - paragraph [ref=e87]: Here's what's happening on GigGle today.
+      - generic [ref=e88]:
+        - link "7 Total Users 2 workers · 3 employers" [ref=e89] [cursor=pointer]:
+          - /url: /admin/users
+          - generic [ref=e90]:
+            - img [ref=e92]
+            - generic [ref=e97]:
+              - paragraph [ref=e98]: "7"
+              - paragraph [ref=e99]: Total Users
+              - paragraph [ref=e100]: 2 workers · 3 employers
+            - img [ref=e101]
+        - link "0 Total Jobs 0 open · 0 completed" [ref=e103] [cursor=pointer]:
+          - /url: /admin/jobs
+          - generic [ref=e104]:
+            - img [ref=e106]
+            - generic [ref=e109]:
+              - paragraph [ref=e110]: "0"
+              - paragraph [ref=e111]: Total Jobs
+              - paragraph [ref=e112]: 0 open · 0 completed
+            - img [ref=e113]
+        - link "0 Open Reports" [ref=e115] [cursor=pointer]:
+          - /url: /admin/reports
+          - generic [ref=e116]:
+            - img [ref=e118]
+            - generic [ref=e120]:
+              - paragraph [ref=e121]: "0"
+              - paragraph [ref=e122]: Open Reports
+            - img [ref=e123]
+        - link "0 Suspended Accounts" [ref=e125] [cursor=pointer]:
+          - /url: /admin/users
+          - generic [ref=e126]:
+            - img [ref=e128]
+            - generic [ref=e132]:
+              - paragraph [ref=e133]: "0"
+              - paragraph [ref=e134]: Suspended Accounts
+            - img [ref=e135]
+      - generic [ref=e137]:
+        - generic [ref=e138]:
+          - heading "Quick Actions" [level=2] [ref=e139]
+          - generic [ref=e140]:
+            - link "Manage Users" [ref=e141] [cursor=pointer]:
+              - /url: /admin/users
+              - text: Manage Users
+              - img [ref=e142]
+            - link "Review Jobs" [ref=e144] [cursor=pointer]:
+              - /url: /admin/jobs
+              - text: Review Jobs
+              - img [ref=e145]
+            - link "Moderation Queue" [ref=e147] [cursor=pointer]:
+              - /url: /admin/reports
+              - text: Moderation Queue
+              - img [ref=e148]
+        - generic [ref=e150]:
+          - generic [ref=e151]:
+            - heading "Recent Registrations" [level=2] [ref=e152]
+            - link "View all" [ref=e153] [cursor=pointer]:
+              - /url: /admin/users
+          - generic [ref=e154]:
+            - generic [ref=e155]:
+              - generic [ref=e156]: P
+              - generic [ref=e157]:
+                - paragraph [ref=e158]: Paul Tabi
+                - paragraph [ref=e159]: worker
+              - generic [ref=e160]: 5 juin
+            - generic [ref=e161]:
+              - generic [ref=e162]: G
+              - generic [ref=e163]:
+                - paragraph [ref=e164]: GigGle Admin
+                - paragraph [ref=e165]: admin
+              - generic [ref=e166]: 5 juin
+            - generic [ref=e167]:
+              - generic [ref=e168]: M
+              - generic [ref=e169]:
+                - paragraph [ref=e170]: Marie Nkomo
+                - paragraph [ref=e171]: employer
+              - generic [ref=e172]: 5 juin
+            - generic [ref=e173]:
+              - generic [ref=e174]: A
+              - generic [ref=e175]:
+                - paragraph [ref=e176]: Admin
+                - paragraph [ref=e177]: admin
+              - generic [ref=e178]: 4 juin
+            - generic [ref=e179]:
+              - generic [ref=e180]: I
+              - generic [ref=e181]:
+                - paragraph [ref=e182]: Isaac Doe
+                - paragraph [ref=e183]: worker
+              - generic [ref=e184]: 4 juin
+            - generic [ref=e185]:
+              - generic [ref=e186]: d
+              - generic [ref=e187]:
+                - paragraph [ref=e188]: doe john
+                - paragraph [ref=e189]: employer
+              - generic [ref=e190]: 30 mai
+            - generic [ref=e191]:
+              - generic [ref=e192]: d
+              - generic [ref=e193]:
+                - paragraph [ref=e194]: dboy
+                - paragraph [ref=e195]: employer
+              - generic [ref=e196]: 30 mai

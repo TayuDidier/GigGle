@@ -1,0 +1,9 @@
+[     206ms] [INFO] %cDownload the React DevTools for a better development experience: https://reactjs.org/link/react-devtools font-weight:bold @ http://localhost:5175/node_modules/.vite/deps/chunk-WERSD76P.js?v=27697d25:21550
+[  115183ms] [ERROR] Failed to load resource: net::ERR_NAME_NOT_RESOLVED @ https://your-project-ref.supabase.co/auth/v1/signup:0
+[  115183ms] [ERROR] TypeError: Failed to fetch
+    at http://localhost:5175/node_modules/.vite/deps/@supabase_supabase-js.js?v=27697d25:12793:23
+    at _handleRequest2 (http://localhost:5175/node_modules/.vite/deps/@supabase_supabase-js.js?v=27697d25:13101:20)
+    at _request (http://localhost:5175/node_modules/.vite/deps/@supabase_supabase-js.js?v=27697d25:13091:22)
+    at SupabaseAuthClient.signUp (http://localhost:5175/node_modules/.vite/deps/@supabase_supabase-js.js?v=27697d25:15809:21)
+    at onSubmit (http://localhost:5175/src/pages/auth/Register.jsx?t=1779908633026:53:43)
+    at http://localhost:5175/node_modules/.vite/deps/chunk-YANRDAH7.js?v=27697d25:1841:15 @ http://localhost:5175/node_modules/.vite/deps/@supabase_supabase-js.js?v=27697d25:13102

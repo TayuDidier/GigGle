@@ -1,0 +1,156 @@
+- generic [ref=e5]:
+  - complementary [ref=e6]:
+    - generic [ref=e7]:
+      - generic [ref=e9]:
+        - img [ref=e11]
+        - generic [ref=e14]:
+          - paragraph [ref=e15]: GigGle
+          - paragraph [ref=e16]: Admin Panel
+      - generic [ref=e18]:
+        - generic [ref=e19]: G
+        - generic [ref=e20]:
+          - paragraph [ref=e21]: GigGle Admin
+          - paragraph [ref=e22]: Administrator
+      - paragraph [ref=e23]: Navigation
+      - navigation [ref=e24]:
+        - link "Dashboard" [ref=e25] [cursor=pointer]:
+          - /url: /admin/dashboard
+          - img [ref=e26]
+          - generic [ref=e31]: Dashboard
+        - link "Users" [ref=e32] [cursor=pointer]:
+          - /url: /admin/users
+          - img [ref=e33]
+          - generic [ref=e38]: Users
+        - link "Jobs" [ref=e39] [cursor=pointer]:
+          - /url: /admin/jobs
+          - img [ref=e40]
+          - generic [ref=e43]: Jobs
+        - link "Reports" [ref=e44] [cursor=pointer]:
+          - /url: /admin/reports
+          - img [ref=e45]
+          - generic [ref=e47]: Reports
+      - button "Sign out" [ref=e49] [cursor=pointer]:
+        - img [ref=e50]
+        - generic [ref=e53]: Sign out
+  - main [ref=e55]:
+    - generic [ref=e164]:
+      - generic [ref=e165]:
+        - heading "Manage Users" [level=1] [ref=e166]
+        - paragraph [ref=e167]: View, edit, suspend or delete any account on the platform.
+      - generic [ref=e168]:
+        - generic [ref=e169]:
+          - img [ref=e170]
+          - textbox "Search by name…" [ref=e173]
+        - combobox [ref=e174]:
+          - option "All roles" [selected]
+          - option "Workers"
+          - option "Employers"
+          - option "Admins"
+      - paragraph [ref=e175]: 5 users found
+      - generic [ref=e176]:
+        - generic [ref=e177]:
+          - generic [ref=e178]: G
+          - generic [ref=e179]:
+            - generic [ref=e180]:
+              - generic [ref=e181]: GigGle Admin
+              - generic [ref=e182]: admin
+            - generic [ref=e184]: Joined 31 mai 2026
+          - generic [ref=e185]:
+            - button "Edit user" [ref=e186] [cursor=pointer]:
+              - img [ref=e187]
+            - button "Suspend user" [ref=e190] [cursor=pointer]:
+              - img [ref=e191]
+            - button "Delete account" [ref=e195] [cursor=pointer]:
+              - img [ref=e196]
+        - generic [ref=e199]:
+          - generic [ref=e200]: P
+          - generic [ref=e201]:
+            - generic [ref=e202]:
+              - generic [ref=e203]: Paul Tabi
+              - generic [ref=e204]: worker
+            - generic [ref=e205]:
+              - generic [ref=e206]: Douala
+              - generic [ref=e207]: "+237655002002"
+              - generic [ref=e208]: Joined 30 mai 2026
+          - generic [ref=e209]:
+            - button "Edit user" [active] [ref=e210] [cursor=pointer]:
+              - img [ref=e211]
+            - button "Suspend user" [ref=e214] [cursor=pointer]:
+              - img [ref=e215]
+            - button "Delete account" [ref=e219] [cursor=pointer]:
+              - img [ref=e220]
+        - generic [ref=e223]:
+          - generic [ref=e224]: M
+          - generic [ref=e225]:
+            - generic [ref=e226]:
+              - generic [ref=e227]: Marie Nkomo
+              - generic [ref=e228]: employer
+            - generic [ref=e229]:
+              - generic [ref=e230]: Douala
+              - generic [ref=e231]: "+237677001001"
+              - generic [ref=e232]: Joined 30 mai 2026
+          - generic [ref=e233]:
+            - button "Edit user" [ref=e234] [cursor=pointer]:
+              - img [ref=e235]
+            - button "Suspend user" [ref=e238] [cursor=pointer]:
+              - img [ref=e239]
+            - button "Delete account" [ref=e243] [cursor=pointer]:
+              - img [ref=e244]
+        - generic [ref=e247]:
+          - generic [ref=e248]: d
+          - generic [ref=e249]:
+            - generic [ref=e250]:
+              - generic [ref=e251]: doe john
+              - generic [ref=e252]: employer
+            - generic [ref=e254]: Joined 30 mai 2026
+          - generic [ref=e255]:
+            - button "Edit user" [ref=e256] [cursor=pointer]:
+              - img [ref=e257]
+            - button "Suspend user" [ref=e260] [cursor=pointer]:
+              - img [ref=e261]
+            - button "Delete account" [ref=e265] [cursor=pointer]:
+              - img [ref=e266]
+        - generic [ref=e269]:
+          - generic [ref=e270]: d
+          - generic [ref=e271]:
+            - generic [ref=e272]:
+              - generic [ref=e273]: dboy
+              - generic [ref=e274]: employer
+            - generic [ref=e276]: Joined 30 mai 2026
+          - generic [ref=e277]:
+            - button "Edit user" [ref=e278] [cursor=pointer]:
+              - img [ref=e279]
+            - button "Suspend user" [ref=e282] [cursor=pointer]:
+              - img [ref=e283]
+            - button "Delete account" [ref=e287] [cursor=pointer]:
+              - img [ref=e288]
+      - generic [ref=e292]:
+        - generic [ref=e293]:
+          - heading "Edit User" [level=2] [ref=e294]
+          - button [ref=e295] [cursor=pointer]:
+            - img [ref=e296]
+        - generic [ref=e299]:
+          - generic [ref=e300]: P
+          - generic [ref=e301]:
+            - paragraph [ref=e302]: Paul Tabi
+            - paragraph [ref=e303]: worker
+        - generic [ref=e304]:
+          - generic [ref=e305]:
+            - generic [ref=e306]: Full Name
+            - textbox "Full name" [ref=e307]: Paul Tabi
+          - generic [ref=e308]:
+            - generic [ref=e309]: Role
+            - combobox [ref=e310]:
+              - option "Worker" [selected]
+              - option "Employer"
+              - option "Admin"
+          - generic [ref=e311]:
+            - generic [ref=e312]:
+              - generic [ref=e313]: City
+              - textbox "City" [ref=e314]: Douala
+            - generic [ref=e315]:
+              - generic [ref=e316]: Phone
+              - textbox "+237…" [ref=e317]: "+237655002002"
+        - generic [ref=e318]:
+          - button "Cancel" [ref=e319] [cursor=pointer]
+          - button "Save Changes" [ref=e320] [cursor=pointer]

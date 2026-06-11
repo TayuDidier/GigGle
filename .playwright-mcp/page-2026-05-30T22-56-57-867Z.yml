@@ -1,0 +1,84 @@
+- generic [ref=e180]:
+  - complementary [ref=e181]:
+    - generic [ref=e182]:
+      - generic [ref=e183]: GigGle
+      - generic [ref=e184]: ✦
+    - generic [ref=e186]:
+      - img [ref=e188]
+      - generic [ref=e191]:
+        - paragraph [ref=e192]: Paul Tabi
+        - paragraph [ref=e193]: Worker
+    - navigation [ref=e194]:
+      - link "Dashboard" [ref=e195] [cursor=pointer]:
+        - /url: /worker/dashboard
+        - img [ref=e196]
+        - generic [ref=e201]: Dashboard
+      - link "Browse Jobs" [ref=e202] [cursor=pointer]:
+        - /url: /worker/browse
+        - img [ref=e203]
+        - generic [ref=e206]: Browse Jobs
+      - link "Applications" [ref=e207] [cursor=pointer]:
+        - /url: /worker/applications
+        - img [ref=e208]
+        - generic [ref=e211]: Applications
+      - link "History" [ref=e212] [cursor=pointer]:
+        - /url: /worker/history
+        - img [ref=e213]
+        - generic [ref=e216]: History
+      - link "Notifications" [ref=e217] [cursor=pointer]:
+        - /url: /worker/notifications
+        - img [ref=e218]
+        - generic [ref=e221]: Notifications
+      - link "Complaints" [ref=e222] [cursor=pointer]:
+        - /url: /worker/complaints
+        - img [ref=e223]
+        - generic [ref=e225]: Complaints
+    - generic [ref=e226]:
+      - link "Profile" [ref=e227] [cursor=pointer]:
+        - /url: /worker/profile
+        - img [ref=e228]
+        - generic [ref=e231]: Profile
+      - link "Settings" [ref=e232] [cursor=pointer]:
+        - /url: /worker/settings
+        - img [ref=e233]
+        - generic [ref=e236]: Settings
+      - button "Sign out" [ref=e237] [cursor=pointer]:
+        - img [ref=e238]
+        - generic [ref=e241]: Sign out
+  - main [ref=e243]:
+    - generic [ref=e244]:
+      - generic [ref=e245]:
+        - generic [ref=e246]:
+          - img [ref=e248]
+          - generic [ref=e250]:
+            - heading "My Complaints" [level=1] [ref=e251]
+            - paragraph [ref=e252]: Submitted to the admin team
+        - link "New" [ref=e253] [cursor=pointer]:
+          - /url: /complaint/new
+          - img [ref=e254]
+          - text: New
+      - generic [ref=e256]:
+        - generic [ref=e257]:
+          - paragraph [ref=e258]: "1"
+          - paragraph [ref=e259]: Under Review
+        - generic [ref=e260]:
+          - paragraph [ref=e261]: "0"
+          - paragraph [ref=e262]: Resolved
+        - generic [ref=e263]:
+          - paragraph [ref=e264]: "0"
+          - paragraph [ref=e265]: Dismissed
+      - generic [ref=e267]:
+        - generic [ref=e268]:
+          - generic [ref=e269]:
+            - img [ref=e270]
+            - text: Under Review
+          - generic [ref=e273]: Today
+        - paragraph [ref=e274]: No payment received after job completion
+        - paragraph [ref=e275]: The employer promised to pay 18,000 XAF via MTN MoMo after I completed the cleaning job on May 31. I completed all the work as agreed (3 rooms, 2 bathrooms, kitchen) but have not received any payment. The employer has not submitted any payment reference code despite the job being marked as completed. This is a test complaint to verify the system works.
+        - generic [ref=e276]:
+          - generic [ref=e277]:
+            - generic [ref=e278]: "Job:"
+            - generic [ref=e279]: House cleaner needed for 3-bedroom apartment in Bonanjo
+          - generic [ref=e280]:
+            - generic [ref=e281]: "Against:"
+            - generic [ref=e282]: Marie Nkomo

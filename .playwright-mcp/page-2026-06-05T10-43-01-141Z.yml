@@ -1,0 +1,77 @@
+- generic [ref=e33]:
+  - complementary [ref=e34]:
+    - generic [ref=e35]:
+      - generic [ref=e36]: GigGle
+      - generic [ref=e37]: ✦
+    - generic [ref=e39]:
+      - img [ref=e41]
+      - generic [ref=e44]:
+        - paragraph [ref=e45]: Marie Nkomo
+        - paragraph [ref=e46]: Employer
+    - navigation [ref=e47]:
+      - link "Dashboard" [ref=e48] [cursor=pointer]:
+        - /url: /employer/dashboard
+        - img [ref=e49]
+        - generic [ref=e54]: Dashboard
+      - link "Post a Job" [ref=e55] [cursor=pointer]:
+        - /url: /employer/post-job
+        - img [ref=e56]
+        - generic [ref=e58]: Post a Job
+      - link "Notifications" [ref=e59] [cursor=pointer]:
+        - /url: /employer/notifications
+        - img [ref=e60]
+        - generic [ref=e63]: Notifications
+      - link "Complaints" [ref=e64] [cursor=pointer]:
+        - /url: /employer/complaints
+        - img [ref=e65]
+        - generic [ref=e67]: Complaints
+      - link "My Jobs" [ref=e68] [cursor=pointer]:
+        - /url: /employer/dashboard
+        - img [ref=e69]
+        - generic [ref=e72]: My Jobs
+    - generic [ref=e73]:
+      - link "Profile" [ref=e74] [cursor=pointer]:
+        - /url: /employer/profile
+        - img [ref=e75]
+        - generic [ref=e78]: Profile
+      - link "Settings" [ref=e79] [cursor=pointer]:
+        - /url: /employer/settings
+        - img [ref=e80]
+        - generic [ref=e83]: Settings
+      - button "Sign out" [ref=e84] [cursor=pointer]:
+        - img [ref=e85]
+        - generic [ref=e88]: Sign out
+  - main [ref=e90]:
+    - generic [ref=e91]:
+      - generic [ref=e92]:
+        - generic [ref=e93]:
+          - heading "Good morning, Marie 👋" [level=1] [ref=e94]
+          - paragraph [ref=e95]: Manage your job listings
+        - link "Post a New Job" [ref=e96] [cursor=pointer]:
+          - /url: /employer/post-job
+          - img [ref=e97]
+          - text: Post a New Job
+      - generic [ref=e99]:
+        - generic [ref=e100]:
+          - paragraph [ref=e101]: "0"
+          - paragraph [ref=e102]: Total Posted
+        - generic [ref=e103]:
+          - paragraph [ref=e104]: "0"
+          - paragraph [ref=e105]: Open
+        - generic [ref=e106]:
+          - paragraph [ref=e107]: "0"
+          - paragraph [ref=e108]: In Progress
+        - generic [ref=e109]:
+          - paragraph [ref=e110]: "0"
+          - paragraph [ref=e111]: Completed
+      - generic [ref=e112]:
+        - heading "My Jobs" [level=2] [ref=e114]
+        - generic [ref=e115]:
+          - img [ref=e117]
+          - generic [ref=e120]:
+            - paragraph [ref=e121]: No jobs posted yet
+            - paragraph [ref=e122]: Post your first job and start receiving applications
+          - link "Post a Job" [ref=e123] [cursor=pointer]:
+            - /url: /employer/post-job
+            - img [ref=e124]
+            - text: Post a Job

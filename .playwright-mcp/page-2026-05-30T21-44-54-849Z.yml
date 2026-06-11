@@ -1,0 +1,82 @@
+- generic [ref=e5]:
+  - complementary [ref=e6]:
+    - generic [ref=e7]:
+      - generic [ref=e8]: GigGle
+      - generic [ref=e9]: ✦
+    - generic [ref=e11]:
+      - img [ref=e13]
+      - generic [ref=e16]:
+        - paragraph [ref=e17]: Paul Tabi
+        - paragraph [ref=e18]: Worker
+    - navigation [ref=e19]:
+      - link "Dashboard" [ref=e20] [cursor=pointer]:
+        - /url: /worker/dashboard
+        - img [ref=e21]
+        - generic [ref=e26]: Dashboard
+      - link "Browse Jobs" [ref=e27] [cursor=pointer]:
+        - /url: /worker/browse
+        - img [ref=e28]
+        - generic [ref=e31]: Browse Jobs
+      - link "Applications" [ref=e32] [cursor=pointer]:
+        - /url: /worker/applications
+        - img [ref=e33]
+        - generic [ref=e36]: Applications
+      - link "History" [ref=e37] [cursor=pointer]:
+        - /url: /worker/history
+        - img [ref=e38]
+        - generic [ref=e41]: History
+      - link "Notifications" [ref=e42] [cursor=pointer]:
+        - /url: /worker/notifications
+        - img [ref=e43]
+        - generic [ref=e46]: Notifications
+    - generic [ref=e47]:
+      - link "Profile" [ref=e48] [cursor=pointer]:
+        - /url: /worker/profile
+        - img [ref=e49]
+        - generic [ref=e52]: Profile
+      - link "Settings" [ref=e53] [cursor=pointer]:
+        - /url: /worker/settings
+        - img [ref=e54]
+        - generic [ref=e57]: Settings
+      - button "Sign out" [ref=e58] [cursor=pointer]:
+        - img [ref=e59]
+        - generic [ref=e62]: Sign out
+  - main [ref=e64]:
+    - generic [ref=e162]:
+      - link "Browse Jobs" [ref=e164] [cursor=pointer]:
+        - /url: /worker/browse
+        - img [ref=e165]
+        - text: Browse Jobs
+      - generic [ref=e167]:
+        - generic [ref=e168]:
+          - generic [ref=e169]:
+            - generic [ref=e170]:
+              - generic [ref=e171]: 🧹
+              - generic [ref=e172]: Cleaning
+            - generic [ref=e173]: Open
+          - heading "House cleaner needed for 3-bedroom apartment in Bonanjo" [level=1] [ref=e174]
+          - generic [ref=e175]: 18 000 XAF
+          - generic [ref=e176]:
+            - generic [ref=e177]:
+              - img [ref=e178]
+              - text: Douala · Rue de la Paix, Bonanjo
+            - generic [ref=e181]:
+              - img [ref=e182]
+              - text: 1 day
+        - generic [ref=e185]:
+          - heading "Job Description" [level=2] [ref=e186]
+          - paragraph [ref=e187]: We need an experienced house cleaner to clean our 3-bedroom apartment in Bonanjo. Tasks include mopping floors, cleaning bathrooms, kitchen, and dusting all rooms. Cleaning supplies will be provided.
+        - generic [ref=e188]:
+          - heading "About the Employer" [level=2] [ref=e189]
+          - generic [ref=e190]:
+            - generic [ref=e191]: M
+            - generic [ref=e192]:
+              - paragraph [ref=e193]: Marie Nkomo
+              - paragraph [ref=e194]: Douala
+            - link "View Profile" [ref=e195] [cursor=pointer]:
+              - /url: /profile/cd785c3a-dca0-4544-a718-955c98536aa8
+        - generic [ref=e196]:
+          - heading "Apply for this Job" [level=2] [ref=e197]
+          - button "Apply Now" [ref=e198] [cursor=pointer]:
+            - img [ref=e199]
+            - text: Apply Now

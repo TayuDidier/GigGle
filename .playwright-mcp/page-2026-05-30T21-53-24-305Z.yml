@@ -1,0 +1,83 @@
+- generic [ref=e33]:
+  - complementary [ref=e34]:
+    - generic [ref=e35]:
+      - generic [ref=e36]: GigGle
+      - generic [ref=e37]: ✦
+    - generic [ref=e39]:
+      - img [ref=e41]
+      - generic [ref=e44]:
+        - paragraph [ref=e45]: Paul Tabi
+        - paragraph [ref=e46]: Worker
+    - navigation [ref=e47]:
+      - link "Dashboard" [ref=e48] [cursor=pointer]:
+        - /url: /worker/dashboard
+        - img [ref=e49]
+        - generic [ref=e54]: Dashboard
+      - link "Browse Jobs" [ref=e55] [cursor=pointer]:
+        - /url: /worker/browse
+        - img [ref=e56]
+        - generic [ref=e59]: Browse Jobs
+      - link "Applications" [ref=e60] [cursor=pointer]:
+        - /url: /worker/applications
+        - img [ref=e61]
+        - generic [ref=e64]: Applications
+      - link "History" [ref=e65] [cursor=pointer]:
+        - /url: /worker/history
+        - img [ref=e66]
+        - generic [ref=e69]: History
+      - link "Notifications" [ref=e70] [cursor=pointer]:
+        - /url: /worker/notifications
+        - img [ref=e71]
+        - generic [ref=e74]: Notifications
+    - generic [ref=e75]:
+      - link "Profile" [ref=e76] [cursor=pointer]:
+        - /url: /worker/profile
+        - img [ref=e77]
+        - generic [ref=e80]: Profile
+      - link "Settings" [ref=e81] [cursor=pointer]:
+        - /url: /worker/settings
+        - img [ref=e82]
+        - generic [ref=e85]: Settings
+      - button "Sign out" [ref=e86] [cursor=pointer]:
+        - img [ref=e87]
+        - generic [ref=e90]: Sign out
+  - main [ref=e92]:
+    - generic [ref=e93]:
+      - generic [ref=e94]:
+        - heading "Good evening, Paul 👋" [level=1] [ref=e95]
+        - paragraph [ref=e96]: Complete jobs to build your reputation
+      - generic [ref=e97]:
+        - generic [ref=e98]:
+          - paragraph [ref=e99]: "1"
+          - paragraph [ref=e100]: Applications
+        - generic [ref=e101]:
+          - paragraph [ref=e102]: "1"
+          - paragraph [ref=e103]: Active Job
+        - generic [ref=e104]:
+          - paragraph [ref=e105]: —
+          - paragraph [ref=e106]: Rating
+      - generic [ref=e107]:
+        - heading "Active Job" [level=2] [ref=e108]
+        - generic [ref=e110]:
+          - generic [ref=e111]:
+            - paragraph [ref=e112]: House cleaner needed for 3-bedroom apartment in Bonanjo
+            - paragraph [ref=e113]: Marie Nkomo · Douala
+            - paragraph [ref=e114]: 18,000 XAF
+          - link "Go to Chat →" [ref=e115] [cursor=pointer]:
+            - /url: /worker/jobs/74846cf3-30eb-4f67-96ae-c6adcac7c826/chat
+      - generic [ref=e116]:
+        - generic [ref=e117]:
+          - heading "Recent Applications" [level=2] [ref=e118]
+          - link "View all" [ref=e119] [cursor=pointer]:
+            - /url: /worker/applications
+            - text: View all
+            - img [ref=e120]
+        - generic [ref=e124]:
+          - generic [ref=e125]:
+            - generic [ref=e126]: 🧹
+            - generic [ref=e127]:
+              - paragraph [ref=e128]: House cleaner needed for 3-bedroom apartment in Bonanjo
+              - paragraph [ref=e129]:
+                - text: Marie Nkomo ·
+                - generic [ref=e130]: 18,000 XAF
+          - generic [ref=e131]: Accepted

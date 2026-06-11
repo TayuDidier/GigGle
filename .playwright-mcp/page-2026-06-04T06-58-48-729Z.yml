@@ -1,0 +1,76 @@
+- generic [ref=e5]:
+  - complementary [ref=e6]:
+    - generic [ref=e7]:
+      - generic [ref=e8]: GigGle
+      - generic [ref=e9]: ✦
+    - generic [ref=e11]:
+      - img [ref=e13]
+      - generic [ref=e16]:
+        - paragraph [ref=e17]: Marie Nkomo
+        - paragraph [ref=e18]: Employer
+    - navigation [ref=e19]:
+      - link "Dashboard" [ref=e20] [cursor=pointer]:
+        - /url: /employer/dashboard
+        - img [ref=e21]
+        - generic [ref=e26]: Dashboard
+      - link "Post a Job" [ref=e27] [cursor=pointer]:
+        - /url: /employer/post-job
+        - img [ref=e28]
+        - generic [ref=e30]: Post a Job
+      - link "Notifications" [ref=e31] [cursor=pointer]:
+        - /url: /employer/notifications
+        - img [ref=e32]
+        - generic [ref=e35]: Notifications
+      - link "Complaints" [ref=e36] [cursor=pointer]:
+        - /url: /employer/complaints
+        - img [ref=e37]
+        - generic [ref=e39]: Complaints
+      - link "My Jobs" [ref=e40] [cursor=pointer]:
+        - /url: /employer/dashboard
+        - img [ref=e41]
+        - generic [ref=e44]: My Jobs
+    - generic [ref=e45]:
+      - link "Profile" [ref=e46] [cursor=pointer]:
+        - /url: /employer/profile
+        - img [ref=e47]
+        - generic [ref=e50]: Profile
+      - link "Settings" [ref=e51] [cursor=pointer]:
+        - /url: /employer/settings
+        - img [ref=e52]
+        - generic [ref=e55]: Settings
+      - button "Sign out" [ref=e56] [cursor=pointer]:
+        - img [ref=e57]
+        - generic [ref=e60]: Sign out
+  - main [ref=e62]:
+    - generic [ref=e63]:
+      - link "Back to Job" [ref=e64] [cursor=pointer]:
+        - /url: /employer/jobs/74846cf3-30eb-4f67-96ae-c6adcac7c826
+        - img [ref=e65]
+        - text: Back to Job
+      - generic [ref=e67]:
+        - img [ref=e69]
+        - generic [ref=e71]:
+          - heading "Submit Payment" [level=1] [ref=e72]
+          - paragraph [ref=e73]: House cleaner needed for 3-bedroom apartment in Bonanjo
+      - generic [ref=e74]:
+        - generic [ref=e75]: P
+        - generic [ref=e76]:
+          - paragraph [ref=e77]: "Paying: Paul Tabi"
+          - paragraph [ref=e78]:
+            - text: "Agreed pay:"
+            - strong [ref=e79]: 18 000 XAF
+      - generic [ref=e96]:
+        - img [ref=e98]
+        - heading "Payment submitted — awaiting confirmation" [level=2] [ref=e101]
+        - paragraph [ref=e102]:
+          - text: "Provider:"
+          - strong [ref=e103]: MTN MoMo
+        - paragraph [ref=e104]:
+          - text: "Reference:"
+          - strong [ref=e105]: MMT12345678
+        - paragraph [ref=e106]:
+          - text: "Amount:"
+          - strong [ref=e107]: 18 000 XAF
+        - paragraph [ref=e108]: The worker will confirm receipt. Once confirmed, you can rate them.
+        - link "Back to Job" [ref=e109] [cursor=pointer]:
+          - /url: /employer/jobs/74846cf3-30eb-4f67-96ae-c6adcac7c826

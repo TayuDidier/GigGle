@@ -1,0 +1,17 @@
+[     316ms] [INFO] %cDownload the React DevTools for a better development experience: https://reactjs.org/link/react-devtools font-weight:bold @ http://localhost:5173/node_modules/.vite/deps/chunk-WERSD76P.js?v=de16e338:21550
+[   45561ms] [ERROR] Failed to load resource: net::ERR_CONNECTION_RESET @ https://omcakemsuifgfanvepbs.supabase.co/rest/v1/profiles?select=*&user_id=eq.cdf86411-493b-4093-8b1b-35c72fdbfe4f:0
+[   45563ms] [ERROR] Failed to load resource: net::ERR_CONNECTION_RESET @ https://omcakemsuifgfanvepbs.supabase.co/rest/v1/profiles?select=*&user_id=eq.cdf86411-493b-4093-8b1b-35c72fdbfe4f:0
+[   71638ms] [ERROR] Failed to load resource: net::ERR_TIMED_OUT @ https://omcakemsuifgfanvepbs.supabase.co/rest/v1/profiles?select=*&user_id=eq.cdf86411-493b-4093-8b1b-35c72fdbfe4f:0
+[   71639ms] [ERROR] Failed to load resource: net::ERR_TIMED_OUT @ https://omcakemsuifgfanvepbs.supabase.co/rest/v1/profiles?select=*&user_id=eq.cdf86411-493b-4093-8b1b-35c72fdbfe4f:0
+[   71670ms] [ERROR] Failed to load resource: net::ERR_TIMED_OUT @ https://omcakemsuifgfanvepbs.supabase.co/rest/v1/profiles?select=*&user_id=eq.cdf86411-493b-4093-8b1b-35c72fdbfe4f:0
+[   88995ms] [ERROR] Failed to load resource: net::ERR_CONNECTION_TIMED_OUT @ https://omcakemsuifgfanvepbs.supabase.co/rest/v1/profiles?select=*&user_id=eq.cdf86411-493b-4093-8b1b-35c72fdbfe4f:0
+[   89310ms] [ERROR] Failed to load resource: net::ERR_CONNECTION_TIMED_OUT @ https://omcakemsuifgfanvepbs.supabase.co/rest/v1/profiles?select=*&user_id=eq.cdf86411-493b-4093-8b1b-35c72fdbfe4f:0
+[  103572ms] [ERROR] Failed to load resource: net::ERR_NETWORK_CHANGED @ https://omcakemsuifgfanvepbs.supabase.co/rest/v1/profiles?select=*&user_id=eq.cdf86411-493b-4093-8b1b-35c72fdbfe4f:0
+[  103574ms] [ERROR] Failed to load resource: net::ERR_NETWORK_CHANGED @ https://omcakemsuifgfanvepbs.supabase.co/rest/v1/profiles?select=*&user_id=eq.cdf86411-493b-4093-8b1b-35c72fdbfe4f:0
+[  103575ms] [ERROR] Failed to load resource: net::ERR_NETWORK_CHANGED @ https://omcakemsuifgfanvepbs.supabase.co/rest/v1/profiles?select=*&user_id=eq.cdf86411-493b-4093-8b1b-35c72fdbfe4f:0
+[  103576ms] [ERROR] Failed to load resource: net::ERR_NETWORK_CHANGED @ https://omcakemsuifgfanvepbs.supabase.co/rest/v1/profiles?select=*&user_id=eq.cdf86411-493b-4093-8b1b-35c72fdbfe4f:0
+[  115458ms] [ERROR] Failed to load resource: net::ERR_NETWORK_CHANGED @ https://omcakemsuifgfanvepbs.supabase.co/rest/v1/profiles?select=*&user_id=eq.cdf86411-493b-4093-8b1b-35c72fdbfe4f:0
+[  115459ms] [ERROR] Failed to load resource: net::ERR_NETWORK_CHANGED @ https://omcakemsuifgfanvepbs.supabase.co/rest/v1/profiles?select=*&user_id=eq.cdf86411-493b-4093-8b1b-35c72fdbfe4f:0
+[  115461ms] [ERROR] Failed to load resource: net::ERR_NETWORK_CHANGED @ https://omcakemsuifgfanvepbs.supabase.co/rest/v1/profiles?select=*&user_id=eq.cdf86411-493b-4093-8b1b-35c72fdbfe4f:0
+[  115461ms] [ERROR] Failed to load resource: net::ERR_NETWORK_CHANGED @ https://omcakemsuifgfanvepbs.supabase.co/rest/v1/profiles?select=*&user_id=eq.cdf86411-493b-4093-8b1b-35c72fdbfe4f:0
+[  119485ms] [ERROR] Failed to load resource: net::ERR_INTERNET_DISCONNECTED @ https://omcakemsuifgfanvepbs.supabase.co/rest/v1/profiles?select=*&user_id=eq.cdf86411-493b-4093-8b1b-35c72fdbfe4f:0

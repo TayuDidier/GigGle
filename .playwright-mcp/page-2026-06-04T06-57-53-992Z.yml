@@ -1,0 +1,149 @@
+- generic [ref=e33]:
+  - complementary [ref=e34]:
+    - generic [ref=e35]:
+      - generic [ref=e36]: GigGle
+      - generic [ref=e37]: ✦
+    - generic [ref=e39]:
+      - img [ref=e41]
+      - generic [ref=e44]:
+        - paragraph [ref=e45]: Marie Nkomo
+        - paragraph [ref=e46]: Employer
+    - navigation [ref=e47]:
+      - link "Dashboard" [ref=e48] [cursor=pointer]:
+        - /url: /employer/dashboard
+        - img [ref=e49]
+        - generic [ref=e54]: Dashboard
+      - link "Post a Job" [ref=e55] [cursor=pointer]:
+        - /url: /employer/post-job
+        - img [ref=e56]
+        - generic [ref=e58]: Post a Job
+      - link "Notifications" [ref=e59] [cursor=pointer]:
+        - /url: /employer/notifications
+        - img [ref=e60]
+        - generic [ref=e63]: Notifications
+      - link "Complaints" [ref=e64] [cursor=pointer]:
+        - /url: /employer/complaints
+        - img [ref=e65]
+        - generic [ref=e67]: Complaints
+      - link "My Jobs" [ref=e68] [cursor=pointer]:
+        - /url: /employer/dashboard
+        - img [ref=e69]
+        - generic [ref=e72]: My Jobs
+    - generic [ref=e73]:
+      - link "Profile" [ref=e74] [cursor=pointer]:
+        - /url: /employer/profile
+        - img [ref=e75]
+        - generic [ref=e78]: Profile
+      - link "Settings" [ref=e79] [cursor=pointer]:
+        - /url: /employer/settings
+        - img [ref=e80]
+        - generic [ref=e83]: Settings
+      - button "Sign out" [ref=e84] [cursor=pointer]:
+        - img [ref=e85]
+        - generic [ref=e88]: Sign out
+  - main [ref=e90]:
+    - generic [ref=e91]:
+      - generic [ref=e92]:
+        - generic [ref=e93]:
+          - heading "Good morning, Marie 👋" [level=1] [ref=e94]
+          - paragraph [ref=e95]: Manage your job listings
+        - link "Post a New Job" [ref=e96] [cursor=pointer]:
+          - /url: /employer/post-job
+          - img [ref=e97]
+          - text: Post a New Job
+      - generic [ref=e99]:
+        - generic [ref=e100]:
+          - paragraph [ref=e101]: "6"
+          - paragraph [ref=e102]: Total Posted
+        - generic [ref=e103]:
+          - paragraph [ref=e104]: "3"
+          - paragraph [ref=e105]: Open
+        - generic [ref=e106]:
+          - paragraph [ref=e107]: "1"
+          - paragraph [ref=e108]: In Progress
+        - generic [ref=e109]:
+          - paragraph [ref=e110]: "2"
+          - paragraph [ref=e111]: Completed
+      - generic [ref=e112]:
+        - generic [ref=e113]:
+          - heading "My Jobs" [level=2] [ref=e114]
+          - link "View all" [ref=e115] [cursor=pointer]:
+            - /url: /employer/dashboard
+            - text: View all
+            - img [ref=e116]
+        - generic [ref=e118]:
+          - generic [ref=e120]:
+            - generic [ref=e121]:
+              - generic [ref=e122]: 📚
+              - generic [ref=e123]:
+                - paragraph [ref=e124]: well educated Economics teacher needed
+                - generic [ref=e125]:
+                  - generic [ref=e126]: Tutoring
+                  - generic [ref=e127]: 50,000 XAF
+                  - generic [ref=e128]: 2 Jun 2026
+            - generic [ref=e129]:
+              - generic [ref=e130]: Open
+              - link "Manage" [ref=e131] [cursor=pointer]:
+                - /url: /employer/jobs/3bcf9a05-68b5-454a-9150-0a92386572a3/applicants
+                - text: Manage
+                - img [ref=e132]
+          - generic [ref=e135]:
+            - generic [ref=e136]:
+              - generic [ref=e137]: 🧹
+              - generic [ref=e138]:
+                - paragraph [ref=e139]: House Cleaning
+                - generic [ref=e140]:
+                  - generic [ref=e141]: Cleaning
+                  - generic [ref=e142]: 20,000 XAF
+                  - generic [ref=e143]: 2 Jun 2026
+            - generic [ref=e144]:
+              - generic [ref=e145]: Open
+              - link "Manage" [ref=e146] [cursor=pointer]:
+                - /url: /employer/jobs/a0c8e957-cfd9-4042-972d-127853438529/applicants
+                - text: Manage
+                - img [ref=e147]
+          - generic [ref=e150]:
+            - generic [ref=e151]:
+              - generic [ref=e152]: 🔧
+              - generic [ref=e153]:
+                - paragraph [ref=e154]: Electrician needed to fix wiring fault and install sockets
+                - generic [ref=e155]:
+                  - generic [ref=e156]: Repairs
+                  - generic [ref=e157]: 20,000 XAF
+                  - generic [ref=e158]: 31 May 2026
+            - generic [ref=e159]:
+              - generic [ref=e160]: Open
+              - link "Manage" [ref=e161] [cursor=pointer]:
+                - /url: /employer/jobs/5a028b8c-494a-49b8-b57b-3732f75d6c21/applicants
+                - text: Manage
+                - img [ref=e162]
+          - generic [ref=e165]:
+            - generic [ref=e166]:
+              - generic [ref=e167]: 🎉
+              - generic [ref=e168]:
+                - paragraph [ref=e169]: Event setup and cleanup crew needed for corporate dinner
+                - generic [ref=e170]:
+                  - generic [ref=e171]: Event Labor
+                  - generic [ref=e172]: 25,000 XAF
+                  - generic [ref=e173]: 31 May 2026
+            - generic [ref=e174]:
+              - generic [ref=e175]: Completed
+              - link "Manage" [ref=e176] [cursor=pointer]:
+                - /url: /employer/jobs/bbb0d8cd-0889-45ab-b107-ccb64e1a7b3c/applicants
+                - text: Manage
+                - img [ref=e177]
+          - generic [ref=e180]:
+            - generic [ref=e181]:
+              - generic [ref=e182]: 📚
+              - generic [ref=e183]:
+                - paragraph [ref=e184]: Math and Physics tutor needed for Form 5 student in Bastos
+                - generic [ref=e185]:
+                  - generic [ref=e186]: Tutoring
+                  - generic [ref=e187]: 12,000 XAF
+                  - generic [ref=e188]: 31 May 2026
+            - generic [ref=e189]:
+              - generic [ref=e190]: In Progress
+              - link "Manage" [ref=e191] [cursor=pointer]:
+                - /url: /employer/jobs/64a57ee5-dd9d-45d3-ae30-7ac8003bef93/applicants
+                - text: Manage
+                - img [ref=e192]

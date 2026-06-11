@@ -1,0 +1,77 @@
+- generic [ref=e5]:
+  - complementary [ref=e6]:
+    - generic [ref=e7]:
+      - generic [ref=e8]: GigGle
+      - generic [ref=e9]: ✦
+    - generic [ref=e11]:
+      - img [ref=e13]
+      - generic [ref=e16]:
+        - paragraph [ref=e17]: Marie Nkomo
+        - paragraph [ref=e18]: Employer
+    - navigation [ref=e19]:
+      - link "Dashboard" [ref=e20] [cursor=pointer]:
+        - /url: /employer/dashboard
+        - img [ref=e21]
+        - generic [ref=e26]: Dashboard
+      - link "Post a Job" [ref=e27] [cursor=pointer]:
+        - /url: /employer/post-job
+        - img [ref=e28]
+        - generic [ref=e30]: Post a Job
+      - link "Notifications" [ref=e31] [cursor=pointer]:
+        - /url: /employer/notifications
+        - img [ref=e32]
+        - generic [ref=e35]: Notifications
+      - link "My Jobs" [ref=e36] [cursor=pointer]:
+        - /url: /employer/dashboard
+        - img [ref=e37]
+        - generic [ref=e40]: My Jobs
+    - generic [ref=e41]:
+      - link "Profile" [ref=e42] [cursor=pointer]:
+        - /url: /employer/profile
+        - img [ref=e43]
+        - generic [ref=e46]: Profile
+      - link "Settings" [ref=e47] [cursor=pointer]:
+        - /url: /employer/settings
+        - img [ref=e48]
+        - generic [ref=e51]: Settings
+      - button "Sign out" [ref=e52] [cursor=pointer]:
+        - img [ref=e53]
+        - generic [ref=e56]: Sign out
+  - main [ref=e58]:
+    - generic [ref=e129]:
+      - link "My Jobs" [ref=e130] [cursor=pointer]:
+        - /url: /employer/dashboard
+        - img [ref=e131]
+        - text: My Jobs
+      - generic [ref=e133]:
+        - generic [ref=e134]:
+          - generic [ref=e135]:
+            - generic [ref=e136]: 🧹
+            - generic [ref=e137]: Cleaning
+          - generic [ref=e138]: Open
+        - heading "House cleaner needed for 3-bedroom apartment in Bonanjo" [level=1] [ref=e139]
+        - generic [ref=e140]: 15 000 XAF
+        - generic [ref=e141]:
+          - generic [ref=e142]:
+            - img [ref=e143]
+            - text: Douala · Rue de la Paix, Bonanjo
+          - generic [ref=e146]:
+            - img [ref=e147]
+            - text: 1 day
+      - generic [ref=e150]:
+        - heading "Description" [level=2] [ref=e151]
+        - paragraph [ref=e152]: We need an experienced house cleaner to clean our 3-bedroom apartment in Bonanjo. Tasks include mopping floors, cleaning bathrooms, kitchen, and dusting all rooms. Cleaning supplies will be provided.
+      - generic [ref=e153]:
+        - heading "Actions" [level=2] [ref=e154]
+        - generic [ref=e155]:
+          - link "Edit Job" [ref=e156] [cursor=pointer]:
+            - /url: /employer/jobs/74846cf3-30eb-4f67-96ae-c6adcac7c826/edit
+            - img [ref=e157]
+            - text: Edit Job
+          - link "View Applicants" [ref=e159] [cursor=pointer]:
+            - /url: /employer/jobs/74846cf3-30eb-4f67-96ae-c6adcac7c826/applicants
+            - img [ref=e160]
+            - text: View Applicants
+          - button "Cancel Job" [ref=e165] [cursor=pointer]:
+            - img [ref=e166]
+            - text: Cancel Job

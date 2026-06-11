@@ -1,0 +1,113 @@
+- generic [ref=e74]:
+  - complementary [ref=e75]:
+    - generic [ref=e76]:
+      - generic [ref=e77]: GigGle
+      - generic [ref=e78]: ✦
+    - generic [ref=e80]:
+      - img [ref=e82]
+      - generic [ref=e85]:
+        - paragraph [ref=e86]: Marie Nkomo
+        - paragraph [ref=e87]: Employer
+    - navigation [ref=e88]:
+      - link "Dashboard" [ref=e89] [cursor=pointer]:
+        - /url: /employer/dashboard
+        - img [ref=e90]
+        - generic [ref=e95]: Dashboard
+      - link "Post a Job" [ref=e96] [cursor=pointer]:
+        - /url: /employer/post-job
+        - img [ref=e97]
+        - generic [ref=e99]: Post a Job
+      - link "Notifications 1" [ref=e100] [cursor=pointer]:
+        - /url: /employer/notifications
+        - img [ref=e101]
+        - generic [ref=e104]: Notifications
+        - generic [ref=e105]: "1"
+      - link "Complaints" [ref=e106] [cursor=pointer]:
+        - /url: /employer/complaints
+        - img [ref=e107]
+        - generic [ref=e109]: Complaints
+      - link "My Jobs" [ref=e110] [cursor=pointer]:
+        - /url: /employer/dashboard
+        - img [ref=e111]
+        - generic [ref=e114]: My Jobs
+    - generic [ref=e115]:
+      - link "Profile" [ref=e116] [cursor=pointer]:
+        - /url: /employer/profile
+        - img [ref=e117]
+        - generic [ref=e120]: Profile
+      - link "Settings" [ref=e121] [cursor=pointer]:
+        - /url: /employer/settings
+        - img [ref=e122]
+        - generic [ref=e125]: Settings
+      - button "Sign out" [ref=e126] [cursor=pointer]:
+        - img [ref=e127]
+        - generic [ref=e130]: Sign out
+  - main [ref=e5]:
+    - generic [ref=e6]:
+      - link "Job Detail" [ref=e7] [cursor=pointer]:
+        - /url: /employer/jobs/c1c90b06-3197-4d10-aadf-f889d491e4d8
+        - img [ref=e8]
+        - text: Job Detail
+      - generic [ref=e10]:
+        - generic [ref=e11]:
+          - generic [ref=e12]:
+            - generic [ref=e13]: 🧹
+            - generic [ref=e14]: Cleaning
+          - generic [ref=e15]: Open
+        - heading "House cleaner needed for 3-bedroom apartment in Bonanjo" [level=1] [ref=e16]
+        - paragraph [ref=e17]: 1 applicant
+      - generic [ref=e18]:
+        - generic [ref=e19]:
+          - button "Applicants (1)" [ref=e20] [cursor=pointer]:
+            - img [ref=e21]
+            - text: Applicants (1)
+          - button "Discover Nearby Workers" [ref=e26] [cursor=pointer]:
+            - img [ref=e27]
+            - text: Discover Nearby Workers
+        - generic [ref=e31]:
+          - generic:
+            - generic:
+              - button "📍" [ref=e32] [cursor=pointer]:
+                - generic [ref=e33]: 📍
+              - button [ref=e34] [cursor=pointer]
+          - generic:
+            - generic [ref=e36]:
+              - button "Zoom in" [ref=e37] [cursor=pointer]: +
+              - button "Zoom out" [ref=e38] [cursor=pointer]: −
+            - generic [ref=e39]:
+              - link "Leaflet" [ref=e40] [cursor=pointer]:
+                - /url: https://leafletjs.com
+                - img [ref=e41]
+                - text: Leaflet
+              - text: "| ©"
+              - link "OpenStreetMap" [ref=e45] [cursor=pointer]:
+                - /url: https://www.openstreetmap.org/copyright
+        - generic [ref=e46]:
+          - generic [ref=e49]: Job location
+          - generic [ref=e52]: Pending
+          - generic [ref=e55]: Accepted
+          - generic [ref=e56]: Click a pin to locate
+      - generic [ref=e58]:
+        - generic [ref=e59]:
+          - generic [ref=e60]: P
+          - generic [ref=e61]:
+            - generic [ref=e62]:
+              - paragraph [ref=e63]: Paul Tabi
+              - generic [ref=e64]: Pending
+            - paragraph [ref=e65]:
+              - img [ref=e66]
+              - text: Douala
+        - paragraph [ref=e70]: "\"Hello! I am Paul Tabi, an experienced house cleaner based in Douala. I have 3 years of experience in residential cleaning and always bring my own high-quality supplies. I am available immediately and can complete the job within 4 hours. I look forward to working with you!\""
+        - generic [ref=e71]:
+          - link "View Profile" [ref=e72] [cursor=pointer]:
+            - /url: /profile/e5225934-f6b1-4608-90c2-7c1641f6b982
+          - button "Select This Worker" [active] [ref=e73] [cursor=pointer]
+      - generic [ref=e133]:
+        - heading "Select this worker?" [level=2] [ref=e134]
+        - paragraph [ref=e135]:
+          - text: You are about to select
+          - strong [ref=e136]: Paul Tabi
+          - text: for this job. Other pending applicants will be rejected.
+        - generic [ref=e137]:
+          - button "Cancel" [ref=e138] [cursor=pointer]
+          - button "Confirm" [ref=e139] [cursor=pointer]

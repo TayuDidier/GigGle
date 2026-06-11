@@ -1,0 +1,9 @@
+[     410ms] [INFO] %cDownload the React DevTools for a better development experience: https://reactjs.org/link/react-devtools font-weight:bold @ http://localhost:5173/node_modules/.vite/deps/chunk-WERSD76P.js?v=de16e338:21550
+[    3515ms] [ERROR] Failed to load resource: the server responded with a status of 400 () @ https://omcakemsuifgfanvepbs.supabase.co/rest/v1/rpc/admin_get_users:0
+[    6039ms] [ERROR] Failed to load resource: the server responded with a status of 400 () @ https://omcakemsuifgfanvepbs.supabase.co/rest/v1/rpc/admin_get_users:0
+[    8434ms] [ERROR] Failed to load resource: the server responded with a status of 400 () @ https://omcakemsuifgfanvepbs.supabase.co/rest/v1/rpc/admin_get_users:0
+[   15187ms] [ERROR] Failed to load resource: the server responded with a status of 400 () @ https://omcakemsuifgfanvepbs.supabase.co/rest/v1/rpc/admin_get_users:0
+[   16636ms] [ERROR] Failed to load resource: the server responded with a status of 400 () @ https://omcakemsuifgfanvepbs.supabase.co/rest/v1/rpc/admin_get_users:0
+[   17647ms] [ERROR] Failed to load resource: the server responded with a status of 400 () @ https://omcakemsuifgfanvepbs.supabase.co/rest/v1/rpc/admin_get_users:0
+[   18970ms] [ERROR] Failed to load resource: the server responded with a status of 400 () @ https://omcakemsuifgfanvepbs.supabase.co/rest/v1/rpc/admin_get_users:0
+[   21457ms] [ERROR] Failed to load resource: the server responded with a status of 400 () @ https://omcakemsuifgfanvepbs.supabase.co/rest/v1/rpc/admin_get_users:0

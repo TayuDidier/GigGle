@@ -1,0 +1,61 @@
+- generic [ref=e33]:
+  - generic [ref=e34]:
+    - generic [ref=e35]: GigGle
+    - generic [ref=e36]: ✦
+  - generic [ref=e37]:
+    - generic [ref=e38]:
+      - img [ref=e68]
+      - generic [ref=e43]: "2"
+      - generic [ref=e46]: "3"
+    - heading "What kind of help do you need?" [level=1] [ref=e70]
+    - paragraph [ref=e48]: Help workers understand what you typically need
+    - generic [ref=e71]:
+      - generic [ref=e72]:
+        - generic [ref=e73]: Describe your hiring needs
+        - textbox "Briefly describe your typical hiring needs..." [ref=e74]
+        - paragraph [ref=e75]: 0/500
+      - generic [ref=e76]:
+        - generic [ref=e77]: Job types you typically post
+        - paragraph [ref=e78]: Select all that apply
+        - generic [ref=e79]:
+          - button "🧹 Cleaning" [ref=e80] [cursor=pointer]:
+            - generic [ref=e81]: 🧹
+            - generic [ref=e82]: Cleaning
+          - button "📚 Tutoring" [ref=e83] [cursor=pointer]:
+            - generic [ref=e84]: 📚
+            - generic [ref=e85]: Tutoring
+          - button "🔧 Repairs" [ref=e86] [cursor=pointer]:
+            - generic [ref=e87]: 🔧
+            - generic [ref=e88]: Repairs
+          - button "❤️ Caregiving" [ref=e89] [cursor=pointer]:
+            - generic [ref=e90]: ❤️
+            - generic [ref=e91]: Caregiving
+          - button "📦 Delivery" [ref=e92] [cursor=pointer]:
+            - generic [ref=e93]: 📦
+            - generic [ref=e94]: Delivery
+          - button "🎉 Event Labor" [ref=e95] [cursor=pointer]:
+            - generic [ref=e96]: 🎉
+            - generic [ref=e97]: Event Labor
+          - button "💻 Digital Services" [ref=e98] [cursor=pointer]:
+            - generic [ref=e99]: 💻
+            - generic [ref=e100]: Digital Services
+          - button "🌿 Gardening" [ref=e101] [cursor=pointer]:
+            - generic [ref=e102]: 🌿
+            - generic [ref=e103]: Gardening
+          - button "🚚 Moving" [ref=e104] [cursor=pointer]:
+            - generic [ref=e105]: 🚚
+            - generic [ref=e106]: Moving
+          - button "👨‍🍳 Cooking" [ref=e107] [cursor=pointer]:
+            - generic [ref=e108]: 👨‍🍳
+            - generic [ref=e109]: Cooking
+          - button "💼 Other" [ref=e110] [cursor=pointer]:
+            - generic [ref=e111]: 💼
+            - generic [ref=e112]: Other
+    - generic [ref=e62]:
+      - button "Back" [ref=e113] [cursor=pointer]:
+        - img [ref=e114]
+        - text: Back
+      - button "Next" [active] [ref=e64] [cursor=pointer]:
+        - text: Next
+        - img [ref=e65]
+  - paragraph [ref=e67]: Step 2 of 3

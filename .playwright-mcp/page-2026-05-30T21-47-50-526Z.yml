@@ -1,0 +1,78 @@
+- generic [ref=e5]:
+  - complementary [ref=e6]:
+    - generic [ref=e7]:
+      - generic [ref=e8]: GigGle
+      - generic [ref=e9]: ✦
+    - generic [ref=e11]:
+      - img [ref=e13]
+      - generic [ref=e16]:
+        - paragraph [ref=e17]: Marie Nkomo
+        - paragraph [ref=e18]: Employer
+    - navigation [ref=e19]:
+      - link "Dashboard" [ref=e20] [cursor=pointer]:
+        - /url: /employer/dashboard
+        - img [ref=e21]
+        - generic [ref=e26]: Dashboard
+      - link "Post a Job" [ref=e27] [cursor=pointer]:
+        - /url: /employer/post-job
+        - img [ref=e28]
+        - generic [ref=e30]: Post a Job
+      - link "Notifications" [ref=e31] [cursor=pointer]:
+        - /url: /employer/notifications
+        - img [ref=e32]
+        - generic [ref=e35]: Notifications
+      - link "My Jobs" [ref=e36] [cursor=pointer]:
+        - /url: /employer/dashboard
+        - img [ref=e37]
+        - generic [ref=e40]: My Jobs
+    - generic [ref=e41]:
+      - link "Profile" [ref=e42] [cursor=pointer]:
+        - /url: /employer/profile
+        - img [ref=e43]
+        - generic [ref=e46]: Profile
+      - link "Settings" [ref=e47] [cursor=pointer]:
+        - /url: /employer/settings
+        - img [ref=e48]
+        - generic [ref=e51]: Settings
+      - button "Sign out" [ref=e52] [cursor=pointer]:
+        - img [ref=e53]
+        - generic [ref=e56]: Sign out
+  - main [ref=e58]:
+    - generic [ref=e59]:
+      - link "Job Detail" [ref=e60] [cursor=pointer]:
+        - /url: /employer/jobs/74846cf3-30eb-4f67-96ae-c6adcac7c826
+        - img [ref=e61]
+        - text: Job Detail
+      - generic [ref=e63]:
+        - generic [ref=e64]:
+          - generic [ref=e65]:
+            - generic [ref=e66]: 🧹
+            - generic [ref=e67]: Cleaning
+          - generic [ref=e68]: Open
+        - heading "House cleaner needed for 3-bedroom apartment in Bonanjo" [level=1] [ref=e69]
+        - paragraph [ref=e70]: 1 applicant
+      - generic [ref=e72]:
+        - generic [ref=e73]:
+          - generic [ref=e74]: P
+          - generic [ref=e75]:
+            - generic [ref=e76]:
+              - paragraph [ref=e77]: Paul Tabi
+              - generic [ref=e78]: Pending
+            - paragraph [ref=e79]:
+              - img [ref=e80]
+              - text: Douala
+            - paragraph [ref=e83]: "Experienced house cleaner with 3 years of work in Douala. Skilled in deep cleaning, laundry, and kitchen work. Available on weekends and weekdays. Skills: Cleaning"
+        - paragraph [ref=e85]: "\"Hello! I am Paul Tabi, an experienced house cleaner based in Douala with 3 years of experience. I am very familiar with deep cleaning, bathroom and kitchen work. I am available immediately and will bring great care to your home.\""
+        - generic [ref=e86]:
+          - link "View Profile" [ref=e87] [cursor=pointer]:
+            - /url: /profile/00e57c9e-cc8f-48d4-89f5-a264fc85a7b6
+          - button "Select This Worker" [active] [ref=e88] [cursor=pointer]
+      - generic [ref=e90]:
+        - heading "Select this worker?" [level=2] [ref=e91]
+        - paragraph [ref=e92]:
+          - text: You are about to select
+          - strong [ref=e93]: Paul Tabi
+          - text: for this job. Other applicants will not be accepted.
+        - generic [ref=e94]:
+          - button "Cancel" [ref=e95] [cursor=pointer]
+          - button "Confirm" [ref=e96] [cursor=pointer]

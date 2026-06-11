@@ -1,0 +1,60 @@
+- generic [ref=e5]:
+  - complementary [ref=e6]:
+    - generic [ref=e7]:
+      - generic [ref=e8]: GigGle
+      - generic [ref=e9]: ✦
+    - generic [ref=e11]:
+      - img [ref=e13]
+      - generic [ref=e16]:
+        - paragraph [ref=e17]: Marie Nkomo
+        - paragraph [ref=e18]: Employer
+    - navigation [ref=e19]:
+      - link "Dashboard" [ref=e20] [cursor=pointer]:
+        - /url: /employer/dashboard
+        - img [ref=e21]
+        - generic [ref=e26]: Dashboard
+      - link "Post a Job" [ref=e27] [cursor=pointer]:
+        - /url: /employer/post-job
+        - img [ref=e28]
+        - generic [ref=e30]: Post a Job
+      - link "Notifications" [ref=e31] [cursor=pointer]:
+        - /url: /employer/notifications
+        - img [ref=e32]
+        - generic [ref=e35]: Notifications
+      - link "My Jobs" [ref=e36] [cursor=pointer]:
+        - /url: /employer/dashboard
+        - img [ref=e37]
+        - generic [ref=e40]: My Jobs
+    - generic [ref=e41]:
+      - link "Profile" [ref=e42] [cursor=pointer]:
+        - /url: /employer/profile
+        - img [ref=e43]
+        - generic [ref=e46]: Profile
+      - link "Settings" [ref=e47] [cursor=pointer]:
+        - /url: /employer/settings
+        - img [ref=e48]
+        - generic [ref=e51]: Settings
+      - button "Sign out" [ref=e52] [cursor=pointer]:
+        - img [ref=e53]
+        - generic [ref=e56]: Sign out
+  - main [ref=e58]:
+    - generic [ref=e59]:
+      - generic [ref=e60]:
+        - link [ref=e61] [cursor=pointer]:
+          - /url: /employer/jobs/74846cf3-30eb-4f67-96ae-c6adcac7c826
+          - img [ref=e62]
+        - generic [ref=e64]: P
+        - generic [ref=e65]:
+          - paragraph [ref=e66]: Paul Tabi
+          - paragraph [ref=e67]: House cleaner needed for 3-bedroom apartment in Bonanjo
+      - generic [ref=e68]:
+        - generic [ref=e70]:
+          - generic [ref=e71]: Hi Paul! Thanks for applying. Please come to our apartment at Rue de la Paix, Bonanjo at 8am tomorrow. Bring your own gloves if you have them.
+          - paragraph [ref=e72]: 22:49
+        - generic [ref=e80]:
+          - generic [ref=e81]: Please confirm you received this. We look forward to seeing you tomorrow!
+          - paragraph [ref=e82]: 22:52
+      - generic [ref=e73]:
+        - textbox "Type a message…" [ref=e74]
+        - button [disabled] [ref=e75]:
+          - img [ref=e83]

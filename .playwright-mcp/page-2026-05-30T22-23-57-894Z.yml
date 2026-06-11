@@ -1,0 +1,103 @@
+- generic [ref=e5]:
+  - complementary [ref=e6]:
+    - generic [ref=e7]:
+      - generic [ref=e8]: GigGle
+      - generic [ref=e9]: ✦
+    - generic [ref=e11]:
+      - img [ref=e13]
+      - generic [ref=e16]:
+        - paragraph [ref=e17]: Marie Nkomo
+        - paragraph [ref=e18]: Employer
+    - navigation [ref=e19]:
+      - link "Dashboard" [ref=e20] [cursor=pointer]:
+        - /url: /employer/dashboard
+        - img [ref=e21]
+        - generic [ref=e26]: Dashboard
+      - link "Post a Job" [ref=e27] [cursor=pointer]:
+        - /url: /employer/post-job
+        - img [ref=e28]
+        - generic [ref=e30]: Post a Job
+      - link "Notifications" [ref=e31] [cursor=pointer]:
+        - /url: /employer/notifications
+        - img [ref=e32]
+        - generic [ref=e35]: Notifications
+      - link "My Jobs" [ref=e36] [cursor=pointer]:
+        - /url: /employer/dashboard
+        - img [ref=e37]
+        - generic [ref=e40]: My Jobs
+    - generic [ref=e41]:
+      - link "Profile" [ref=e42] [cursor=pointer]:
+        - /url: /employer/profile
+        - img [ref=e43]
+        - generic [ref=e46]: Profile
+      - link "Settings" [ref=e47] [cursor=pointer]:
+        - /url: /employer/settings
+        - img [ref=e48]
+        - generic [ref=e51]: Settings
+      - button "Sign out" [ref=e52] [cursor=pointer]:
+        - img [ref=e53]
+        - generic [ref=e56]: Sign out
+  - main [ref=e58]:
+    - generic [ref=e59]:
+      - link "Job Detail" [ref=e60] [cursor=pointer]:
+        - /url: /employer/jobs/74846cf3-30eb-4f67-96ae-c6adcac7c826
+        - img [ref=e61]
+        - text: Job Detail
+      - generic [ref=e63]:
+        - generic [ref=e64]:
+          - generic [ref=e65]:
+            - generic [ref=e66]: 🧹
+            - generic [ref=e67]: Cleaning
+          - generic [ref=e68]: In Progress
+        - heading "House cleaner needed for 3-bedroom apartment in Bonanjo" [level=1] [ref=e69]
+        - paragraph [ref=e70]: 1 applicant
+      - generic [ref=e71]:
+        - img [ref=e72]
+        - text: You've already selected a worker for this job.
+      - generic [ref=e75]:
+        - generic [ref=e76]:
+          - button "Applicants (1)" [ref=e77] [cursor=pointer]:
+            - img [ref=e78]
+            - text: Applicants (1)
+          - button "Discover Nearby Workers" [active] [ref=e83] [cursor=pointer]:
+            - img [ref=e84]
+            - text: Discover Nearby Workers
+        - generic [ref=e88]:
+          - generic:
+            - generic:
+              - button "📍" [ref=e89] [cursor=pointer]:
+                - generic [ref=e90]: 📍
+              - button [ref=e135] [cursor=pointer]
+          - generic:
+            - generic [ref=e93]:
+              - button "Zoom in" [ref=e94] [cursor=pointer]: +
+              - button "Zoom out" [ref=e95] [cursor=pointer]: −
+            - generic [ref=e96]:
+              - link "Leaflet" [ref=e97] [cursor=pointer]:
+                - /url: https://leafletjs.com
+                - img [ref=e98]
+                - text: Leaflet
+              - text: "| ©"
+              - link "OpenStreetMap" [ref=e102] [cursor=pointer]:
+                - /url: https://www.openstreetmap.org/copyright
+        - generic [ref=e103]:
+          - generic [ref=e106]: Job location
+          - generic [ref=e109]: Worker
+          - generic [ref=e112]: ★ Top-rated (≥4.0)
+          - generic [ref=e113]: Click a pin to locate
+      - generic [ref=e137]:
+        - heading "Nearby Workerswithin 25km · sorted by rating" [level=2] [ref=e139]
+        - generic [ref=e141]:
+          - generic [ref=e142]:
+            - generic [ref=e143]: P
+            - generic [ref=e144]:
+              - generic [ref=e145]:
+                - paragraph [ref=e146]: Paul Tabi
+                - generic [ref=e147]: "#1 Nearby"
+              - paragraph [ref=e148]:
+                - img [ref=e149]
+                - text: Douala · 0m away
+              - text: No ratings yet
+              - paragraph [ref=e152]: "Experienced house cleaner with 3 years of work in Douala. Skilled in deep cleaning, laundry, and kitchen work. Available on weekends and weekdays. Skills: Cleaning"
+          - link "View Full Profile" [ref=e154] [cursor=pointer]:
+            - /url: /profile/00e57c9e-cc8f-48d4-89f5-a264fc85a7b6

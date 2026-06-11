@@ -1,0 +1,23 @@
+[     993ms] [INFO] %cDownload the React DevTools for a better development experience: https://reactjs.org/link/react-devtools font-weight:bold @ http://localhost:5173/node_modules/.vite/deps/chunk-WERSD76P.js?v=de16e338:21550
+[  159954ms] [ERROR] Failed to load resource: net::ERR_TIMED_OUT @ https://omcakemsuifgfanvepbs.supabase.co/rest/v1/jobs?select=id&employer_id=eq.da19c577-4a05-4467-bed3-0155066463ae&status=eq.open:0
+[  291910ms] [ERROR] Failed to load resource: net::ERR_CONNECTION_RESET @ https://omcakemsuifgfanvepbs.supabase.co/rest/v1/jobs?select=id&employer_id=eq.da19c577-4a05-4467-bed3-0155066463ae&status=eq.open:0
+[  490038ms] [ERROR] Failed to load resource: the server responded with a status of 400 () @ https://omcakemsuifgfanvepbs.supabase.co/auth/v1/token?grant_type=password:0
+[  537492ms] [INFO] %cDownload the React DevTools for a better development experience: https://reactjs.org/link/react-devtools font-weight:bold @ http://localhost:5173/node_modules/.vite/deps/chunk-WERSD76P.js?v=de16e338:21550
+[  738933ms] [INFO] %cDownload the React DevTools for a better development experience: https://reactjs.org/link/react-devtools font-weight:bold @ http://localhost:5173/node_modules/.vite/deps/chunk-WERSD76P.js?v=de16e338:21550
+[  797243ms] [ERROR] Failed to load resource: net::ERR_CONNECTION_RESET @ https://omcakemsuifgfanvepbs.supabase.co/auth/v1/token?grant_type=password:0
+[  797243ms] [ERROR] TypeError: Failed to fetch
+    at http://localhost:5173/node_modules/.vite/deps/@supabase_supabase-js.js?v=de16e338:12793:23
+    at _handleRequest2 (http://localhost:5173/node_modules/.vite/deps/@supabase_supabase-js.js?v=de16e338:13101:20)
+    at _request (http://localhost:5173/node_modules/.vite/deps/@supabase_supabase-js.js?v=de16e338:13091:22)
+    at SupabaseAuthClient.signInWithPassword (http://localhost:5173/node_modules/.vite/deps/@supabase_supabase-js.js?v=de16e338:15980:21)
+    at onSubmit (http://localhost:5173/src/pages/auth/Login.jsx:41:59)
+    at http://localhost:5173/node_modules/.vite/deps/chunk-YANRDAH7.js?v=de16e338:1841:15 @ http://localhost:5173/node_modules/.vite/deps/@supabase_supabase-js.js?v=de16e338:13102
+[ 1379201ms] [INFO] %cDownload the React DevTools for a better development experience: https://reactjs.org/link/react-devtools font-weight:bold @ http://localhost:5173/node_modules/.vite/deps/chunk-WERSD76P.js?v=de16e338:21550
+[ 1725891ms] [ERROR] Failed to load resource: net::ERR_NAME_NOT_RESOLVED @ https://omcakemsuifgfanvepbs.supabase.co/auth/v1/token?grant_type=password:0
+[ 1725892ms] [ERROR] TypeError: Failed to fetch
+    at http://localhost:5173/node_modules/.vite/deps/@supabase_supabase-js.js?v=de16e338:12793:23
+    at _handleRequest2 (http://localhost:5173/node_modules/.vite/deps/@supabase_supabase-js.js?v=de16e338:13101:20)
+    at _request (http://localhost:5173/node_modules/.vite/deps/@supabase_supabase-js.js?v=de16e338:13091:22)
+    at SupabaseAuthClient.signInWithPassword (http://localhost:5173/node_modules/.vite/deps/@supabase_supabase-js.js?v=de16e338:15980:21)
+    at onSubmit (http://localhost:5173/src/pages/auth/Login.jsx:41:59)
+    at http://localhost:5173/node_modules/.vite/deps/chunk-YANRDAH7.js?v=de16e338:1841:15 @ http://localhost:5173/node_modules/.vite/deps/@supabase_supabase-js.js?v=de16e338:13102
