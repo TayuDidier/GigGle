@@ -4,7 +4,7 @@ import { useState, useRef, useEffect } from 'react'
 import { ChevronLeft, Send, CreditCard, Star, CheckCircle, Flag, ImagePlus, X } from 'lucide-react'
 import { useAuth } from '../../contexts/AuthContext'
 import { getJobById } from '../../api/jobs.api'
-import { getPaymentForJob } from '../../api/payments.api'
+import { getEscrowForJob } from '../../api/payments.api'
 import { useMessages } from '../../hooks/useMessages'
 import { queryKeys } from '../../constants/queryKeys'
 
@@ -70,9 +70,9 @@ export default function EmployerChat() {
     enabled: !!jobId,
   })
 
-  const { data: payment } = useQuery({
-    queryKey: queryKeys.payments.forJob(jobId),
-    queryFn: () => getPaymentForJob(jobId),
+  const { data: escrow } = useQuery({
+    queryKey: queryKeys.escrows.forJob(jobId),
+    queryFn: () => getEscrowForJob(jobId),
     enabled: !!jobId && job?.status === 'completed',
   })
 
@@ -188,27 +188,27 @@ export default function EmployerChat() {
       </div>
 
       {/* Post-completion banners */}
-      {isCompleted && !payment && (
+      {isCompleted && escrow?.status !== 'released' && (
         <div className="mx-4 mb-2 px-4 py-3 rounded-xl flex items-center justify-between gap-3 shrink-0"
           style={{ background: '#fff8e6', border: '1px solid #f0c040' }}>
           <div className="flex items-center gap-2 text-sm min-w-0">
             <CreditCard size={15} style={{ color: '#ef9900', flexShrink: 0 }} />
-            <span style={{ color: '#0b1c30' }}>Job completed — submit payment reference</span>
+            <span style={{ color: '#0b1c30' }}>Job completed — release payment to worker</span>
           </div>
           <Link to={`/employer/jobs/${jobId}/payment`}
             className="text-xs font-bold px-3 py-1.5 rounded-lg text-white shrink-0"
             style={{ background: '#ef9900' }}>
-            Pay Now →
+            Release →
           </Link>
         </div>
       )}
 
-      {payment?.status === 'confirmed' && (
+      {escrow?.status === 'released' && (
         <div className="mx-4 mb-2 px-4 py-3 rounded-xl flex items-center justify-between gap-3 shrink-0"
           style={{ background: '#dcfce7', border: '1px solid #86efac' }}>
           <div className="flex items-center gap-2 text-sm">
             <CheckCircle size={15} color="#166534" />
-            <span style={{ color: '#166534' }}>Payment confirmed</span>
+            <span style={{ color: '#166534' }}>Payment released</span>
           </div>
           <Link to={`/employer/jobs/${jobId}/rate`}
             className="text-xs font-bold px-3 py-1.5 rounded-lg text-white shrink-0"

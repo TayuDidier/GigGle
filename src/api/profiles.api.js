@@ -20,6 +20,20 @@ export async function getProfileById(profileId) {
   return data
 }
 
+// Column allowlist for cross-user viewing (e.g. PublicProfile) — deliberately
+// excludes id_document_url / verification_rejection_reason / reviewer fields,
+// which must never leave the owner+admin boundary even though verification_status
+// (needed for the public "Verified" badge) is safe to expose.
+export async function getPublicProfileById(profileId) {
+  const { data, error } = await supabase
+    .from('profiles')
+    .select('id, role, full_name, bio, city, avatar_url, company_name, rating_average, rating_count, verification_status')
+    .eq('id', profileId)
+    .single()
+  if (error) throw error
+  return data
+}
+
 export async function updateProfile(profileId, updates) {
   // If updates contain lat/lng, convert to PostGIS WKT
   const payload = { ...updates }

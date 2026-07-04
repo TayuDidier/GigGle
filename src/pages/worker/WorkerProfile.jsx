@@ -7,7 +7,16 @@ import { useAuth } from '../../contexts/AuthContext'
 import { updateProfile } from '../../api/profiles.api'
 import { uploadAvatar } from '../../api/storage.api'
 import { CITIES } from '../../constants/cities'
-import { User, Camera, Star, AlertCircle, CheckCircle } from 'lucide-react'
+import { User, Camera, Star, AlertCircle, CheckCircle, ShieldCheck } from 'lucide-react'
+import { VerifiedBadge } from '../../components/VerifiedBadge'
+import IconBadge from '../../components/ui/IconBadge'
+
+const VERIFICATION_LABEL = {
+  unverified: 'Not verified yet',
+  pending: 'Pending review',
+  approved: 'Verified',
+  rejected: 'Rejected — resubmission needed',
+}
 
 const schema = z.object({
   full_name: z.string().min(2, 'Name must be at least 2 characters').max(80),
@@ -125,6 +134,23 @@ export default function WorkerProfile() {
   return (
     <div className="px-4 sm:px-6 py-6 max-w-2xl mx-auto">
       <h1 className="text-xl font-bold mb-6" style={{ color: '#0b1c30' }}>My Profile</h1>
+
+      {/* ---- Verification Status ---- */}
+      <div className="card mb-6 flex items-center justify-between gap-3">
+        <div className="flex items-center gap-3 min-w-0">
+          <IconBadge icon={ShieldCheck} tone="navy" size="sm" />
+          <div className="min-w-0">
+            <p className="text-sm font-semibold" style={{ color: '#0b1c30' }}>Identity Verification</p>
+            {profile?.verification_status === 'approved'
+              ? <VerifiedBadge status={profile.verification_status} />
+              : <p className="text-xs" style={{ color: '#444651' }}>{VERIFICATION_LABEL[profile?.verification_status] || 'Not verified yet'}</p>
+            }
+          </div>
+        </div>
+        <Link to="/worker/verify" className="text-sm font-semibold shrink-0" style={{ color: '#00236f' }}>
+          Manage →
+        </Link>
+      </div>
 
       {/* ---- Avatar Section ---- */}
       <div className="card mb-6 flex flex-col items-center gap-4 py-6">

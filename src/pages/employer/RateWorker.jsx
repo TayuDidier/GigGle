@@ -4,7 +4,7 @@ import { useQuery, useMutation, useQueryClient } from '@tanstack/react-query'
 import { ChevronLeft, Star, CheckCircle, AlertCircle, Lock } from 'lucide-react'
 import { useAuth } from '../../contexts/AuthContext'
 import { getJobById } from '../../api/jobs.api'
-import { getPaymentForJob } from '../../api/payments.api'
+import { getEscrowForJob } from '../../api/payments.api'
 import { submitRating, checkExistingRating } from '../../api/ratings.api'
 import { queryKeys } from '../../constants/queryKeys'
 
@@ -47,9 +47,9 @@ export default function RateWorker() {
     enabled:  !!jobId,
   })
 
-  const { data: payment } = useQuery({
-    queryKey: queryKeys.payments.forJob(jobId),
-    queryFn:  () => getPaymentForJob(jobId),
+  const { data: escrow } = useQuery({
+    queryKey: queryKeys.escrows.forJob(jobId),
+    queryFn:  () => getEscrowForJob(jobId),
     enabled:  !!jobId,
   })
 
@@ -74,7 +74,7 @@ export default function RateWorker() {
   })
 
   const worker            = job?.selected_worker
-  const paymentConfirmed  = payment?.status === 'confirmed'
+  const paymentConfirmed  = escrow?.status === 'released'
   const alreadyRated      = !!existingRating
 
   return (
@@ -123,10 +123,10 @@ export default function RateWorker() {
           </div>
           <h2 className="text-base font-bold mb-2" style={{ color: '#0b1c30' }}>Rating locked</h2>
           <p className="text-sm mb-5" style={{ color: '#444651' }}>
-            Rating unlocks once the worker confirms payment receipt.
+            Rating unlocks once you release payment to the worker.
           </p>
           <Link to={`/employer/jobs/${jobId}/payment`} className="btn-primary">
-            Submit Payment First →
+            Release Payment First →
           </Link>
         </div>
       )}

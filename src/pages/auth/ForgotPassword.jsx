@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom'
 import { useForm } from 'react-hook-form'
 import { zodResolver } from '@hookform/resolvers/zod'
 import { z } from 'zod'
-import { AlertCircle, CheckCircle, ArrowLeft } from 'lucide-react'
+import { AlertCircle, CheckCircle, ArrowLeft, Zap } from 'lucide-react'
 import { supabase } from '../../lib/supabase'
 
 const schema = z.object({
@@ -37,9 +37,12 @@ export default function ForgotPassword() {
     <div className="min-h-screen flex items-center justify-center px-4 py-12" style={{ background: '#f8f9ff' }}>
       <div className="w-full max-w-md">
         <div className="text-center mb-8">
-          <Link to="/" className="inline-flex items-center gap-1">
+          <Link to="/" className="inline-flex items-center gap-2">
+            <div className="w-10 h-10 rounded-2xl flex items-center justify-center shadow-elevated"
+              style={{ background: 'linear-gradient(135deg, #00236f, #002f8a)' }}>
+              <Zap size={18} fill="#ef9900" color="#ef9900" />
+            </div>
             <span className="text-3xl font-bold" style={{ color: '#00236f' }}>GigGle</span>
-            <span className="text-2xl" style={{ color: '#ef9900' }}>✦</span>
           </Link>
           <h1 className="text-2xl font-semibold mt-4" style={{ color: '#0b1c30' }}>Reset your password</h1>
           <p className="text-sm mt-1" style={{ color: '#444651' }}>Enter your email and we'll send you a reset link</p>
@@ -63,7 +66,7 @@ export default function ForgotPassword() {
               {serverError && (
                 <div className="flex items-center gap-2 p-3 rounded-lg mb-5 text-sm"
                   style={{ background: '#ffdad6', color: '#ba1a1a' }}>
-                  <AlertCircle size={16} />
+                  <AlertCircle size={15} />
                   <span>{serverError}</span>
                 </div>
               )}

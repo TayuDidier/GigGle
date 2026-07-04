@@ -1,10 +1,12 @@
 import { useParams, Link } from 'react-router-dom'
 import { useQuery } from '@tanstack/react-query'
 import { Star, MapPin, Flag, ChevronLeft } from 'lucide-react'
-import { getProfileById } from '../../api/profiles.api'
+import { getPublicProfileById } from '../../api/profiles.api'
 import { getRatingsForUser } from '../../api/ratings.api'
 import { queryKeys } from '../../constants/queryKeys'
 import { useAuth } from '../../contexts/AuthContext'
+import { VerifiedBadge } from '../../components/VerifiedBadge'
+import { ICON_SIZE } from '../../constants/iconTokens'
 
 function StarDisplay({ value, count }) {
   const filled = Math.round(value || 0)
@@ -29,7 +31,7 @@ function StarDisplay({ value, count }) {
 }
 
 function RatingCard({ rating }) {
-  const date = new Date(rating.created_at).toLocaleDateString('fr-CM', { month: 'short', day: 'numeric', year: 'numeric' })
+  const date = new Date(rating.created_at).toLocaleDateString('en-GB', { weekday: 'short', day: 'numeric', month: 'short', year: 'numeric' })
   return (
     <div className="card">
       <div className="flex items-start gap-3">
@@ -69,8 +71,8 @@ export default function PublicProfile() {
   const { profile: myProfile } = useAuth()
 
   const { data: profile, isLoading: profileLoading, error: profileError } = useQuery({
-    queryKey: queryKeys.profiles.byId(id),
-    queryFn: () => getProfileById(id),
+    queryKey: queryKeys.profiles.public(id),
+    queryFn: () => getPublicProfileById(id),
     enabled: !!id,
   })
 
@@ -82,7 +84,7 @@ export default function PublicProfile() {
 
   if (profileLoading) {
     return (
-      <div className="flex items-center justify-center py-24" style={{ background: '#f8f9ff', minHeight: '100vh' }}>
+      <div className="flex items-center justify-center py-24" style={{ background: '#f8f9ff', minHeight: '100%' }}>
         <div className="w-8 h-8 border-4 border-t-transparent rounded-full animate-spin" style={{ borderColor: '#00236f', borderTopColor: 'transparent' }} />
       </div>
     )
@@ -90,17 +92,19 @@ export default function PublicProfile() {
 
   if (profileError || !profile) {
     return (
-      <div className="max-w-lg mx-auto px-4 py-10" style={{ background: '#f8f9ff', minHeight: '100vh' }}>
+      <div className="max-w-lg mx-auto px-4 py-10" style={{ background: '#f8f9ff', minHeight: '100%' }}>
         <p className="text-sm" style={{ color: '#ba1a1a' }}>{profileError?.message || 'Profile not found.'}</p>
       </div>
     )
   }
 
-  const backTo = myProfile?.role === 'worker' ? '/worker/browse' : '/employer/dashboard'
+  const backTo = myProfile?.role === 'worker' ? '/worker/browse'
+    : myProfile?.role === 'admin' ? '/admin/users'
+    : '/employer/dashboard'
   const isOwnProfile = myProfile?.id === profile.id
 
   return (
-    <div className="min-h-screen px-4 py-6" style={{ background: '#f8f9ff' }}>
+    <div className="px-4 py-6" style={{ background: '#f8f9ff', minHeight: '100%' }}>
       <div className="max-w-lg mx-auto">
         {/* Back */}
         <Link to={backTo} className="inline-flex items-center gap-1 text-sm font-medium mb-5" style={{ color: '#00236f' }}>
@@ -118,13 +122,16 @@ export default function PublicProfile() {
               }
             </div>
             <div className="flex-1 min-w-0">
-              <h1 className="text-xl font-bold truncate" style={{ color: '#0b1c30' }}>{profile.full_name}</h1>
+              <div className="flex items-center gap-2 flex-wrap">
+                <h1 className="text-xl font-bold truncate" style={{ color: '#0b1c30' }}>{profile.full_name}</h1>
+                <VerifiedBadge status={profile.verification_status} />
+              </div>
               <p className="text-sm capitalize mb-1" style={{ color: '#ef9900', fontWeight: 600 }}>
                 {profile.role}
               </p>
               {profile.city && (
                 <div className="flex items-center gap-1 text-sm mb-2" style={{ color: '#666' }}>
-                  <MapPin size={13} /> {profile.city}
+                  <MapPin size={ICON_SIZE.metadata} /> {profile.city}
                 </div>
               )}
               {profile.rating_count > 0

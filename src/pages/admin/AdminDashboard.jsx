@@ -1,11 +1,12 @@
 import { useQuery } from '@tanstack/react-query'
 import { Link } from 'react-router-dom'
-import { Users, Briefcase, Flag, TrendingUp, AlertTriangle, ArrowRight, ShieldOff } from 'lucide-react'
+import { Users, Briefcase, Flag, AlertTriangle, ArrowRight, ShieldOff, UserCheck } from 'lucide-react'
 import { supabase } from '../../lib/supabase'
 import { useAuth } from '../../contexts/AuthContext'
+import StatCard from '../../components/ui/StatCard'
 
 async function getAdminAnalytics() {
-  const [usersRes, jobsRes, reportsRes, recentUsersRes] = await Promise.all([
+  const [usersRes, jobsRes, reportsRes, recentUsersRes, pendingVerificationsRes] = await Promise.all([
     supabase.from('profiles').select('id, role, is_suspended, created_at'),
     supabase.from('jobs').select('id, status, created_at'),
     supabase.from('reports').select('id, status'),
@@ -13,6 +14,7 @@ async function getAdminAnalytics() {
       .select('id, full_name, role, created_at, is_suspended')
       .order('created_at', { ascending: false })
       .limit(8),
+    supabase.from('profiles').select('id', { count: 'exact', head: true }).eq('verification_status', 'pending'),
   ])
 
   const users   = usersRes.data   || []
@@ -28,36 +30,15 @@ async function getAdminAnalytics() {
     openJobs:      jobs.filter(j => j.status === 'open').length,
     completedJobs: jobs.filter(j => j.status === 'completed').length,
     openReports:   reports.filter(r => r.status === 'open').length,
+    pendingVerifications: pendingVerificationsRes.count || 0,
     recentUsers:   recentUsersRes.data || [],
   }
 }
 
 const ROLE_COLOR = {
-  worker:   { bg: '#eff4ff', color: '#00236f' },
-  employer: { bg: '#fff8e6', color: '#b36b00' },
-  admin:    { bg: '#fee2e2', color: '#ba1a1a' },
-}
-
-function StatCard({ icon, label, value, sub, to, accent = '#00236f', bg = '#eff4ff' }) {
-  const content = (
-    <div
-      className="bg-white rounded-2xl p-5 border flex items-start gap-4 hover:shadow-lg transition-all duration-200 group"
-      style={{ borderColor: '#e4e4ef' }}
-    >
-      <div className="w-12 h-12 rounded-xl flex items-center justify-center shrink-0" style={{ background: bg }}>
-        {icon}
-      </div>
-      <div className="flex-1 min-w-0">
-        <p className="text-2xl font-bold" style={{ color: accent }}>{value ?? '—'}</p>
-        <p className="text-sm font-semibold mt-0.5" style={{ color: '#0b1c30' }}>{label}</p>
-        {sub && <p className="text-xs mt-0.5" style={{ color: '#888' }}>{sub}</p>}
-      </div>
-      {to && (
-        <ArrowRight size={16} className="shrink-0 mt-1 opacity-0 group-hover:opacity-100 transition-opacity" style={{ color: accent }} />
-      )}
-    </div>
-  )
-  return to ? <Link to={to}>{content}</Link> : content
+  worker:   { bg: '#e5eeff', color: '#00236f' },
+  employer: { bg: '#fff3cd', color: '#ef9900' },
+  admin:    { bg: '#ffdad6', color: '#ba1a1a' },
 }
 
 export default function AdminDashboard() {
@@ -90,7 +71,7 @@ export default function AdminDashboard() {
 
       {/* Alert banner */}
       {stats?.openReports > 0 && (
-        <div className="flex items-center gap-3 mb-6 px-5 py-3.5 rounded-2xl border"
+        <div className="flex items-center gap-3 mb-4 px-5 py-3.5 rounded-2xl border"
           style={{ background: '#fffbeb', borderColor: '#f0c040' }}>
           <AlertTriangle size={18} style={{ color: '#b36b00', flexShrink: 0 }} />
           <p className="text-sm font-medium flex-1" style={{ color: '#7c5e00' }}>
@@ -104,41 +85,59 @@ export default function AdminDashboard() {
         </div>
       )}
 
+      {stats?.pendingVerifications > 0 && (
+        <div className="flex items-center gap-3 mb-6 px-5 py-3.5 rounded-2xl border"
+          style={{ background: '#fffbeb', borderColor: '#f0c040' }}>
+          <UserCheck size={18} style={{ color: '#b36b00', flexShrink: 0 }} />
+          <p className="text-sm font-medium flex-1" style={{ color: '#7c5e00' }}>
+            {stats.pendingVerifications} identity verification{stats.pendingVerifications !== 1 ? 's' : ''} awaiting review
+          </p>
+          <Link to="/admin/verifications"
+            className="text-sm font-bold flex items-center gap-1 shrink-0"
+            style={{ color: '#b36b00' }}>
+            Review <ArrowRight size={14} />
+          </Link>
+        </div>
+      )}
+
       {/* Stat cards */}
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-8">
         <StatCard
-          icon={<Users size={22} color="#00236f" />}
+          icon={Users}
+          tone="navy"
           label="Total Users"
           value={stats?.totalUsers}
           sub={`${stats?.workers} workers · ${stats?.employers} employers`}
           to="/admin/users"
-          accent="#00236f"
-          bg="#eff4ff"
         />
         <StatCard
-          icon={<Briefcase size={22} color="#006c4e" />}
+          icon={Briefcase}
+          tone="green"
           label="Total Jobs"
           value={stats?.totalJobs}
           sub={`${stats?.openJobs} open · ${stats?.completedJobs} completed`}
           to="/admin/jobs"
-          accent="#006c4e"
-          bg="#dcfce7"
         />
         <StatCard
-          icon={<Flag size={22} color="#ba1a1a" />}
+          icon={Flag}
+          tone="alert"
           label="Open Reports"
           value={stats?.openReports}
           to="/admin/reports"
-          accent="#ba1a1a"
-          bg="#fee2e2"
         />
         <StatCard
-          icon={<ShieldOff size={22} color="#b36b00" />}
+          icon={ShieldOff}
+          tone="orange"
           label="Suspended Accounts"
           value={stats?.suspended}
           to="/admin/users"
-          accent="#b36b00"
-          bg="#fff8e6"
+        />
+        <StatCard
+          icon={UserCheck}
+          tone="navy"
+          label="Pending Verifications"
+          value={stats?.pendingVerifications}
+          to="/admin/verifications"
         />
       </div>
 
@@ -150,9 +149,10 @@ export default function AdminDashboard() {
           <h2 className="text-sm font-bold mb-4 uppercase tracking-wide" style={{ color: '#6b7280' }}>Quick Actions</h2>
           <div className="space-y-2">
             {[
-              { to: '/admin/users',   label: 'Manage Users',      color: '#00236f', bg: '#eff4ff' },
-              { to: '/admin/jobs',    label: 'Review Jobs',        color: '#006c4e', bg: '#dcfce7' },
-              { to: '/admin/reports', label: 'Moderation Queue',   color: '#ba1a1a', bg: '#fee2e2' },
+              { to: '/admin/users',         label: 'Manage Users',        color: '#00236f', bg: '#eff4ff' },
+              { to: '/admin/verifications', label: 'Review Verifications', color: '#1e40af', bg: '#dbeafe' },
+              { to: '/admin/jobs',          label: 'Review Jobs',          color: '#006c4e', bg: '#dcfce7' },
+              { to: '/admin/reports',       label: 'Moderation Queue',     color: '#ba1a1a', bg: '#fee2e2' },
             ].map(({ to, label, color, bg }) => (
               <Link key={to} to={to}
                 className="flex items-center justify-between px-4 py-2.5 rounded-xl text-sm font-medium hover:opacity-90 transition-opacity"

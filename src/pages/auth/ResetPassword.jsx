@@ -3,7 +3,7 @@ import { Link, useNavigate } from 'react-router-dom'
 import { useForm } from 'react-hook-form'
 import { zodResolver } from '@hookform/resolvers/zod'
 import { z } from 'zod'
-import { Eye, EyeOff, AlertCircle, CheckCircle } from 'lucide-react'
+import { Eye, EyeOff, AlertCircle, CheckCircle, Zap } from 'lucide-react'
 import { supabase } from '../../lib/supabase'
 
 const schema = z.object({
@@ -44,9 +44,12 @@ export default function ResetPassword() {
     <div className="min-h-screen flex items-center justify-center px-4 py-12" style={{ background: '#f8f9ff' }}>
       <div className="w-full max-w-md">
         <div className="text-center mb-8">
-          <Link to="/" className="inline-flex items-center gap-1">
+          <Link to="/" className="inline-flex items-center gap-2">
+            <div className="w-10 h-10 rounded-2xl flex items-center justify-center shadow-elevated"
+              style={{ background: 'linear-gradient(135deg, #00236f, #002f8a)' }}>
+              <Zap size={18} fill="#ef9900" color="#ef9900" />
+            </div>
             <span className="text-3xl font-bold" style={{ color: '#00236f' }}>GigGle</span>
-            <span className="text-2xl" style={{ color: '#ef9900' }}>✦</span>
           </Link>
           <h1 className="text-2xl font-semibold mt-4" style={{ color: '#0b1c30' }}>Set new password</h1>
           <p className="text-sm mt-1" style={{ color: '#444651' }}>Choose a strong new password for your account</p>
@@ -67,7 +70,7 @@ export default function ResetPassword() {
               {serverError && (
                 <div className="flex items-center gap-2 p-3 rounded-lg mb-5 text-sm"
                   style={{ background: '#ffdad6', color: '#ba1a1a' }}>
-                  <AlertCircle size={16} />
+                  <AlertCircle size={15} />
                   <span>{serverError}</span>
                 </div>
               )}
@@ -88,7 +91,7 @@ export default function ResetPassword() {
                       className="absolute right-3 top-1/2 -translate-y-1/2 p-1"
                       style={{ color: '#444651' }}
                     >
-                      {showPassword ? <EyeOff size={18} /> : <Eye size={18} />}
+                      {showPassword ? <EyeOff size={16} /> : <Eye size={16} />}
                     </button>
                   </div>
                   {errors.password && (
@@ -111,7 +114,7 @@ export default function ResetPassword() {
                       className="absolute right-3 top-1/2 -translate-y-1/2 p-1"
                       style={{ color: '#444651' }}
                     >
-                      {showConfirm ? <EyeOff size={18} /> : <Eye size={18} />}
+                      {showConfirm ? <EyeOff size={16} /> : <Eye size={16} />}
                     </button>
                   </div>
                   {errors.confirmPassword && (

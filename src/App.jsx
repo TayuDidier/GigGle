@@ -1,10 +1,12 @@
 import { Routes, Route, Navigate } from 'react-router-dom'
 import { ProtectedRoute } from './components/auth/ProtectedRoute'
+import { RequireVerification } from './components/auth/RequireVerification'
 
 // Layouts
 import WorkerLayout from './components/layout/WorkerLayout'
 import EmployerLayout from './components/layout/EmployerLayout'
 import AdminLayout from './components/layout/AdminLayout'
+import RoleAwareLayout from './components/layout/RoleAwareLayout'
 
 // Public pages
 import Landing from './pages/Landing'
@@ -18,6 +20,7 @@ import AuthConfirm from './pages/auth/AuthConfirm'
 import PublicProfile from './pages/shared/PublicProfile'
 import FileReport from './pages/shared/FileReport'
 import NotFound from './pages/shared/NotFound'
+import VerifyIdentity from './pages/shared/VerifyIdentity'
 
 // Complaints
 import WorkerComplaints from './pages/worker/WorkerComplaints'
@@ -59,6 +62,7 @@ import AdminDashboard from './pages/admin/AdminDashboard'
 import AdminUsers from './pages/admin/AdminUsers'
 import AdminJobs from './pages/admin/AdminJobs'
 import AdminReports from './pages/admin/AdminReports'
+import AdminVerifications from './pages/admin/AdminVerifications'
 
 export default function App() {
   return (
@@ -79,7 +83,10 @@ export default function App() {
         {/* All other worker routes wrapped in WorkerLayout */}
         <Route element={<WorkerLayout />}>
           <Route path="/worker/dashboard" element={<WorkerDashboard />} />
-          <Route path="/worker/browse" element={<BrowseJobs />} />
+          <Route path="/worker/verify" element={<VerifyIdentity />} />
+          <Route element={<RequireVerification />}>
+            <Route path="/worker/browse" element={<BrowseJobs />} />
+          </Route>
           <Route path="/worker/jobs/:id" element={<JobDetailPage />} />
           <Route path="/worker/applications" element={<MyApplications />} />
           <Route path="/worker/history" element={<WorkerHistory />} />
@@ -101,8 +108,11 @@ export default function App() {
         {/* All other employer routes wrapped in EmployerLayout */}
         <Route element={<EmployerLayout />}>
           <Route path="/employer/dashboard" element={<EmployerDashboard />} />
+          <Route path="/employer/verify" element={<VerifyIdentity />} />
           <Route path="/employer/my-jobs" element={<MyJobs />} />
-          <Route path="/employer/post-job" element={<PostJob />} />
+          <Route element={<RequireVerification />}>
+            <Route path="/employer/post-job" element={<PostJob />} />
+          </Route>
           <Route path="/employer/jobs/:id" element={<EmployerJobDetail />} />
           <Route path="/employer/jobs/:id/edit" element={<EditJob />} />
           <Route path="/employer/jobs/:id/applicants" element={<ManageApplicants />} />
@@ -116,21 +126,25 @@ export default function App() {
         </Route>
       </Route>
 
-      {/* Shared authenticated — no layout wrapper, accessible by either role */}
+      {/* Shared authenticated — renders inside whichever layout matches the
+          viewer's own role, so the sidebar/nav stay visible either way. */}
       <Route element={<ProtectedRoute allowedRoles={['worker', 'employer', 'admin']} />}>
-        <Route path="/profile/:id" element={<PublicProfile />} />
-        <Route path="/complaint/new" element={<FileReport />} />
-        {/* legacy alias kept for any existing links */}
-        <Route path="/report/:targetId" element={<FileReport />} />
+        <Route element={<RoleAwareLayout />}>
+          <Route path="/profile/:id" element={<PublicProfile />} />
+          <Route path="/complaint/new" element={<FileReport />} />
+          {/* legacy alias kept for any existing links */}
+          <Route path="/report/:targetId" element={<FileReport />} />
+        </Route>
       </Route>
 
       {/* Admin routes */}
       <Route element={<ProtectedRoute allowedRoles={['admin']} />}>
         <Route element={<AdminLayout />}>
-          <Route path="/admin/dashboard" element={<AdminDashboard />} />
-          <Route path="/admin/users"     element={<AdminUsers />} />
-          <Route path="/admin/jobs"      element={<AdminJobs />} />
-          <Route path="/admin/reports"   element={<AdminReports />} />
+          <Route path="/admin/dashboard"      element={<AdminDashboard />} />
+          <Route path="/admin/users"          element={<AdminUsers />} />
+          <Route path="/admin/verifications"  element={<AdminVerifications />} />
+          <Route path="/admin/jobs"           element={<AdminJobs />} />
+          <Route path="/admin/reports"        element={<AdminReports />} />
         </Route>
       </Route>
 

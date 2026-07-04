@@ -1,11 +1,11 @@
 import { useParams, Link, useNavigate } from 'react-router-dom'
 import { useQuery, useMutation, useQueryClient } from '@tanstack/react-query'
 import { useState } from 'react'
-import { ChevronLeft, MapPin, Clock, Star, Users, MessageSquare, CheckCircle, AlertCircle, Edit2, XCircle, CreditCard, Lock } from 'lucide-react'
+import { ChevronLeft, MapPin, Clock, Star, Users, MessageSquare, CheckCircle, AlertCircle, Edit2, XCircle, CreditCard, Lock, ShieldCheck } from 'lucide-react'
 import { useAuth } from '../../contexts/AuthContext'
 import { getJobById, updateJobStatus } from '../../api/jobs.api'
 import { getJobApplicants } from '../../api/applications.api'
-import { getPaymentForJob } from '../../api/payments.api'
+import { getEscrowForJob } from '../../api/payments.api'
 import { checkExistingRating } from '../../api/ratings.api'
 import { queryKeys } from '../../constants/queryKeys'
 import { CategoryBadge } from '../../components/jobs/CategoryBadge'
@@ -52,10 +52,10 @@ export default function EmployerJobDetail() {
     enabled: !!id,
   })
 
-  const { data: payment } = useQuery({
-    queryKey: queryKeys.payments.forJob(id),
-    queryFn:  () => getPaymentForJob(id),
-    enabled:  !!id && job?.status === 'completed',
+  const { data: escrow } = useQuery({
+    queryKey: queryKeys.escrows.forJob(id),
+    queryFn:  () => getEscrowForJob(id),
+    enabled:  !!id && ['awaiting_funding', 'in_progress', 'completed'].includes(job?.status),
   })
 
   const { data: myRating } = useQuery({
@@ -176,15 +176,38 @@ export default function EmployerJobDetail() {
             </button>
           </div>
         )}
+        {job.status === 'awaiting_funding' && (
+          <div className="space-y-3">
+            <div className="p-4 rounded-xl" style={{ background: '#fff8e6', border: '2px solid #ef9900' }}>
+              <p className="text-sm font-semibold mb-1" style={{ color: '#0b1c30' }}>
+                {selectedWorker?.full_name} selected — fund escrow to begin
+              </p>
+              <p className="text-xs mb-3" style={{ color: '#444651' }}>
+                Secure the payment in escrow to start the job. The worker is paid from escrow once you mark it complete.
+              </p>
+              <Link to={`/employer/jobs/${id}/payment`} className="btn-primary flex items-center gap-2 w-full justify-center">
+                <ShieldCheck size={16} /> Fund Escrow
+              </Link>
+            </div>
+            <Link to={`/employer/jobs/${id}/chat/${selectedWorker?.id}`} className="btn-secondary flex items-center gap-2">
+              <MessageSquare size={16} /> Open Chat with Worker
+            </Link>
+          </div>
+        )}
         {job.status === 'in_progress' && (
           <div className="space-y-3">
+            {escrow?.status === 'held' && (
+              <div className="flex items-center gap-2 px-4 py-2.5 rounded-lg text-sm font-medium" style={{ background: '#dcfce7', color: '#166534' }}>
+                <ShieldCheck size={15} /> {Number(escrow.gross_amount).toLocaleString('fr-CM')} XAF secured in escrow
+              </div>
+            )}
             {/* Prominent completion CTA */}
             <div className="p-4 rounded-xl" style={{ background: '#fff8e6', border: '2px solid #ef9900' }}>
               <p className="text-sm font-semibold mb-1" style={{ color: '#0b1c30' }}>
                 Work in progress with {selectedWorker?.full_name}
               </p>
               <p className="text-xs mb-3" style={{ color: '#444651' }}>
-                Once the work is done, mark it as completed to begin the payment process.
+                Once the work is done, mark it as completed to release payment to the worker.
               </p>
               <button
                 onClick={() => setConfirmDialog({ type: 'complete' })}
@@ -200,41 +223,54 @@ export default function EmployerJobDetail() {
         )}
         {job.status === 'completed' && (
           <div className="space-y-3">
-            {/* Step 1 — Payment */}
-            <div className="p-4 rounded-xl" style={{
-              background: payment ? '#f0fdf4' : '#fff8e6',
-              border: `1.5px solid ${payment ? '#86efac' : '#f0c040'}`,
-            }}>
-              <div className="flex items-center justify-between mb-1">
-                <div className="flex items-center gap-2">
-                  <CreditCard size={16} style={{ color: payment ? '#166534' : '#ef9900' }} />
-                  <span className="text-sm font-bold" style={{ color: '#0b1c30' }}>Step 1 — Submit Payment</span>
+            {/* Step 1 — Release payment */}
+            {(() => {
+              const released  = escrow?.status === 'released'
+              const releasing = escrow?.status === 'releasing'
+              const held      = escrow?.status === 'held'
+              return (
+                <div className="p-4 rounded-xl" style={{
+                  background: released ? '#f0fdf4' : '#fff8e6',
+                  border: `1.5px solid ${released ? '#86efac' : '#f0c040'}`,
+                }}>
+                  <div className="flex items-center justify-between mb-1">
+                    <div className="flex items-center gap-2">
+                      <CreditCard size={16} style={{ color: released ? '#166534' : '#ef9900' }} />
+                      <span className="text-sm font-bold" style={{ color: '#0b1c30' }}>Step 1 — Release Payment</span>
+                    </div>
+                    {released
+                      ? <span className="text-xs font-semibold px-2 py-0.5 rounded-full" style={{ background: '#dcfce7', color: '#166534' }}>✓ Paid</span>
+                      : releasing
+                        ? <span className="text-xs font-semibold px-2 py-0.5 rounded-full" style={{ background: '#fef3c7', color: '#b45309' }}>⏳ Sending</span>
+                        : held
+                          ? <span className="text-xs font-semibold px-2 py-0.5 rounded-full" style={{ background: '#dbeafe', color: '#1e40af' }}>🔒 Held</span>
+                          : <span className="text-xs font-semibold px-2 py-0.5 rounded-full" style={{ background: '#fef3c7', color: '#b45309' }}>Pending</span>
+                    }
+                  </div>
+                  <p className="text-xs mb-3" style={{ color: '#444651' }}>
+                    {released
+                      ? `${Number(escrow.payout_amount).toLocaleString('fr-CM')} XAF was released to ${selectedWorker?.full_name}.`
+                      : held
+                        ? `Release the held funds to pay ${selectedWorker?.full_name} via MTN MoMo or Orange Money.`
+                        : `Open the payment screen to pay ${selectedWorker?.full_name}.`}
+                  </p>
+                  {released
+                    ? <Link to={`/employer/jobs/${id}/payment`} className="btn-secondary flex items-center gap-2 text-sm">
+                        View payment details
+                      </Link>
+                    : <Link to={`/employer/jobs/${id}/payment`} className="btn-primary flex items-center gap-2 w-full justify-center">
+                        <CreditCard size={15} /> {held ? 'Release Payment' : 'Open Payment'}
+                      </Link>
+                  }
                 </div>
-                {payment
-                  ? <span className="text-xs font-semibold px-2 py-0.5 rounded-full" style={{ background: '#dcfce7', color: '#166534' }}>
-                      {payment.status === 'confirmed' ? '✓ Confirmed' : '⏳ Awaiting worker'}
-                    </span>
-                  : <span className="text-xs font-semibold px-2 py-0.5 rounded-full" style={{ background: '#fef3c7', color: '#b45309' }}>Pending</span>
-                }
-              </div>
-              <p className="text-xs mb-3" style={{ color: '#444651' }}>
-                Send {Number(job.pay).toLocaleString('fr-CM')} XAF to {selectedWorker?.full_name} via MTN MoMo or Orange Money, then submit the reference code here.
-              </p>
-              {!payment
-                ? <Link to={`/employer/jobs/${id}/payment`} className="btn-primary flex items-center gap-2 w-full justify-center">
-                    <CreditCard size={15} /> Submit Payment Reference
-                  </Link>
-                : <Link to={`/employer/jobs/${id}/payment`} className="btn-secondary flex items-center gap-2 text-sm">
-                    View payment details
-                  </Link>
-              }
-            </div>
+              )
+            })()}
 
             {/* Step 2 — Rate */}
             <div className="p-4 rounded-xl" style={{
               background: myRating ? '#f0fdf4' : '#f8f9ff',
               border: `1.5px solid ${myRating ? '#86efac' : '#c7d7fd'}`,
-              opacity: payment?.status === 'confirmed' || myRating ? 1 : 0.65,
+              opacity: escrow?.status === 'released' || myRating ? 1 : 0.65,
             }}>
               <div className="flex items-center justify-between mb-1">
                 <div className="flex items-center gap-2">
@@ -245,7 +281,7 @@ export default function EmployerJobDetail() {
                 </div>
                 {myRating
                   ? <span className="text-xs font-semibold px-2 py-0.5 rounded-full" style={{ background: '#dcfce7', color: '#166534' }}>✓ Done</span>
-                  : payment?.status !== 'confirmed'
+                  : escrow?.status !== 'released'
                     ? <span className="text-xs font-semibold px-2 py-0.5 rounded-full flex items-center gap-1" style={{ background: '#f3f4f6', color: '#9ca3af' }}>
                         <Lock size={11} /> Locked
                       </span>
@@ -253,11 +289,11 @@ export default function EmployerJobDetail() {
                 }
               </div>
               <p className="text-xs mb-3" style={{ color: '#444651' }}>
-                {payment?.status === 'confirmed'
-                  ? 'Payment confirmed. Share your honest experience with the GigGle community.'
-                  : 'Unlocks once the worker confirms payment receipt.'}
+                {escrow?.status === 'released'
+                  ? 'Payment released. Share your honest experience with the GigGle community.'
+                  : 'Unlocks once you release payment to the worker.'}
               </p>
-              {!myRating && payment?.status === 'confirmed'
+              {!myRating && escrow?.status === 'released'
                 ? <Link to={`/employer/jobs/${id}/rate`} className="btn-primary flex items-center gap-2 w-full justify-center">
                     <Star size={15} /> Rate {selectedWorker?.full_name}
                   </Link>
@@ -283,7 +319,7 @@ export default function EmployerJobDetail() {
       </div>
 
       {/* Selected worker card */}
-      {selectedWorker && (job.status === 'in_progress' || job.status === 'completed') && (
+      {selectedWorker && ['awaiting_funding', 'in_progress', 'completed'].includes(job.status) && (
         <div className="card mb-4">
           <h2 className="text-base font-semibold mb-3" style={{ color: '#0b1c30' }}>Selected Worker</h2>
           <div className="flex items-center gap-3">

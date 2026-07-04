@@ -1,13 +1,14 @@
 import { useState } from 'react'
 import { NavLink, Outlet, useNavigate } from 'react-router-dom'
 import { useAuth } from '../../contexts/AuthContext'
-import { LayoutDashboard, Users, Briefcase, Flag, LogOut, ShieldCheck, Menu, X } from 'lucide-react'
+import { LayoutDashboard, Users, Briefcase, Flag, LogOut, ShieldCheck, UserCheck, Menu, X } from 'lucide-react'
 
 const NAV = [
-  { to: '/admin/dashboard', icon: LayoutDashboard, label: 'Dashboard' },
-  { to: '/admin/users',     icon: Users,           label: 'Users'     },
-  { to: '/admin/jobs',      icon: Briefcase,       label: 'Jobs'      },
-  { to: '/admin/reports',   icon: Flag,            label: 'Reports'   },
+  { to: '/admin/dashboard',      icon: LayoutDashboard, label: 'Dashboard'     },
+  { to: '/admin/users',          icon: Users,           label: 'Users'         },
+  { to: '/admin/verifications',  icon: UserCheck,       label: 'Verifications' },
+  { to: '/admin/jobs',           icon: Briefcase,       label: 'Jobs'          },
+  { to: '/admin/reports',        icon: Flag,            label: 'Reports'       },
 ]
 
 function NavItem({ to, icon: Icon, label, onClick }) {

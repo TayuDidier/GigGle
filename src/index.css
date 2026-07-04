@@ -4,53 +4,110 @@
 
 @layer base {
   * { box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
   body {
     font-family: 'Inter', sans-serif;
     background-color: #f8f9ff;
     color: #0b1c30;
     -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
   }
   h1, h2, h3, h4, h5, h6 { font-weight: 600; color: #0b1c30; }
 }
 
 @layer components {
+  /* ── Buttons ── */
   .btn-primary {
-    @apply bg-orange text-white font-semibold px-6 py-3 rounded-lg
-           hover:bg-orange-dark active:scale-95 transition-all duration-150
-           shadow-sm min-h-[48px] inline-flex items-center justify-center;
+    @apply bg-orange text-white font-semibold px-6 py-3 rounded-xl
+           hover:bg-orange-dark active:scale-[0.97]
+           transition-all duration-200 ease-in-out
+           shadow-sm
+           min-h-[48px] inline-flex items-center justify-center gap-2;
   }
   .btn-secondary {
-    @apply border border-primary text-primary font-semibold px-6 py-3 rounded-lg
-           hover:bg-surface-low active:scale-95 transition-all duration-150
-           min-h-[48px] inline-flex items-center justify-center;
+    @apply border-2 border-primary text-primary font-semibold px-6 py-3 rounded-xl
+           hover:bg-surface-low active:scale-[0.97]
+           transition-all duration-200 ease-in-out
+           min-h-[48px] inline-flex items-center justify-center gap-2;
   }
   .btn-ghost {
-    @apply text-primary font-medium px-4 py-2 rounded-lg
-           hover:bg-surface-low transition-all duration-150 min-h-[48px]
-           inline-flex items-center justify-center;
+    @apply text-primary font-medium px-4 py-2 rounded-xl
+           hover:bg-surface-low transition-all duration-200 ease-in-out
+           min-h-[48px] inline-flex items-center justify-center gap-2;
   }
+
+  /* ── Cards ── */
   .card {
-    @apply bg-white border border-outline-variant rounded-xl shadow-card p-6;
+    @apply bg-white border border-outline-variant rounded-2xl shadow-card p-6
+           transition-all duration-200 ease-in-out;
   }
+  .card-hover {
+    @apply card hover:shadow-card-hover hover:-translate-y-0.5 hover:border-primary/20;
+  }
+
+  /* ── Form ── */
   .input-field {
-    @apply w-full text-base px-4 py-3 border border-outline-variant rounded-lg
+    @apply w-full text-base px-4 py-3 border border-outline-variant rounded-xl
            bg-white text-on-surface placeholder:text-on-surface-variant
-           focus:outline-none focus:border-primary focus:ring-2 focus:ring-primary/20
-           transition-all duration-150 min-h-[48px];
+           focus:outline-none focus:border-primary focus:ring-2 focus:ring-primary/15
+           transition-all duration-200 ease-in-out min-h-[48px];
   }
   .label {
-    @apply block text-sm font-medium text-on-surface mb-1;
+    @apply block text-sm font-medium text-on-surface mb-1.5;
   }
+
+  /* ── Badges ── */
   .badge {
-    @apply inline-flex items-center gap-1 px-3 py-1 rounded-full text-xs font-semibold;
+    @apply inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-semibold;
   }
-  .badge-green {
-    @apply badge bg-secondary-container text-secondary;
+  .badge-green  { @apply badge bg-secondary-container text-secondary; }
+  .badge-blue   { @apply badge bg-surface-container text-primary; }
+  .badge-orange { @apply badge bg-orange-light/30 text-orange-dark; }
+
+  /* ── Sidebar nav item ── */
+  .nav-item {
+    @apply flex items-center gap-3 px-4 py-2.5 rounded-xl text-sm font-medium
+           text-white/65 hover:text-white hover:bg-white/10
+           transition-all duration-200 ease-in-out;
   }
-  .badge-blue {
-    @apply badge bg-surface-container text-primary;
+  .nav-item-active {
+    @apply nav-item text-white bg-white/10 border-l-[3px] border-orange pl-[13px];
   }
-  .badge-orange {
-    @apply badge bg-orange-light/30 text-orange-dark;
+
+  /* ── Glass ── */
+  .glass {
+    @apply bg-white/8 backdrop-blur-sm border border-white/12 rounded-xl;
+  }
+}
+
+@layer utilities {
+  /* Hide scrollbar cross-browser */
+  .scrollbar-hide {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+  .scrollbar-hide::-webkit-scrollbar { display: none; }
+
+  /* Shimmer loading skeleton */
+  .skeleton {
+    background: linear-gradient(90deg, #e5eeff 25%, #f0f5ff 50%, #e5eeff 75%);
+    background-size: 200% 100%;
+    animation: shimmer 1.8s linear infinite;
+  }
+
+  /* Mesh gradient helpers */
+  .mesh-bg {
+    background:
+      radial-gradient(ellipse 80% 60% at 50% -10%, rgba(0,35,111,0.08) 0%, transparent 60%),
+      radial-gradient(ellipse 40% 40% at 90% 80%, rgba(0,108,78,0.06) 0%, transparent 50%),
+      #f8f9ff;
+  }
+  .mesh-bg-dark {
+    background: linear-gradient(160deg, #001852 0%, #00236f 55%, #002f8a 100%);
+  }
+
+  /* Subtle inner border glow on focus */
+  .ring-focus {
+    @apply focus:ring-2 focus:ring-primary/20 focus:border-primary;
   }
 }

@@ -4,6 +4,8 @@ import { Link } from 'react-router-dom'
 import { CheckCircle, XCircle, Flag } from 'lucide-react'
 import { supabase } from '../../lib/supabase'
 import { useAuth } from '../../contexts/AuthContext'
+import IconBadge from '../../components/ui/IconBadge'
+import { ICON_SIZE } from '../../constants/iconTokens'
 
 async function getAdminReports(statusFilter) {
   let q = supabase
@@ -88,9 +90,7 @@ export default function AdminReports() {
         </div>
       ) : reports.length === 0 ? (
         <div className="bg-white rounded-2xl border text-center py-16" style={{ borderColor: '#e4e4ef' }}>
-          <div className="w-14 h-14 rounded-full flex items-center justify-center mx-auto mb-3" style={{ background: '#dcfce7' }}>
-            <CheckCircle size={26} color="#006c4e" />
-          </div>
+          <IconBadge icon={CheckCircle} tone="green" size="md" className="mx-auto mb-3" />
           <p className="text-sm font-medium" style={{ color: '#166534' }}>No reports in this queue.</p>
         </div>
       ) : (
@@ -160,14 +160,14 @@ export default function AdminReports() {
                       disabled={resolveMutation.isPending}
                       className="flex items-center gap-1.5 text-sm font-semibold px-4 py-2 rounded-lg text-white disabled:opacity-60"
                       style={{ background: '#006c4e' }}>
-                      <CheckCircle size={15} /> Resolve
+                      <CheckCircle size={ICON_SIZE.inline} /> Resolve
                     </button>
                     <button
                       onClick={() => handleAction(r.id, 'dismissed')}
                       disabled={resolveMutation.isPending}
                       className="flex items-center gap-1.5 text-sm font-semibold px-4 py-2 rounded-lg border disabled:opacity-60"
                       style={{ borderColor: '#c5c5d3', color: '#444' }}>
-                      <XCircle size={15} /> Dismiss
+                      <XCircle size={ICON_SIZE.inline} /> Dismiss
                     </button>
                   </div>
                 </div>

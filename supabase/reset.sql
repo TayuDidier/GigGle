@@ -225,9 +225,14 @@ CREATE TRIGGER on_auth_user_created
 
 
 -- Recalculate rating_average when a new rating is inserted
+-- SECURITY DEFINER: this updates the RATED user's profile row, not the
+-- rater's own row, so it must bypass the "users can update their own
+-- profile" RLS policy or the update silently affects 0 rows.
 CREATE OR REPLACE FUNCTION public.update_rating_average()
 RETURNS TRIGGER
 LANGUAGE plpgsql
+SECURITY DEFINER
+SET search_path TO 'public'
 AS $$
 BEGIN
   UPDATE public.profiles

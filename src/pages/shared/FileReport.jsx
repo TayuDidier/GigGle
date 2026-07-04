@@ -5,30 +5,30 @@ import { Flag, ChevronLeft, CheckCircle, AlertCircle, Briefcase, User } from 'lu
 import { useAuth } from '../../contexts/AuthContext'
 import { submitReport } from '../../api/reports.api'
 import { getJobById } from '../../api/jobs.api'
-import { getProfileById } from '../../api/profiles.api'
+import { getPublicProfileById } from '../../api/profiles.api'
 
 const CATEGORIES = [
-  { value: 'no_payment',        label: '💸 No payment received after job completion',    roles: ['worker'] },
-  { value: 'misleading_job',    label: '📋 Job description was false or misleading',      roles: ['worker'] },
-  { value: 'unsafe_conditions', label: '⚠️ Unsafe or dangerous working conditions',        roles: ['worker'] },
-  { value: 'employer_harass',   label: '😡 Harassment or abuse by employer',              roles: ['worker'] },
-  { value: 'employer_noshow',   label: '📵 Employer no-show or unreachable',              roles: ['worker'] },
-  { value: 'last_min_cancel',   label: '🚫 Job cancelled last minute without reason',     roles: ['worker'] },
-  { value: 'worker_noshow',     label: '❌ Worker no-show or abandoned the job',          roles: ['employer'] },
-  { value: 'poor_quality',      label: '🔧 Work quality was unacceptable',                roles: ['employer'] },
-  { value: 'extra_pay_demand',  label: '💰 Worker demanded more than the agreed pay',     roles: ['employer'] },
-  { value: 'theft_damage',      label: '🏚️ Theft or damage to property',                 roles: ['employer'] },
-  { value: 'worker_harass',     label: '😡 Harassment or threats by worker',              roles: ['employer'] },
-  { value: 'fraud_profile',     label: '🚷 Fraudulent profile or fake experience',        roles: ['employer'] },
-  { value: 'payment_dispute',   label: '💳 Payment amount or method dispute',             roles: ['worker', 'employer'] },
-  { value: 'communication',     label: '📵 Communication breakdown or unresponsive',       roles: ['worker', 'employer'] },
-  { value: 'other',             label: '📝 Other issue not listed above',                  roles: ['worker', 'employer'] },
+  { value: 'no_payment',        emoji: '💸', label: 'No payment received after job completion',    roles: ['worker'] },
+  { value: 'misleading_job',    emoji: '📋', label: 'Job description was false or misleading',      roles: ['worker'] },
+  { value: 'unsafe_conditions', emoji: '⚠️', label: 'Unsafe or dangerous working conditions',        roles: ['worker'] },
+  { value: 'employer_harass',   emoji: '😡', label: 'Harassment or abuse by employer',              roles: ['worker'] },
+  { value: 'employer_noshow',   emoji: '📵', label: 'Employer no-show or unreachable',              roles: ['worker'] },
+  { value: 'last_min_cancel',   emoji: '🚫', label: 'Job cancelled last minute without reason',     roles: ['worker'] },
+  { value: 'worker_noshow',     emoji: '❌', label: 'Worker no-show or abandoned the job',          roles: ['employer'] },
+  { value: 'poor_quality',      emoji: '🔧', label: 'Work quality was unacceptable',                roles: ['employer'] },
+  { value: 'extra_pay_demand',  emoji: '💰', label: 'Worker demanded more than the agreed pay',     roles: ['employer'] },
+  { value: 'theft_damage',      emoji: '🏚️', label: 'Theft or damage to property',                 roles: ['employer'] },
+  { value: 'worker_harass',     emoji: '😡', label: 'Harassment or threats by worker',              roles: ['employer'] },
+  { value: 'fraud_profile',     emoji: '🚷', label: 'Fraudulent profile or fake experience',        roles: ['employer'] },
+  { value: 'payment_dispute',   emoji: '💳', label: 'Payment amount or method dispute',             roles: ['worker', 'employer'] },
+  { value: 'communication',     emoji: '📵', label: 'Communication breakdown or unresponsive',       roles: ['worker', 'employer'] },
+  { value: 'other',             emoji: '📝', label: 'Other issue not listed above',                  roles: ['worker', 'employer'] },
 ]
 
 const STATUS_CFG = {
-  open:      { label: 'Under Review', bg: '#fef3c7', color: '#b45309' },
-  resolved:  { label: 'Resolved',     bg: '#dcfce7', color: '#166534' },
-  dismissed: { label: 'Dismissed',    bg: '#f3f4f6', color: '#374151' },
+  open:      { label: 'Under Review', bg: '#fff3cd', color: '#ef9900' },
+  resolved:  { label: 'Resolved',     bg: '#97f5cc', color: '#006c4e' },
+  dismissed: { label: 'Dismissed',    bg: '#f4f4f4', color: '#444651' },
 }
 
 export default function FileReport() {
@@ -52,8 +52,8 @@ export default function FileReport() {
   })
 
   const { data: reportedUser } = useQuery({
-    queryKey: ['profiles', userId],
-    queryFn: () => getProfileById(userId),
+    queryKey: ['profiles', 'public', userId],
+    queryFn: () => getPublicProfileById(userId),
     enabled: !!userId,
   })
 
@@ -71,7 +71,7 @@ export default function FileReport() {
     setSubmitting(true)
     try {
       const cat = CATEGORIES.find(c => c.value === category)
-      const fullReason = `[${cat?.label?.replace(/^.{2}\s/, '') || category}]\n\n${description.trim()}`
+      const fullReason = `[${cat?.label || category}]\n\n${description.trim()}`
       await submitReport({
         reporterId:  profile.id,
         reportedId:  userId || null,
@@ -88,7 +88,7 @@ export default function FileReport() {
 
   if (success) {
     return (
-      <div className="min-h-screen flex items-center justify-center px-4" style={{ background: '#f8f9ff' }}>
+      <div className="flex items-center justify-center px-4" style={{ background: '#f8f9ff', minHeight: '100%' }}>
         <div className="max-w-sm w-full card text-center py-10">
           <div className="w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4" style={{ background: '#dcfce7' }}>
             <CheckCircle size={30} color="#006c4e" />
@@ -107,7 +107,7 @@ export default function FileReport() {
   }
 
   return (
-    <div className="min-h-screen px-4 py-8" style={{ background: '#f8f9ff' }}>
+    <div className="px-4 py-8" style={{ background: '#f8f9ff', minHeight: '100%' }}>
       <div className="max-w-lg mx-auto">
 
         {/* Header */}
@@ -177,7 +177,7 @@ export default function FileReport() {
                     onChange={() => setCategory(cat.value)}
                     className="mt-0.5 accent-red-600 shrink-0"
                   />
-                  <span className="text-sm" style={{ color: '#0b1c30' }}>{cat.label}</span>
+                  <span className="text-sm" style={{ color: '#0b1c30' }}>{cat.emoji} {cat.label}</span>
                 </label>
               ))}
             </div>

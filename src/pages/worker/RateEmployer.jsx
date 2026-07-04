@@ -4,9 +4,10 @@ import { useQuery, useMutation, useQueryClient } from '@tanstack/react-query'
 import { ChevronLeft, Star, CheckCircle, AlertCircle, Lock } from 'lucide-react'
 import { useAuth } from '../../contexts/AuthContext'
 import { getJobById } from '../../api/jobs.api'
-import { getPaymentForJob } from '../../api/payments.api'
+import { getEscrowForJob } from '../../api/payments.api'
 import { submitRating, checkExistingRating } from '../../api/ratings.api'
 import { queryKeys } from '../../constants/queryKeys'
+import IconBadge from '../../components/ui/IconBadge'
 
 function StarPicker({ value, onChange }) {
   const [hover, setHover] = useState(0)
@@ -47,9 +48,9 @@ export default function RateEmployer() {
     enabled:  !!jobId,
   })
 
-  const { data: payment } = useQuery({
-    queryKey: queryKeys.payments.forJob(jobId),
-    queryFn:  () => getPaymentForJob(jobId),
+  const { data: escrow } = useQuery({
+    queryKey: queryKeys.escrows.forJob(jobId),
+    queryFn:  () => getEscrowForJob(jobId),
     enabled:  !!jobId,
   })
 
@@ -74,7 +75,7 @@ export default function RateEmployer() {
   })
 
   const employer          = job?.employer
-  const paymentConfirmed  = payment?.status === 'confirmed'
+  const paymentConfirmed  = escrow?.status === 'released'
   const alreadyRated      = !!existingRating
 
   return (
@@ -87,10 +88,7 @@ export default function RateEmployer() {
 
       {/* Header */}
       <div className="flex items-center gap-3 mb-6">
-        <div className="w-11 h-11 rounded-full flex items-center justify-center shrink-0"
-          style={{ background: '#fff8e6' }}>
-          <Star size={22} fill="#ef9900" color="#ef9900" />
-        </div>
+        <IconBadge icon={Star} tone="orange" size="md" iconProps={{ fill: '#ef9900' }} />
         <div>
           <h1 className="text-xl font-bold" style={{ color: '#0b1c30' }}>Rate the Employer</h1>
           <p className="text-sm" style={{ color: '#444651' }}>{job?.title || 'Loading…'}</p>
@@ -117,16 +115,13 @@ export default function RateEmployer() {
       {/* Locked — payment not confirmed */}
       {!paymentConfirmed && !alreadyRated && (
         <div className="card text-center py-10">
-          <div className="w-14 h-14 rounded-full flex items-center justify-center mx-auto mb-4"
-            style={{ background: '#f3f4f6' }}>
-            <Lock size={28} color="#9ca3af" />
-          </div>
+          <IconBadge icon={Lock} bg="#f3f4f6" color="#9ca3af" size="md" className="mx-auto mb-4" />
           <h2 className="text-base font-bold mb-2" style={{ color: '#0b1c30' }}>Rating locked</h2>
           <p className="text-sm mb-5" style={{ color: '#444651' }}>
-            Rating unlocks after you confirm payment receipt.
+            Rating unlocks once you've been paid from escrow.
           </p>
           <Link to={`/worker/jobs/${jobId}/confirm-payment`} className="btn-primary">
-            Confirm Payment First →
+            View Payment Status →
           </Link>
         </div>
       )}
@@ -134,10 +129,7 @@ export default function RateEmployer() {
       {/* Already rated */}
       {alreadyRated && !mutation.isSuccess && (
         <div className="card text-center py-10">
-          <div className="w-14 h-14 rounded-full flex items-center justify-center mx-auto mb-4"
-            style={{ background: '#dcfce7' }}>
-            <CheckCircle size={28} color="#166534" />
-          </div>
+          <IconBadge icon={CheckCircle} tone="green" size="md" bg="#dcfce7" color="#166534" className="mx-auto mb-4" />
           <h2 className="text-base font-bold mb-2" style={{ color: '#0b1c30' }}>Rating submitted</h2>
           <p className="text-sm mb-5" style={{ color: '#444651' }}>
             You've already rated {employer?.full_name} for this job. Thank you!
@@ -149,10 +141,7 @@ export default function RateEmployer() {
       {/* Success state */}
       {mutation.isSuccess && (
         <div className="card text-center py-10">
-          <div className="w-14 h-14 rounded-full flex items-center justify-center mx-auto mb-4"
-            style={{ background: '#dcfce7' }}>
-            <CheckCircle size={28} color="#166534" />
-          </div>
+          <IconBadge icon={CheckCircle} tone="green" size="md" bg="#dcfce7" color="#166534" className="mx-auto mb-4" />
           <h2 className="text-base font-bold mb-2" style={{ color: '#0b1c30' }}>Rating submitted — thank you!</h2>
           <p className="text-sm mb-5" style={{ color: '#444651' }}>
             Your feedback builds trust in the GigGle community.

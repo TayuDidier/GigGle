@@ -16,9 +16,11 @@ export const queryKeys = {
     conversation: (jobId, myId, partnerId) => ['messages', 'conv', jobId, myId, partnerId],
   },
   ratings: { forUser: (id) => ['ratings', 'user', id] },
-  payments: { forJob: (id) => ['payments', 'job', id] },
-  profiles: { byId: (id) => ['profiles', id] },
+  escrows: { forJob: (id) => ['escrows', 'job', id] },
+  profiles: { byId: (id) => ['profiles', id], public: (id) => ['profiles', 'public', id] },
   workers: { nearby: (p) => ['workers', 'nearby', p] },
+  credentials: { forProfile: (id) => ['credentials', id] },
+  verifications: { admin: (p) => ['admin', 'verifications', p] },
   admin: {
     analytics: () => ['admin', 'analytics'],
     users: (p) => ['admin', 'users', p],

@@ -1,10 +1,10 @@
 import { useParams, Link } from 'react-router-dom'
 import { useQuery } from '@tanstack/react-query'
 import { useState, useRef, useEffect } from 'react'
-import { ChevronLeft, Send, CreditCard, CheckCircle, Star, Flag, ImagePlus, X } from 'lucide-react'
+import { ChevronLeft, Send, CreditCard, CheckCircle, Star, Flag, ImagePlus, X, ShieldCheck } from 'lucide-react'
 import { useAuth } from '../../contexts/AuthContext'
 import { getJobById } from '../../api/jobs.api'
-import { getPaymentForJob } from '../../api/payments.api'
+import { getEscrowForJob } from '../../api/payments.api'
 import { useMessages } from '../../hooks/useMessages'
 import { queryKeys } from '../../constants/queryKeys'
 
@@ -72,9 +72,9 @@ export default function WorkerChat() {
   const { messages, isLoading: messagesLoading, send, sendImage, sending, sendError } =
     useMessages(jobId, profile?.id, employerId)
 
-  const { data: payment } = useQuery({
-    queryKey: queryKeys.payments.forJob(jobId),
-    queryFn: () => getPaymentForJob(jobId),
+  const { data: escrow } = useQuery({
+    queryKey: queryKeys.escrows.forJob(jobId),
+    queryFn: () => getEscrowForJob(jobId),
     enabled: !!jobId && job?.status === 'completed',
   })
 
@@ -180,23 +180,24 @@ export default function WorkerChat() {
       </div>
 
       {/* Post-completion banners */}
-      {isCompleted && payment?.status === 'pending' && (
+      {isCompleted && (escrow?.status === 'held' || escrow?.status === 'releasing') && (
         <div className="mx-4 mb-2 px-4 py-3 rounded-xl flex items-center gap-3 shrink-0"
-          style={{ background: '#fff8e6', border: '1px solid #f0c040' }}>
-          <div className="w-4 h-4 border-2 border-t-transparent rounded-full animate-spin shrink-0"
-            style={{ borderColor: '#ef9900', borderTopColor: 'transparent' }} />
-          <span className="text-sm" style={{ color: '#0b1c30' }}>
-            Payment in progress — waiting for employer approval…
+          style={{ background: '#dcfce7', border: '1px solid #86efac' }}>
+          <ShieldCheck size={15} color="#166534" className="shrink-0" />
+          <span className="text-sm" style={{ color: '#166534' }}>
+            {escrow?.status === 'releasing'
+              ? 'Payment on the way to your mobile money…'
+              : 'Payment secured in escrow — released when the job is approved.'}
           </span>
         </div>
       )}
 
-      {isCompleted && payment?.status === 'confirmed' && (
+      {isCompleted && escrow?.status === 'released' && (
         <div className="mx-4 mb-2 px-4 py-3 rounded-xl flex items-center justify-between gap-3 shrink-0"
           style={{ background: '#dcfce7', border: '1px solid #86efac' }}>
           <div className="flex items-center gap-2 text-sm">
             <CheckCircle size={14} color="#166534" />
-            <span style={{ color: '#166534' }}>Payment confirmed</span>
+            <span style={{ color: '#166534' }}>You've been paid</span>
           </div>
           <Link to={`/worker/jobs/${jobId}/rate`}
             className="text-xs font-bold px-3 py-1.5 rounded-lg text-white shrink-0"

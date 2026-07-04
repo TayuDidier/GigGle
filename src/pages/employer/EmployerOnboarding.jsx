@@ -5,7 +5,7 @@ import { completeOnboarding } from '../../api/profiles.api'
 import { uploadAvatar } from '../../api/storage.api'
 import { CATEGORIES } from '../../constants/categories'
 import { CITIES } from '../../constants/cities'
-import { User, Camera, ChevronRight, ChevronLeft, Check } from 'lucide-react'
+import { User, Camera, ChevronRight, ChevronLeft, Check, Zap } from 'lucide-react'
 
 const STEP_TITLES = [
   'Tell us about yourself',
@@ -149,9 +149,12 @@ export default function EmployerOnboarding() {
       style={{ background: '#f8f9ff' }}
     >
       {/* Logo */}
-      <div className="flex items-center gap-1 mb-8">
+      <div className="flex items-center gap-2 mb-8">
+        <div className="w-10 h-10 rounded-2xl flex items-center justify-center shadow-elevated"
+          style={{ background: 'linear-gradient(135deg, #00236f, #002f8a)' }}>
+          <Zap size={18} fill="#ef9900" color="#ef9900" />
+        </div>
         <span className="text-2xl font-bold" style={{ color: '#00236f' }}>GigGle</span>
-        <span style={{ color: '#ef9900' }}>✦</span>
       </div>
 
       {/* Card */}

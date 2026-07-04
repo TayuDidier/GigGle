@@ -6,6 +6,7 @@ import { Lock, Trash2, Eye, EyeOff, CheckCircle, AlertCircle } from 'lucide-reac
 import { supabase } from '../../lib/supabase'
 import { useAuth } from '../../contexts/AuthContext'
 import { useNavigate } from 'react-router-dom'
+import IconBadge from '../../components/ui/IconBadge'
 
 const pwSchema = z.object({
   newPassword: z.string().min(6, 'Password must be at least 6 characters'),
@@ -37,7 +38,7 @@ function ChangePasswordSection() {
   return (
     <div className="card mb-4">
       <div className="flex items-center gap-2 mb-4">
-        <Lock size={18} style={{ color: '#00236f' }} />
+        <IconBadge icon={Lock} tone="navy" size="sm" />
         <h2 className="text-base font-semibold" style={{ color: '#0b1c30' }}>Change Password</h2>
       </div>
 
@@ -114,7 +115,7 @@ function DeleteAccountSection() {
   return (
     <div className="card" style={{ border: '1px solid #fca5a5' }}>
       <div className="flex items-center gap-2 mb-3">
-        <Trash2 size={18} style={{ color: '#ba1a1a' }} />
+        <IconBadge icon={Trash2} tone="alert" size="sm" />
         <h2 className="text-base font-semibold" style={{ color: '#ba1a1a' }}>Deactivate Account</h2>
       </div>
       <p className="text-sm mb-4" style={{ color: '#444651' }}>

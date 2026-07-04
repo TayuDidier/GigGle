@@ -3,13 +3,14 @@ import { useQuery } from '@tanstack/react-query'
 import '../../lib/leaflet-fix'
 import L from 'leaflet'
 import { MapContainer, TileLayer, Marker, Popup, CircleMarker, useMap } from 'react-leaflet'
-import { Link } from 'react-router-dom'
-import { Search, SlidersHorizontal, MapIcon, List, MapPin } from 'lucide-react'
+import { Link, useNavigate } from 'react-router-dom'
+import { Search, SlidersHorizontal, MapIcon, List, MapPin, ArrowLeft, LocateFixed } from 'lucide-react'
 import { useAuth } from '../../contexts/AuthContext'
 import { getJobsWithinRadius } from '../../api/jobs.api'
 import { queryKeys } from '../../constants/queryKeys'
 import { CATEGORIES } from '../../constants/categories'
 import { CITIES } from '../../constants/cities'
+import IconBadge from '../../components/ui/IconBadge'
 
 const RADIUS_OPTIONS = [5, 10, 15, 25, 50]
 
@@ -91,17 +92,34 @@ function SkeletonSidebarCard() {
 
 export default function BrowseJobs() {
   const { profile } = useAuth()
+  const navigate = useNavigate()
   const [radiusKm, setRadiusKm] = useState(10)
   const [category, setCategory] = useState(null)
   const [view, setView] = useState('list')
   const [searchText, setSearchText] = useState('')
   const [searchCity, setSearchCity] = useState('')
+  const [gpsCoords, setGpsCoords] = useState(null)
+  const [locating, setLocating] = useState(false)
 
   useEffect(() => {
     if (profile?.city && !searchCity) setSearchCity(profile.city)
   }, [profile?.city])
 
+  const handleGetLocation = () => {
+    if (!navigator.geolocation) return
+    setLocating(true)
+    navigator.geolocation.getCurrentPosition(
+      pos => {
+        setGpsCoords({ lat: pos.coords.latitude, lng: pos.coords.longitude })
+        setLocating(false)
+      },
+      () => setLocating(false),
+      { timeout: 8000 }
+    )
+  }
+
   const userCoords = useMemo(() => {
+    if (gpsCoords) return gpsCoords
     const cityObj = CITIES.find(c => c.name === searchCity)
     if (cityObj) return { lat: cityObj.lat, lng: cityObj.lng }
     if (profile?.location) {
@@ -111,7 +129,7 @@ export default function BrowseJobs() {
       } catch { }
     }
     return { lat: CITIES[0].lat, lng: CITIES[0].lng }
-  }, [searchCity, profile])
+  }, [gpsCoords, searchCity, profile])
 
   const { data: jobs = [], isLoading, error } = useQuery({
     queryKey: queryKeys.jobs.nearby({ ...userCoords, radiusKm, category }),
@@ -138,12 +156,19 @@ export default function BrowseJobs() {
     >
       {/* ── COMPACT HEADER ── */}
       <div
-        className="shrink-0 px-3 pt-2.5 pb-1.5 border-b"
+        className="shrink-0 px-3 pt-2.5 pb-2 border-b"
         style={{ background: '#fff', borderColor: '#e4e4ef' }}
       >
-        {/* Row 1: title + count + mobile toggle */}
+        {/* Row 1: back + title + count + mobile view toggles */}
         <div className="flex items-center justify-between mb-2">
           <div className="flex items-center gap-2">
+            <button
+              onClick={() => navigate(-1)}
+              className="p-1 rounded-lg transition-colors hover:bg-gray-100"
+              style={{ color: '#00236f' }}
+            >
+              <ArrowLeft size={17} />
+            </button>
             <h1 className="text-base font-bold" style={{ color: '#0b1c30' }}>Browse Jobs</h1>
             {!isLoading && (
               <span className="text-xs px-2 py-0.5 rounded-full font-medium"
@@ -170,67 +195,64 @@ export default function BrowseJobs() {
           </div>
         </div>
 
-        {/* Row 2: search + city selector inline */}
-        <div className="flex gap-2 mb-1.5">
-          <div className="relative flex-1">
-            <Search size={13} className="absolute left-2.5 top-1/2 -translate-y-1/2" style={{ color: '#9ca3af' }} />
+        {/* Row 2: search (≤50%) + get-location button */}
+        <div className="flex items-center gap-2 mb-1.5">
+          <div className="relative w-1/2">
+            <Search size={11} className="absolute left-2 top-1/2 -translate-y-1/2" style={{ color: '#9ca3af' }} />
             <input
               type="text"
-              placeholder="Search titles…"
+              placeholder="Search job titles…"
               value={searchText}
               onChange={e => setSearchText(e.target.value)}
-              className="w-full pl-7 pr-3 py-1.5 text-xs rounded-lg border outline-none focus:ring-2"
+              className="w-full pl-6 pr-2 py-1.5 text-xs rounded-lg border outline-none focus:ring-1"
               style={{ borderColor: '#c5c5d3', background: '#f8f9ff' }}
             />
           </div>
+          <button
+            onClick={handleGetLocation}
+            disabled={locating}
+            className="flex items-center gap-1.5 text-xs font-semibold px-3 py-1.5 rounded-lg border transition-colors shrink-0"
+            style={gpsCoords
+              ? { background: '#e5eeff', borderColor: '#00236f', color: '#00236f' }
+              : { background: '#fff', borderColor: '#c5c5d3', color: '#444651' }}
+          >
+            <LocateFixed size={13} className={locating ? 'animate-spin' : ''} />
+            {locating ? 'Locating…' : gpsCoords ? 'GPS active' : 'Use my location'}
+          </button>
+        </div>
+
+        {/* Row 3: city + distance + category (each ≤50%) */}
+        <div className="flex items-center gap-2">
+          <SlidersHorizontal size={11} className="shrink-0" style={{ color: '#9ca3af' }} />
           <select
             value={searchCity}
-            onChange={e => setSearchCity(e.target.value)}
-            className="text-xs font-medium rounded-lg border px-2 py-1.5 shrink-0"
+            onChange={e => { setSearchCity(e.target.value); setGpsCoords(null) }}
+            className="text-xs font-medium rounded-lg border pl-2 pr-5 py-1.5 max-w-[50%] flex-1"
             style={{ borderColor: '#c5c5d3', color: '#0b1c30', background: '#f8f9ff' }}
           >
             {CITIES.map(c => <option key={c.name} value={c.name}>{c.name}</option>)}
           </select>
-        </div>
-
-        {/* Row 3: radius pills + category pills on one scrollable strip */}
-        <div className="flex items-center gap-1.5 overflow-x-auto pb-1 scrollbar-hide">
-          <SlidersHorizontal size={12} className="shrink-0" style={{ color: '#9ca3af' }} />
-          {RADIUS_OPTIONS.map(r => (
-            <button
-              key={r}
-              onClick={() => setRadiusKm(r)}
-              className="shrink-0 text-[10px] px-2 py-1 rounded-full border font-semibold transition-colors"
-              style={radiusKm === r
-                ? { background: '#00236f', borderColor: '#00236f', color: '#fff' }
-                : { borderColor: '#c5c5d3', color: '#444651', background: '#fff' }}
-            >
-              {r}km
-            </button>
-          ))}
-          <span className="shrink-0 w-px h-3 mx-0.5" style={{ background: '#c5c5d3' }} />
-          <button
-            onClick={() => setCategory(null)}
-            className="shrink-0 text-[10px] px-2 py-1 rounded-full border font-semibold transition-colors"
-            style={category === null
-              ? { background: '#ef9900', borderColor: '#ef9900', color: '#fff' }
-              : { borderColor: '#c5c5d3', color: '#444651', background: '#fff' }}
+          <select
+            value={radiusKm}
+            onChange={e => setRadiusKm(Number(e.target.value))}
+            className="text-xs font-medium rounded-lg border pl-2 pr-5 py-1.5 max-w-[50%] flex-1"
+            style={{ borderColor: '#c5c5d3', color: '#0b1c30', background: '#f8f9ff' }}
           >
-            All
-          </button>
-          {CATEGORIES.map(cat => (
-            <button
-              key={cat.value}
-              onClick={() => setCategory(category === cat.value ? null : cat.value)}
-              className="shrink-0 text-[10px] px-2 py-1 rounded-full border font-semibold transition-colors inline-flex items-center gap-0.5"
-              style={category === cat.value
-                ? { background: '#ef9900', borderColor: '#ef9900', color: '#fff' }
-                : { borderColor: '#c5c5d3', color: '#444651', background: '#fff' }}
-            >
-              <span>{cat.emoji}</span>
-              <span>{cat.label}</span>
-            </button>
-          ))}
+            {RADIUS_OPTIONS.map(r => (
+              <option key={r} value={r}>{r} km</option>
+            ))}
+          </select>
+          <select
+            value={category ?? ''}
+            onChange={e => setCategory(e.target.value || null)}
+            className="text-xs font-medium rounded-lg border pl-2 pr-5 py-1.5 max-w-[50%] flex-1"
+            style={{ borderColor: '#c5c5d3', color: '#0b1c30', background: '#f8f9ff' }}
+          >
+            <option value="">All categories</option>
+            {CATEGORIES.map(cat => (
+              <option key={cat.value} value={cat.value}>{cat.emoji} {cat.label}</option>
+            ))}
+          </select>
         </div>
       </div>
 
@@ -245,8 +267,8 @@ export default function BrowseJobs() {
       <div className="flex-1 flex min-h-0">
 
         {/* MAP PANEL — 70% on desktop, toggled on mobile */}
-        <div className={`${view === 'map' ? 'flex' : 'hidden'} md:flex md:w-[70%] flex-col min-h-0`}>
-          <div className="flex-1 relative">
+        <div className={`${view === 'map' ? 'flex' : 'hidden'} md:flex md:w-[70%] flex-col min-h-0 p-3`}>
+          <div className="flex-1 relative rounded-xl overflow-hidden border shadow-sm" style={{ borderColor: '#c5c5d3' }}>
             <MapContainer
               center={[userCoords.lat, userCoords.lng]}
               zoom={12}
@@ -334,7 +356,7 @@ export default function BrowseJobs() {
               </>
             ) : filteredJobs.length === 0 ? (
               <div className="flex flex-col items-center justify-center py-12 text-center px-3">
-                <MapPin size={32} className="mb-3 opacity-25" style={{ color: '#444651' }} />
+                <IconBadge icon={MapPin} tone="navy" size="sm" className="mb-3" />
                 <p className="text-xs font-semibold mb-1" style={{ color: '#0b1c30' }}>No jobs found</p>
                 <p className="text-[11px] leading-snug" style={{ color: '#888' }}>
                   Try a different city, larger radius, or different category.

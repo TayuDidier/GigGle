@@ -5,9 +5,9 @@ import { useAuth } from '../../contexts/AuthContext'
 import { getMyReports } from '../../api/reports.api'
 
 const STATUS_CFG = {
-  open:      { label: 'Under Review', icon: Clock,         bg: '#fef3c7', color: '#b45309' },
-  resolved:  { label: 'Resolved',     icon: CheckCircle,   bg: '#dcfce7', color: '#166534' },
-  dismissed: { label: 'Dismissed',    icon: XCircle,       bg: '#f3f4f6', color: '#374151' },
+  open:      { label: 'Under Review', icon: Clock,         bg: '#fff3cd', color: '#ef9900' },
+  resolved:  { label: 'Resolved',     icon: CheckCircle,   bg: '#97f5cc', color: '#006c4e' },
+  dismissed: { label: 'Dismissed',    icon: XCircle,       bg: '#f4f4f4', color: '#444651' },
 }
 
 function timeAgo(iso) {
@@ -69,9 +69,9 @@ export default function MyComplaints({ newComplaintParams = '' }) {
       {complaints.length > 0 && (
         <div className="grid grid-cols-3 gap-2 mb-5">
           {[
-            { label: 'Under Review', value: open,      bg: '#fef3c7', color: '#b45309' },
-            { label: 'Resolved',     value: resolved,  bg: '#dcfce7', color: '#166534' },
-            { label: 'Dismissed',    value: dismissed, bg: '#f3f4f6', color: '#374151' },
+            { label: 'Under Review', value: open,      bg: '#fff3cd', color: '#ef9900' },
+            { label: 'Resolved',     value: resolved,  bg: '#97f5cc', color: '#006c4e' },
+            { label: 'Dismissed',    value: dismissed, bg: '#f4f4f4', color: '#444651' },
           ].map(s => (
             <div key={s.label} className="text-center py-3 rounded-xl" style={{ background: s.bg }}>
               <p className="text-xl font-bold" style={{ color: s.color }}>{s.value}</p>

@@ -4,9 +4,10 @@ import { Bell, CheckCircle, XCircle, MessageSquare, CreditCard, Briefcase } from
 import { useAuth } from '../../contexts/AuthContext'
 import { supabase } from '../../lib/supabase'
 import { queryKeys } from '../../constants/queryKeys'
+import IconBadge from '../../components/ui/IconBadge'
 
 async function getWorkerNotifications(profileId) {
-  const [appsRes, msgsRes, paymentsRes] = await Promise.all([
+  const [appsRes, msgsRes, escrowsRes] = await Promise.all([
     supabase
       .from('applications')
       .select('id, status, created_at, job:jobs(id, title)')
@@ -21,10 +22,11 @@ async function getWorkerNotifications(profileId) {
       .order('created_at', { ascending: false })
       .limit(20),
     supabase
-      .from('payment_acknowledgments')
-      .select('id, status, amount, provider, submitted_at, job:jobs!payment_acknowledgments_job_id_fkey(id, title, selected_worker_id)')
-      .eq('status', 'submitted')
-      .order('submitted_at', { ascending: false })
+      .from('escrows')
+      .select('id, status, payout_amount, funded_at, released_at, updated_at, job:jobs(id, title)')
+      .eq('worker_id', profileId)
+      .in('status', ['held', 'released'])
+      .order('updated_at', { ascending: false })
       .limit(20),
   ])
 
@@ -52,15 +54,15 @@ async function getWorkerNotifications(profileId) {
     })
   }
 
-  for (const pay of paymentsRes.data || []) {
-    if (pay.job?.selected_worker_id !== profileId) continue
+  for (const esc of escrowsRes.data || []) {
+    const released = esc.status === 'released'
     notifs.push({
-      id: `pay-${pay.id}`,
+      id: `esc-${esc.id}`,
       type: 'payment',
-      title: 'Payment reference submitted',
-      body: `${pay.provider === 'mtn_momo' ? 'MTN MoMo' : 'Orange Money'} · ${Number(pay.amount).toLocaleString('fr-CM')} XAF — ${pay.job?.title}`,
-      link: `/worker/jobs/${pay.job?.id}/chat`,
-      time: pay.submitted_at,
+      title: released ? "You've been paid 🎉" : 'Payment secured in escrow 🔒',
+      body: `${Number(esc.payout_amount).toLocaleString('fr-CM')} XAF ${released ? 'received' : 'held for you'} — ${esc.job?.title}`,
+      link: `/worker/jobs/${esc.job?.id}/confirm-payment`,
+      time: released ? (esc.released_at || esc.updated_at) : (esc.funded_at || esc.updated_at),
     })
   }
 
@@ -68,17 +70,17 @@ async function getWorkerNotifications(profileId) {
 }
 
 const iconMap = {
-  accepted: <CheckCircle size={18} color="#006c4e" />,
-  rejected: <XCircle size={18} color="#ba1a1a" />,
-  message: <MessageSquare size={18} color="#00236f" />,
-  payment: <CreditCard size={18} color="#ef9900" />,
+  accepted: CheckCircle,
+  rejected: XCircle,
+  message: MessageSquare,
+  payment: CreditCard,
 }
 
-const bgMap = {
-  accepted: '#dcfce7',
-  rejected: '#fee2e2',
-  message: '#eff4ff',
-  payment: '#fff8e6',
+const toneMap = {
+  accepted: 'green',
+  rejected: 'alert',
+  message: 'navy',
+  payment: 'orange',
 }
 
 function timeAgo(iso) {
@@ -104,7 +106,7 @@ export default function WorkerNotifications() {
   return (
     <div className="max-w-xl mx-auto px-4 py-6" style={{ background: '#f8f9ff', minHeight: '100%' }}>
       <div className="flex items-center gap-2 mb-6">
-        <Bell size={20} style={{ color: '#00236f' }} />
+        <IconBadge icon={Bell} tone="navy" size="sm" />
         <h1 className="text-xl font-bold" style={{ color: '#0b1c30' }}>Notifications</h1>
       </div>
 
@@ -116,9 +118,7 @@ export default function WorkerNotifications() {
 
       {!isLoading && notifications.length === 0 && (
         <div className="text-center py-16">
-          <div className="w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4" style={{ background: '#e5eeff' }}>
-            <Briefcase size={28} color="#00236f" />
-          </div>
+          <IconBadge icon={Briefcase} tone="navy" size="md" className="mx-auto mb-4" />
           <p className="text-base font-semibold mb-1" style={{ color: '#0b1c30' }}>All caught up</p>
           <p className="text-sm" style={{ color: '#888' }}>No notifications yet. Apply for jobs to get started.</p>
         </div>
@@ -128,10 +128,7 @@ export default function WorkerNotifications() {
         {notifications.map((n) => {
           const inner = (
             <div className="card flex items-start gap-3 hover:shadow-md transition-shadow cursor-pointer">
-              <div className="w-9 h-9 rounded-full flex items-center justify-center shrink-0 mt-0.5"
-                style={{ background: bgMap[n.type] || '#f0f0f0' }}>
-                {iconMap[n.type]}
-              </div>
+              <IconBadge icon={iconMap[n.type] || Bell} tone={toneMap[n.type] || 'navy'} size="sm" className="mt-0.5" />
               <div className="flex-1 min-w-0">
                 <p className="text-sm font-semibold" style={{ color: '#0b1c30' }}>{n.title}</p>
                 <p className="text-xs mt-0.5 truncate" style={{ color: '#666' }}>{n.body}</p>

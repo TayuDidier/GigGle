@@ -5,6 +5,7 @@ import { useAuth } from '../../contexts/AuthContext'
 import { supabase } from '../../lib/supabase'
 import { CategoryBadge } from '../../components/jobs/CategoryBadge'
 import { queryKeys } from '../../constants/queryKeys'
+import IconBadge from '../../components/ui/IconBadge'
 
 async function getWorkerCompletedJobs(workerId) {
   const { data, error } = await supabase
@@ -93,9 +94,7 @@ export default function WorkerHistory() {
 
       {!isLoading && jobs.length === 0 && (
         <div className="text-center py-16">
-          <div className="w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4" style={{ background: '#e5eeff' }}>
-            <Briefcase size={28} color="#00236f" />
-          </div>
+          <IconBadge icon={Briefcase} tone="navy" size="md" className="mx-auto mb-4" />
           <p className="text-base font-semibold mb-1" style={{ color: '#0b1c30' }}>No completed jobs yet</p>
           <p className="text-sm mb-5" style={{ color: '#888' }}>Jobs you complete will appear here.</p>
           <Link to="/worker/browse" className="btn-primary">Browse Jobs</Link>

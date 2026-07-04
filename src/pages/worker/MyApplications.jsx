@@ -7,6 +7,7 @@ import { getMyApplications } from '../../api/applications.api'
 import { queryKeys } from '../../constants/queryKeys'
 import { CategoryBadge } from '../../components/jobs/CategoryBadge'
 import { JobStatusBadge } from '../../components/jobs/JobStatusBadge'
+import IconBadge from '../../components/ui/IconBadge'
 
 function relativeTime(date) {
   const diff = Math.floor((Date.now() - new Date(date)) / 86400000)
@@ -177,7 +178,7 @@ export default function MyApplications() {
         </div>
       ) : filtered.length === 0 ? (
         <div className="flex flex-col items-center justify-center py-16 text-center">
-          <Clock size={48} className="mb-4 opacity-30" style={{ color: '#444651' }} />
+          <IconBadge icon={Clock} tone="navy" size="md" className="mb-4" />
           <p className="font-semibold mb-1" style={{ color: '#0b1c30' }}>
             {activeTab === 'all' ? 'No applications yet' : `No ${activeTab} applications`}
           </p>

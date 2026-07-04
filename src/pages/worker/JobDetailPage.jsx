@@ -112,6 +112,16 @@ export default function JobDetailPage() {
       )
     }
 
+    if (profile?.verification_status !== 'approved') {
+      return (
+        <div className="flex items-center gap-2 px-4 py-3 rounded-lg" style={{ background: '#fff7ed', color: '#c2410c' }}>
+          <AlertCircle size={16} />
+          <span className="text-sm font-medium flex-1">Verify your identity to apply for jobs.</span>
+          <Link to="/worker/verify" className="text-sm font-semibold underline shrink-0">Verify now</Link>
+        </div>
+      )
+    }
+
     if (!isOpen) {
       return (
         <div className="px-4 py-3 rounded-lg text-sm" style={{ background: '#f3f4f6', color: '#444651' }}>

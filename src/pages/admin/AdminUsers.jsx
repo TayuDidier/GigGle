@@ -2,6 +2,8 @@ import { useState } from 'react'
 import { useQuery, useMutation, useQueryClient } from '@tanstack/react-query'
 import { Search, Shield, ShieldOff, Star, Pencil, Trash2, X, AlertTriangle } from 'lucide-react'
 import { supabase } from '../../lib/supabase'
+import IconBadge from '../../components/ui/IconBadge'
+import { ICON_SIZE } from '../../constants/iconTokens'
 
 async function getAdminUsers({ search, role }) {
   const { data, error } = await supabase.rpc('admin_get_users', {
@@ -28,9 +30,9 @@ async function toggleSuspend(id, suspended) {
 }
 
 const ROLE_STYLES = {
-  worker:   { bg: '#eff4ff', color: '#00236f' },
-  employer: { bg: '#fff8e6', color: '#b36b00' },
-  admin:    { bg: '#fee2e2', color: '#ba1a1a' },
+  worker:   { bg: '#e5eeff', color: '#00236f' },
+  employer: { bg: '#fff3cd', color: '#ef9900' },
+  admin:    { bg: '#ffdad6', color: '#ba1a1a' },
 }
 
 function Toast({ msg, type = 'success' }) {
@@ -62,7 +64,7 @@ function EditModal({ user, onClose, onSave, saving }) {
         <div className="flex items-center justify-between px-6 py-4 border-b" style={{ borderColor: '#f0f0f8' }}>
           <h2 className="text-base font-bold" style={{ color: '#0b1c30' }}>Edit User</h2>
           <button onClick={onClose} className="p-1.5 rounded-lg hover:bg-gray-100">
-            <X size={18} color="#666" />
+            <X size={18} color="#757682" />
           </button>
         </div>
 
@@ -128,10 +130,7 @@ function DeleteModal({ user, onClose, onConfirm, deleting }) {
   return (
     <div className="fixed inset-0 z-50 flex items-center justify-center p-4" style={{ background: 'rgba(0,0,0,0.5)' }}>
       <div className="bg-white rounded-2xl w-full max-w-sm shadow-2xl p-6">
-        <div className="w-12 h-12 rounded-full flex items-center justify-center mx-auto mb-4"
-          style={{ background: '#fee2e2' }}>
-          <AlertTriangle size={22} color="#ba1a1a" />
-        </div>
+        <IconBadge icon={AlertTriangle} tone="alert" size="md" className="mx-auto mb-4" />
         <h2 className="text-base font-bold text-center mb-1" style={{ color: '#0b1c30' }}>Delete account?</h2>
         <p className="text-sm text-center mb-5" style={{ color: '#444651' }}>
           <strong>{user.full_name}</strong>'s account and all their data will be permanently removed.
@@ -224,7 +223,7 @@ export default function AdminUsers() {
       {/* Filters */}
       <div className="flex flex-wrap gap-2 mb-5">
         <div className="relative flex-1 min-w-48">
-          <Search size={15} className="absolute left-3 top-1/2 -translate-y-1/2" style={{ color: '#9ca3af' }} />
+          <Search size={ICON_SIZE.inline} className="absolute left-3 top-1/2 -translate-y-1/2" style={{ color: '#9ca3af' }} />
           <input
             value={search}
             onChange={(e) => handleSearchChange(e.target.value)}
@@ -312,7 +311,7 @@ export default function AdminUsers() {
                   {u.phone && <span>{u.phone}</span>}
                   {u.rating_average != null && (
                     <span className="flex items-center gap-0.5">
-                      <Star size={11} fill="#ef9900" color="#ef9900" />
+                      <Star size={ICON_SIZE.metadata} fill="#ef9900" color="#ef9900" />
                       {Number(u.rating_average).toFixed(1)} ({u.rating_count})
                     </span>
                   )}

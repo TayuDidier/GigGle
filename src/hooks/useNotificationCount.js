@@ -6,23 +6,21 @@ export function useWorkerNotificationCount(profileId) {
     queryKey: ['worker-notif-count', profileId],
     queryFn: async () => {
       if (!profileId) return 0
-      const [appsRes, paymentsRes] = await Promise.all([
+      const [appsRes, paidRes] = await Promise.all([
         // Accepted applications the worker hasn't acted on yet
         supabase
           .from('applications')
           .select('*', { count: 'exact', head: true })
           .eq('worker_id', profileId)
           .eq('status', 'accepted'),
-        // Submitted payments waiting for the worker to confirm
+        // Escrows that have paid out to this worker
         supabase
-          .from('payment_acknowledgments')
-          .select('id, job:jobs!payment_acknowledgments_job_id_fkey(selected_worker_id)')
-          .eq('status', 'submitted'),
+          .from('escrows')
+          .select('*', { count: 'exact', head: true })
+          .eq('worker_id', profileId)
+          .eq('status', 'released'),
       ])
-      const waitingPayments = (paymentsRes.data || []).filter(
-        p => p.job?.selected_worker_id === profileId
-      ).length
-      return (appsRes.count || 0) + waitingPayments
+      return (appsRes.count || 0) + (paidRes.count || 0)
     },
     enabled: !!profileId,
     refetchInterval: 30_000,

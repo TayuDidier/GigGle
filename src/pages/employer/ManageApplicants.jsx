@@ -1,5 +1,5 @@
 import { useState, useMemo, useEffect, useRef } from 'react'
-import { useParams, Link } from 'react-router-dom'
+import { useParams, Link, useNavigate } from 'react-router-dom'
 import { useQuery, useMutation, useQueryClient } from '@tanstack/react-query'
 import '../../lib/leaflet-fix'
 import L from 'leaflet'
@@ -53,8 +53,8 @@ const ICONS = {
   pending:  makeCircleIcon('#00236f', '', '#fff'),
   accepted: makeCircleIcon('#006c4e', '✓', '#fff'),
   rejected: makeCircleIcon('#9ca3af', '', '#c5c5d3'),
-  worker:   makeCircleIcon('#7c3aed', '', '#fff'),
-  top:      makeCircleIcon('#b45309', '★', '#fef3c7'),
+  worker:   makeCircleIcon('#1e3a8a', '', '#fff'),
+  top:      makeCircleIcon('#ffb95f', '★', '#fff3cd'),
 }
 
 // Fit map bounds to supplied positions
@@ -86,9 +86,9 @@ function StarRating({ rating, count }) {
 }
 
 const STATUS_CFG = {
-  pending:  { label: 'Pending',  bg: '#fef3c7', color: '#b45309' },
-  accepted: { label: 'Accepted', bg: '#dcfce7', color: '#166534' },
-  rejected: { label: 'Rejected', bg: '#f3f4f6', color: '#374151' },
+  pending:  { label: 'Pending',  bg: '#e5eeff', color: '#00236f' },
+  accepted: { label: 'Accepted', bg: '#97f5cc', color: '#006c4e' },
+  rejected: { label: 'Rejected', bg: '#f4f4f4', color: '#444651' },
 }
 
 function ConfirmSelectDialog({ applicantName, onConfirm, onCancel, isPending }) {
@@ -119,6 +119,7 @@ function ConfirmSelectDialog({ applicantName, onConfirm, onCancel, isPending }) 
 
 export default function ManageApplicants() {
   const { id } = useParams()
+  const navigate = useNavigate()
   const queryClient = useQueryClient()
   const [confirmApplicant, setConfirmApplicant] = useState(null)
   const [successMessage, setSuccessMessage] = useState('')
@@ -161,8 +162,9 @@ export default function ManageApplicants() {
       queryClient.invalidateQueries(queryKeys.jobs.byId(id))
       queryClient.invalidateQueries(queryKeys.applications.forJob(id))
       setConfirmApplicant(null)
-      setSuccessMessage('Worker selected! The job is now in progress.')
-      setTimeout(() => setSuccessMessage(''), 5000)
+      // Worker selected — the job now awaits funding. Send the employer straight
+      // to the escrow screen to secure payment and start the job.
+      navigate(`/employer/jobs/${id}/payment`)
     },
     onError: (err) => {
       setConfirmApplicant(null)
@@ -171,7 +173,7 @@ export default function ManageApplicants() {
   })
 
   const isLoading = loadingJob || loadingApps
-  const alreadySelected = job?.status === 'in_progress' || job?.status === 'completed'
+  const alreadySelected = ['awaiting_funding', 'in_progress', 'completed'].includes(job?.status)
 
   // Build map positions for bounds fitting
   const mapPositions = useMemo(() => {
@@ -231,12 +233,12 @@ export default function ManageApplicants() {
 
       {/* Banners */}
       {successMessage && (
-        <div className="flex items-center gap-2 mb-4 px-4 py-3 rounded-lg text-sm font-medium" style={{ background: '#dcfce7', color: '#166534' }}>
+        <div className="flex items-center gap-2 mb-4 px-4 py-3 rounded-lg text-sm font-medium" style={{ background: '#97f5cc', color: '#006c4e' }}>
           <CheckCircle size={16} /> {successMessage}
         </div>
       )}
       {errorMsg && (
-        <div className="flex items-center gap-2 mb-4 px-4 py-3 rounded-lg text-sm font-medium" style={{ background: '#fee2e2', color: '#ba1a1a' }}>
+        <div className="flex items-center gap-2 mb-4 px-4 py-3 rounded-lg text-sm font-medium" style={{ background: '#ffdad6', color: '#ba1a1a' }}>
           <AlertCircle size={16} /> {errorMsg}
         </div>
       )}
@@ -267,7 +269,7 @@ export default function ManageApplicants() {
               onClick={() => setMapMode('discover')}
               className="flex-1 flex items-center justify-center gap-2 py-2.5 text-sm font-semibold transition-colors"
               style={mapMode === 'discover'
-                ? { color: '#7c3aed', borderBottom: '2px solid #7c3aed' }
+                ? { color: '#1e3a8a', borderBottom: '2px solid #1e3a8a' }
                 : { color: '#444651' }}
             >
               <Search size={15} />
@@ -354,7 +356,7 @@ export default function ManageApplicants() {
                     <Popup>
                       <div className="text-sm min-w-[160px]">
                         <div className="flex items-center gap-1 mb-0.5">
-                          {isTop && <span className="text-xs font-bold" style={{ color: '#b45309' }}>⭐ Top Worker</span>}
+                          {isTop && <span className="text-xs font-bold" style={{ color: '#ef9900' }}>⭐ Top Worker</span>}
                         </div>
                         <p className="font-semibold" style={{ color: '#0b1c30' }}>{w.full_name}</p>
                         {w.rating_average && (
@@ -400,11 +402,11 @@ export default function ManageApplicants() {
             ) : (
               <>
                 <span className="flex items-center gap-1.5">
-                  <span className="inline-block w-3 h-3 rounded-full" style={{ background: '#7c3aed' }} />
+                  <span className="inline-block w-3 h-3 rounded-full" style={{ background: '#1e3a8a' }} />
                   <span style={{ color: '#444651' }}>Worker</span>
                 </span>
                 <span className="flex items-center gap-1.5">
-                  <span className="inline-block w-3 h-3 rounded-full" style={{ background: '#b45309' }} />
+                  <span className="inline-block w-3 h-3 rounded-full" style={{ background: '#ffb95f' }} />
                   <span style={{ color: '#444651' }}>★ Top-rated (≥4.0)</span>
                 </span>
               </>
@@ -498,7 +500,7 @@ export default function ManageApplicants() {
                         </button>
                       )}
                       {app.status === 'accepted' && (
-                        <span className="flex items-center gap-1 text-xs font-semibold" style={{ color: '#166534' }}>
+                        <span className="flex items-center gap-1 text-xs font-semibold" style={{ color: '#006c4e' }}>
                           <CheckCircle size={14} /> Selected
                         </span>
                       )}
@@ -524,7 +526,7 @@ export default function ManageApplicants() {
           </div>
           {fetchingNearby ? (
             <div className="flex justify-center py-12">
-              <div className="w-8 h-8 border-4 border-t-transparent rounded-full animate-spin" style={{ borderColor: '#7c3aed', borderTopColor: 'transparent' }} />
+              <div className="w-8 h-8 border-4 border-t-transparent rounded-full animate-spin" style={{ borderColor: '#1e3a8a', borderTopColor: 'transparent' }} />
             </div>
           ) : nearbyWorkers.length === 0 ? (
             <div className="flex flex-col items-center justify-center py-16 text-center card">
@@ -543,13 +545,13 @@ export default function ManageApplicants() {
                     ref={el => cardRefs.current[w.id] = el}
                     className="bg-white border rounded-xl shadow-sm p-4 transition-all duration-300"
                     style={{
-                      borderColor: isHighlighted ? '#7c3aed' : '#c5c5d3',
-                      boxShadow: isHighlighted ? '0 0 0 3px rgba(124,58,237,0.15)' : undefined,
+                      borderColor: isHighlighted ? '#1e3a8a' : '#c5c5d3',
+                      boxShadow: isHighlighted ? '0 0 0 3px rgba(30,58,138,0.15)' : undefined,
                     }}
                   >
                     <div className="flex gap-3">
                       <div className="w-12 h-12 rounded-full overflow-hidden flex items-center justify-center text-lg font-bold shrink-0"
-                        style={{ background: isTop ? '#fef3c7' : '#e5eeff', color: isTop ? '#b45309' : '#00236f' }}>
+                        style={{ background: isTop ? '#fff3cd' : '#e5eeff', color: isTop ? '#ef9900' : '#00236f' }}>
                         {w.avatar_url
                           ? <img src={w.avatar_url} alt="" className="w-full h-full object-cover" />
                           : (w.full_name || 'W').charAt(0)}
@@ -559,13 +561,13 @@ export default function ManageApplicants() {
                           <p className="font-bold truncate" style={{ color: '#0b1c30' }}>{w.full_name}</p>
                           {isTop && (
                             <span className="shrink-0 inline-flex items-center gap-0.5 px-1.5 py-0.5 rounded-full text-xs font-bold"
-                              style={{ background: '#fef3c7', color: '#b45309' }}>
+                              style={{ background: '#fff3cd', color: '#ef9900' }}>
                               ⭐ Top
                             </span>
                           )}
                           {idx === 0 && (
                             <span className="shrink-0 inline-flex items-center gap-0.5 px-1.5 py-0.5 rounded-full text-xs font-bold"
-                              style={{ background: '#dcfce7', color: '#166534' }}>
+                              style={{ background: '#97f5cc', color: '#006c4e' }}>
                               #1 Nearby
                             </span>
                           )}

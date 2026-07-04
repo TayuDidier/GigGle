@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react'
 import { Link, useNavigate } from 'react-router-dom'
-import { CheckCircle, AlertCircle } from 'lucide-react'
+import { CheckCircle, AlertCircle, Zap } from 'lucide-react'
 import { supabase } from '../../lib/supabase'
 
 export default function AuthConfirm() {
@@ -50,9 +50,12 @@ export default function AuthConfirm() {
   return (
     <div className="min-h-screen flex items-center justify-center px-4" style={{ background: '#f8f9ff' }}>
       <div className="max-w-md w-full bg-white border border-outline-variant rounded-xl shadow-card p-8 text-center">
-        <Link to="/" className="inline-flex items-center gap-1 mb-6">
+        <Link to="/" className="inline-flex items-center gap-2 mb-6">
+          <div className="w-10 h-10 rounded-2xl flex items-center justify-center shadow-elevated"
+            style={{ background: 'linear-gradient(135deg, #00236f, #002f8a)' }}>
+            <Zap size={18} fill="#ef9900" color="#ef9900" />
+          </div>
           <span className="text-2xl font-bold" style={{ color: '#00236f' }}>GigGle</span>
-          <span className="text-xl" style={{ color: '#ef9900' }}>✦</span>
         </Link>
 
         {status === 'loading' && (

@@ -54,7 +54,7 @@ export async function updateJobStatus(jobId, status) {
 export async function getJobById(jobId) {
   const { data, error } = await supabase
     .from('jobs')
-    .select(`*, employer:profiles!jobs_employer_id_fkey(id, full_name, avatar_url, rating_average, city), selected_worker:profiles!jobs_selected_worker_id_fkey(id, full_name, avatar_url, rating_average)`)
+    .select(`*, employer:profiles!jobs_employer_id_fkey(id, full_name, avatar_url, rating_average, city), selected_worker:profiles!jobs_selected_worker_id_fkey(id, full_name, avatar_url, rating_average, phone)`)
     .eq('id', jobId)
     .single()
   if (error) throw error
