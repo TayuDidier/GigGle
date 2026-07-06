@@ -9,7 +9,7 @@ import { useNavigate } from 'react-router-dom'
 import IconBadge from '../../components/ui/IconBadge'
 
 const pwSchema = z.object({
-  newPassword: z.string().min(6, 'Password must be at least 6 characters'),
+  newPassword: z.string().min(8, 'Password must be at least 8 characters'),
   confirmPassword: z.string(),
 }).refine((d) => d.newPassword === d.confirmPassword, {
   message: 'Passwords do not match',
@@ -60,7 +60,7 @@ function ChangePasswordSection() {
             <input
               type={showNew ? 'text' : 'password'}
               className="input-field pr-12"
-              placeholder="Min. 6 characters"
+              placeholder="Min. 8 characters"
               {...register('newPassword')}
             />
             <button type="button" onClick={() => setShowNew(!showNew)}

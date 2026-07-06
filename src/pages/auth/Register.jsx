@@ -9,7 +9,7 @@ import { supabase } from '../../lib/supabase'
 const schema = z.object({
   fullName: z.string().min(2, 'Full name must be at least 2 characters'),
   email: z.string().email('Please enter a valid email address'),
-  password: z.string().min(6, 'Password must be at least 6 characters'),
+  password: z.string().min(8, 'Password must be at least 8 characters'),
   confirmPassword: z.string(),
 }).refine((d) => d.password === d.confirmPassword, {
   message: 'Passwords do not match',
@@ -184,7 +184,7 @@ export default function Register() {
                 <Lock size={15} className="absolute left-3.5 top-1/2 -translate-y-1/2 pointer-events-none"
                   style={{ color: '#9ca3af' }} />
                 <input type={showPassword ? 'text' : 'password'} className="input-field pl-10 pr-12"
-                  placeholder="Min. 6 characters" autoComplete="new-password" {...register('password')} />
+                  placeholder="Min. 8 characters" autoComplete="new-password" {...register('password')} />
                 <button type="button" onClick={() => setShowPassword(!showPassword)}
                   className="absolute right-3 top-1/2 -translate-y-1/2 p-1 rounded-lg hover:bg-surface-low transition-colors"
                   style={{ color: '#444651' }}>

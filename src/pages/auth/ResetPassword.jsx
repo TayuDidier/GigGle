@@ -7,7 +7,7 @@ import { Eye, EyeOff, AlertCircle, CheckCircle, Zap } from 'lucide-react'
 import { supabase } from '../../lib/supabase'
 
 const schema = z.object({
-  password: z.string().min(6, 'Password must be at least 6 characters'),
+  password: z.string().min(8, 'Password must be at least 8 characters'),
   confirmPassword: z.string(),
 }).refine((d) => d.password === d.confirmPassword, {
   message: 'Passwords do not match',
@@ -82,7 +82,7 @@ export default function ResetPassword() {
                     <input
                       type={showPassword ? 'text' : 'password'}
                       className="input-field pr-12"
-                      placeholder="Min. 6 characters"
+                      placeholder="Min. 8 characters"
                       {...register('password')}
                     />
                     <button
