@@ -1,5 +1,5 @@
 import { useState, useRef, useEffect } from 'react'
-import { Link } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
 import { useForm } from 'react-hook-form'
 import { zodResolver } from '@hookform/resolvers/zod'
 import { z } from 'zod'
@@ -7,7 +7,7 @@ import { useAuth } from '../../contexts/AuthContext'
 import { updateProfile } from '../../api/profiles.api'
 import { uploadAvatar } from '../../api/storage.api'
 import { CITIES } from '../../constants/cities'
-import { User, Camera, Star, AlertCircle, CheckCircle, ShieldCheck } from 'lucide-react'
+import { User, Camera, Star, AlertCircle, CheckCircle, ShieldCheck, LogOut } from 'lucide-react'
 import { VerifiedBadge } from '../../components/VerifiedBadge'
 import IconBadge from '../../components/ui/IconBadge'
 
@@ -42,8 +42,14 @@ function StarRating({ value }) {
 }
 
 export default function WorkerProfile() {
-  const { user, profile, refetchProfile } = useAuth()
+  const { user, profile, refetchProfile, signOut } = useAuth()
+  const navigate = useNavigate()
   const fileInputRef = useRef(null)
+
+  const handleSignOut = async () => {
+    await signOut()
+    navigate('/', { replace: true })
+  }
 
   const [avatarUrl, setAvatarUrl] = useState(profile?.avatar_url || null)
   const [uploading, setUploading] = useState(false)
@@ -317,6 +323,16 @@ export default function WorkerProfile() {
           Go to Settings →
         </Link>
       </div>
+
+      {/* ---- Sign out (mobile only — desktop has it in the sidebar) ---- */}
+      <button
+        onClick={handleSignOut}
+        className="md:hidden w-full mt-6 flex items-center justify-center gap-2 font-semibold px-4 py-3 rounded-lg border-2"
+        style={{ borderColor: '#ba1a1a', color: '#ba1a1a' }}
+      >
+        <LogOut size={17} />
+        Sign Out
+      </button>
     </div>
   )
 }
