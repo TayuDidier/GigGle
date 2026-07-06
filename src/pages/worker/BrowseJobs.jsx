@@ -2,7 +2,7 @@ import { useState, useMemo, useEffect } from 'react'
 import { useQuery } from '@tanstack/react-query'
 import '../../lib/leaflet-fix'
 import L from 'leaflet'
-import { MapContainer, TileLayer, Marker, Popup, CircleMarker, useMap } from 'react-leaflet'
+import { MapContainer, TileLayer, Marker, Popup, Tooltip, CircleMarker, useMap } from 'react-leaflet'
 import { Link, useNavigate } from 'react-router-dom'
 import { Search, SlidersHorizontal, MapIcon, List, MapPin, ArrowLeft, LocateFixed } from 'lucide-react'
 import { useAuth } from '../../contexts/AuthContext'
@@ -14,17 +14,49 @@ import IconBadge from '../../components/ui/IconBadge'
 
 const RADIUS_OPTIONS = [5, 10, 15, 25, 50]
 
-const jobPinIcon = L.divIcon({
-  className: '',
-  html: `<div style="
-    width:28px;height:28px;border-radius:50% 50% 50% 0;transform:rotate(-45deg);
-    background:#ef9900;border:3px solid #fff;
-    box-shadow:0 2px 6px rgba(0,0,0,0.35)">
-  </div>`,
-  iconSize: [28, 28],
-  iconAnchor: [14, 28],
-  popupAnchor: [0, -30],
-})
+// Per-category pin: an orange teardrop carrying the job's category emoji so each
+// point on the map visibly signals what kind of work it is. Cached per category
+// so identical divIcons aren't rebuilt on every render.
+const jobIconCache = {}
+function makeJobIcon(category) {
+  if (jobIconCache[category]) return jobIconCache[category]
+  const cat = CATEGORIES.find(c => c.value === category)
+  const emoji = cat?.emoji ?? '💼'
+  const icon = L.divIcon({
+    className: '',
+    html: `<div style="
+      width:34px;height:34px;border-radius:50% 50% 50% 0;transform:rotate(-45deg);
+      background:#ef9900;border:3px solid #fff;
+      box-shadow:0 2px 6px rgba(0,0,0,0.35);
+      display:flex;align-items:center;justify-content:center">
+      <span style="transform:rotate(45deg);font-size:15px;line-height:1">${emoji}</span>
+    </div>`,
+    iconSize: [34, 34],
+    iconAnchor: [17, 34],
+    popupAnchor: [0, -34],
+    tooltipAnchor: [0, -30],
+  })
+  jobIconCache[category] = icon
+  return icon
+}
+
+// "1.2km" / "450m" — shared distance formatter for pins, tooltips and cards
+function formatDistance(km) {
+  if (km === undefined || km === null) return null
+  return km < 1 ? `${Math.round(km * 1000)}m` : `${km.toFixed(1)}km`
+}
+
+// On mobile the map panel starts as display:none (list is the default view), so
+// Leaflet initializes with a 0-size container. When the user switches to the map
+// view we must tell Leaflet to re-measure, otherwise it renders blank/gray.
+function InvalidateOnView({ view }) {
+  const map = useMap()
+  useEffect(() => {
+    const id = setTimeout(() => map.invalidateSize(), 120)
+    return () => clearTimeout(id)
+  }, [view, map])
+  return null
+}
 
 function MapBoundsUpdater({ jobs, userCoords }) {
   const map = useMap()
@@ -267,7 +299,7 @@ export default function BrowseJobs() {
       <div className="flex-1 flex min-h-0">
 
         {/* MAP PANEL — 70% on desktop, toggled on mobile */}
-        <div className={`${view === 'map' ? 'flex' : 'hidden'} md:flex md:w-[70%] flex-col min-h-0 p-3`}>
+        <div className={`${view === 'map' ? 'flex' : 'hidden'} md:flex w-full md:w-[70%] flex-col min-h-0 p-3`}>
           <div className="flex-1 relative rounded-xl overflow-hidden border shadow-sm" style={{ borderColor: '#c5c5d3' }}>
             <MapContainer
               center={[userCoords.lat, userCoords.lng]}
@@ -279,6 +311,7 @@ export default function BrowseJobs() {
                 attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>'
                 url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
               />
+              <InvalidateOnView view={view} />
               <MapBoundsUpdater jobs={filteredJobs} userCoords={userCoords} />
               <CircleMarker
                 center={[userCoords.lat, userCoords.lng]}
@@ -292,18 +325,31 @@ export default function BrowseJobs() {
               {filteredJobs.map(job => {
                 if (!job.job_lat || !job.job_lng) return null
                 const cat = CATEGORIES.find(c => c.value === job.category)
+                const distanceLabel = formatDistance(job.distance_km)
                 return (
-                  <Marker key={job.id} position={[job.job_lat, job.job_lng]} icon={jobPinIcon}>
+                  <Marker key={job.id} position={[job.job_lat, job.job_lng]} icon={makeJobIcon(job.category)}>
+                    {/* Hover tooltip: type of work + distance from the user */}
+                    <Tooltip direction="top" offset={[0, -4]} opacity={1} className="job-hover-tooltip">
+                      <div style={{ minWidth: 130 }}>
+                        <div className="text-[11px] font-semibold" style={{ color: '#00236f' }}>
+                          {cat?.emoji} {cat?.label}
+                        </div>
+                        <div className="text-xs font-semibold leading-snug" style={{ color: '#0b1c30' }}>
+                          {job.title}
+                        </div>
+                        {distanceLabel && (
+                          <div className="text-[11px] font-medium mt-0.5 flex items-center gap-0.5" style={{ color: '#ef9900' }}>
+                            <MapPin size={10} /> {distanceLabel} away
+                          </div>
+                        )}
+                      </div>
+                    </Tooltip>
                     <Popup minWidth={170}>
                       <div className="text-sm">
                         <p className="text-xs mb-0.5" style={{ color: '#444651' }}>
                           {cat?.emoji} {cat?.label}
-                          {job.distance_km !== undefined && (
-                            <span className="ml-1">·{' '}
-                              {job.distance_km < 1
-                                ? `${Math.round(job.distance_km * 1000)}m`
-                                : `${job.distance_km.toFixed(1)}km`}
-                            </span>
+                          {distanceLabel && (
+                            <span className="ml-1">·{' '}{distanceLabel}</span>
                           )}
                         </p>
                         <p className="font-semibold mb-1 leading-snug text-sm" style={{ color: '#0b1c30' }}>{job.title}</p>
@@ -335,15 +381,16 @@ export default function BrowseJobs() {
               </div>
               <div className="flex items-center gap-1.5">
                 <span className="inline-block w-2.5 h-2.5 rounded-full" style={{ background: '#ef9900' }} />
-                <span style={{ color: '#444651' }}>Job</span>
+                <span style={{ color: '#444651' }}>Job · icon = type</span>
               </div>
+              <div style={{ color: '#9ca3af' }} className="pt-0.5 leading-tight">Hover a pin for distance</div>
             </div>
           </div>
         </div>
 
         {/* JOB LIST PANEL — 30% on desktop, full-width on mobile */}
         <div
-          className={`${view === 'list' ? 'flex' : 'hidden'} md:flex md:w-[30%] flex-col min-h-0 border-l`}
+          className={`${view === 'list' ? 'flex' : 'hidden'} md:flex w-full md:w-[30%] flex-col min-h-0 border-l`}
           style={{ borderColor: '#e4e4ef', background: '#f8f9ff' }}
         >
           <div className="flex-1 overflow-y-auto p-2 space-y-1.5">
