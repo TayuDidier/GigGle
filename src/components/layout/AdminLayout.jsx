@@ -123,7 +123,7 @@ export default function AdminLayout() {
       )}
 
       {/* Main area */}
-      <div className="flex-1 flex flex-col md:ml-64 min-h-screen">
+      <div className="flex-1 min-w-0 flex flex-col md:ml-64 min-h-screen">
         {/* Mobile top bar */}
         <header
           className="md:hidden flex items-center justify-between px-4 h-14 border-b sticky top-0 z-20"

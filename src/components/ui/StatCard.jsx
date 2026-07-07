@@ -16,13 +16,13 @@ export default function StatCard({
   const accent = color || (ICON_TONES[tone] || ICON_TONES.navy).color
   const content = (
     <div
-      className="bg-white rounded-2xl p-5 border flex items-start gap-4 hover:shadow-lg transition-all duration-200 group"
+      className="bg-white rounded-2xl p-4 sm:p-5 border flex items-start gap-3 sm:gap-4 hover:shadow-lg transition-all duration-200 group"
       style={{ borderColor: '#e4e4ef' }}
     >
       <IconBadge icon={icon} tone={tone} bg={bg} color={color} size="md" />
       <div className="flex-1 min-w-0">
         <p className="text-2xl font-bold" style={{ color: accent }}>{value ?? '—'}</p>
-        <p className="text-sm font-semibold mt-0.5" style={{ color: '#0b1c30' }}>{label}</p>
+        <p className="text-xs sm:text-sm font-semibold mt-0.5 leading-tight" style={{ color: '#0b1c30' }}>{label}</p>
         {sub && <p className="text-xs mt-0.5" style={{ color: '#757682' }}>{sub}</p>}
       </div>
       {to && (

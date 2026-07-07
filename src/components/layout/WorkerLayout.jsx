@@ -144,7 +144,7 @@ export default function WorkerLayout() {
       </aside>
 
       {/* ── Main content ── */}
-      <div className={`flex-1 flex flex-col ${isBrowse ? '' : 'md:ml-60'} min-h-screen`}>
+      <div className={`flex-1 min-w-0 flex flex-col ${isBrowse ? '' : 'md:ml-60'} min-h-screen`}>
 
         {/* Mobile top header */}
         <header

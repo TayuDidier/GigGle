@@ -89,7 +89,7 @@ export default function EmployerDashboard() {
       </div>
 
       {/* ── Stats ── */}
-      <div className="grid grid-cols-2 sm:grid-cols-4 gap-3">
+      <div className="grid grid-cols-2 lg:grid-cols-4 gap-3">
         <StatCard value={total}      label="Total Posted"  icon={Briefcase}    color="#444651" bg="#f4f4f4" />
         <StatCard value={openCount}  label="Open"          icon={TrendingUp}   tone="green" />
         <StatCard value={inProgress} label="In Progress"   icon={Clock}        tone="navy" />

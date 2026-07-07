@@ -141,7 +141,7 @@ export default function EmployerLayout() {
       </aside>
 
       {/* ── Main content ── */}
-      <div className="flex-1 flex flex-col md:ml-60 min-h-screen">
+      <div className="flex-1 min-w-0 flex flex-col md:ml-60 min-h-screen">
 
         {/* Mobile top header */}
         <header
