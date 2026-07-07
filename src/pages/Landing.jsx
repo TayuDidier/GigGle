@@ -145,7 +145,7 @@ function HeroSection() {
             </h1>
 
             <p className="text-base md:text-lg leading-relaxed mb-8 max-w-xl" style={{ color: '#444651' }}>
-              Cameroon's gig marketplace connecting reliable workers with people who need help — powered by verified ratings, location matching, and mobile money.
+              Cameroon's gig marketplace connecting reliable workers with people who need help powered by verified ratings, location matching, and mobile money.
             </p>
 
             <div className="flex flex-col sm:flex-row gap-3 justify-center md:justify-start mb-10">
